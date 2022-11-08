@@ -76,6 +76,7 @@
     <br>
     <br>
     <br>
+    
     <!-- Užduotis -->
     <div>
         <table border style="text-align: center">
@@ -133,5 +134,115 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Formos -->
+    <h1>Formos</h1>
+    <div>
+        <form>
+
+            <!-- Checkbox -->
+            <div>
+                <div>
+                    <label for="">Čiužinėjimas</label>
+                    <input type="radio" name="interest" value="">
+                </div>
+                <div>
+                    <label for="">Sportas</label>
+                    <input type="checkbox" name="interest" value="">
+                </div>
+                <div>
+                    <label for="">Filmai</label>
+                    <input type="checkbox" name="interest" value="">
+                </div>
+                <div>
+                    <label for="">Kulinarija</label>
+                    <input type="checkbox" name="interest" value="">
+                </div>
+            </div>
+            <br>
+
+            <!-- Input'as -->
+            <div>
+                <label for="">Pavardė:</label>
+                <input type="text" id="pavarde" name="pavarde" required>
+            </div>
+
+            <!-- Textarea -->
+            <div>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <!-- Select -->
+            <div>
+                <label for="">Tavo augintinis</label>
+                <select>
+                    <optgroup label="Dažniausi">
+                        <option value="0">Šuo</option>
+                        <option value="1">Katė</option>
+                    </optgroup>
+                    <optgroup label="Retesni">
+                        <option value="2" selected>Jūrų kiaulytė</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <button>Pateikti</button>
+        </form>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- 2 užduotis -->
+    <div class='register-form-container'>
+        <form style="display: flex; flex-direction: column; gap: 0.5rem; width: max-content; border: 2px solid rgb(255, 92, 141); border-radius: 5%; padding: 2rem;">
+            <!-- Vardas -->
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label for="">Vardas</label>
+                <input type="text">
+            </div>
+            <!-- Slaptazodis -->
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label for="">Slaptažodis</label>
+                <input type="text">
+            </div>
+            <!-- El. Pastas -->
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label for="">El. Paštas</label>
+                <input type="email">
+            </div>
+            <!-- Lyties pasirinkimas -->
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                    <label for=""  style="display: block">Lytis:</label>
+                    <div>
+                        <label for="">Vyras</label>
+                        <input type="radio" name="lytis" id="" value="vyras">
+                        <label for="">Moteris</label>
+                        <input type="radio" name="lytis" id="" value="moteris">
+                    </div>
+            </div>
+            <!-- Komentaras -->
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label for="" style="display: block">Komentaras:</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <!-- Submit mygtukas -->
+            <div style="display: flex; justify-content: center;">
+                <input type="submit" value="Pateikti">
+            </div>
+        </form>
+        <p class='console' style="display: none">tf</p>
+    </div>
+
+
+    <script>
+        document.querySelector(".register-form-container").addEventListener('submit', (event) => {
+            event.preventDefault();
+            console.log(event);
+            document.querySelector(".console").innerHTML=JSON.stringify(event);
+            document.querySelector(".console").style.display="block";
+        });
+    </script>
 </body>
 </html>
