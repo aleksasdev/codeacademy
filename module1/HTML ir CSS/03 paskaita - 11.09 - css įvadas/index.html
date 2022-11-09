@@ -19,6 +19,28 @@
 </head>
 <body>
 
+    <!-- Homework -->
+    <div class="navbar-container">
+        <div class="navbar-button">Home
+            <div class="dropdown-container" id="off"></div>
+        </div>
+        <div class="navbar-button">Tables
+            <div class="dropdown-container" id="off">
+                <a href="#" class="dropdown-button">Oak Tables</a>
+                <a href="#" class="dropdown-button">Birch Tables</a>
+                <a href="#" class="dropdown-button">Spruce Tables</a>
+            </div>
+        </div>
+
+        <div class="navbar-button">Wardrobes
+            <div class="dropdown-container" id="off">
+                <a href="#" class="dropdown-button">Double Doors</a>
+                <a href="#" class="dropdown-button">Single Door</a>
+                <a href="#" class="dropdown-button">Complex</a>
+            </div>
+        </div>
+    </div>
+
     <div id="task-1">
         <div class="flag-container">
             <div class="lithuania-item lithuania-1"></div>
@@ -187,5 +209,45 @@
             <div id="flag-practice-color3"  class="flag-practice-item"></div>
         </div>
     </div>
+
+    <script>
+        // Handle dropdown click
+        const navbarButtons = document.getElementsByClassName('navbar-button');
+        for(const element of navbarButtons){
+            element.addEventListener('click', (event) => {
+                const dropdownDiv = element.getElementsByClassName('dropdown-container')[0]
+                if(dropdownDiv){
+                    if(dropdownDiv.id==="off"){
+                        dropdownDiv.id="on";
+                        dropdownDiv.style.visibility="visible";
+
+                        // Close all other dropdowns
+                        for(const element of document.getElementsByClassName('dropdown-container')){
+                            if(element.innerHTML !== dropdownDiv.innerHTML && element.id!=="off"){
+                                element.id="off";
+                                element.style.visibility="collapse";
+                            }
+                        }
+                        return true;
+                    }
+                    dropdownDiv.id="off";
+                    dropdownDiv.style.visibility="collapse";
+
+                }
+            });
+        }
+
+        // Close dropdown when clicked anywhere randomly TODO: Not perfectly implemented, needs fixing
+        document.getElementsByTagName('html')[0].addEventListener('click', (event)=>{
+            if(event.target.innerHTML.includes("navbar")){
+                const dropdownDivs = document.getElementsByClassName('dropdown-container');
+                for(const dropdownDivElement of dropdownDivs){
+                    dropdownDivElement.style.visibility="collapse";
+                    dropdownDivElement.id="off";
+                }
+            }
+        })
+        
+    </script>
 </body>
 </html>

@@ -1,5 +1,13 @@
-body{
-    height: 600vh;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #404258;
+    --secondary-color: #D6E4E5;
+    --text-color: #fff;
 }
 
 h2 {
@@ -29,6 +37,50 @@ h2 {
 }
 .linijinis-blokinis {
     display: inline-block;
+}
+
+/* Homework */
+.navbar-container{
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
+    background-color: var(--primary-color);
+    gap: 2.5rem;
+    user-select: none;
+}
+.navbar-button{
+    position: relative;
+    color: var(--text-color);
+    height: 40%;
+    padding: 1rem;
+    border: 1px solid var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    cursor: pointer;
+}
+.dropdown-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    z-index: 2;
+    text-align: center;
+    top: calc(100% + 0.5rem);
+    border-top: none;
+    visibility: collapse;
+}
+.dropdown-button{
+    color: var(--text-color);
+    padding: 0.4rem;
+    border-bottom: 1px dashed var(--secondary-color);
+    text-decoration: none;
 }
 
 /* Task 1, kad graziau butu*/
@@ -145,7 +197,6 @@ h2 {
 }
 .fixed{
     position: fixed;
-    bottom: 0;
 }
 .sticky{
     position: sticky;
