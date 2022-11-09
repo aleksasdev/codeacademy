@@ -1,3 +1,7 @@
+body{
+    height: 600vh;
+}
+
 h2 {
     color: blueviolet;
 }
@@ -10,11 +14,12 @@ h2 {
     border: 3px dashed cyan;
 }
 .kvadratas {
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
     background-color: beige;
     border: 3px solid black;
     font-size: 2em;
+    text-align: center;
 }
 .linijinis {
     display: inline;
@@ -64,7 +69,6 @@ h2 {
     display: inline-block;
     height: 7rem;
     width: 3.4rem;
-    font-size: 0;
 }
 .belgium-1{
     background-color: black;
@@ -95,7 +99,6 @@ h2 {
     display: inline-block;
     height: 7rem;
     width: 3.4rem;
-    font-size: 0;
 }
 .france-1{
     background-color: blue;
@@ -113,5 +116,96 @@ h2 {
     height: 3.5rem;
 }
 .poland-1{
+    background-color: red;
+}
+
+.display-ib{
+    display: inline-block;
+}
+.t10{
+    top: 10px;
+}
+.r30{
+    right: 30px;
+}
+.b50{
+    bottom: 50px;
+}
+.l80{
+    left: 80px;
+}
+.static{
+    position: static;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+    bottom: 0;
+}
+.sticky{
+    position: sticky;
+    top: -10px;
+}
+
+
+.practice-rectangle{
+    width: 150px;
+    height: 150px;
+    background-color: bisque;
+    border: 1px solid black;
+    display: inline-block;
+}
+.test-2{
+    position: relative;
+    top: 50px;
+    border: 5px solid black;
+}
+
+.practice-picture-frame {
+    width: 30rem;
+    height: 30rem;
+    border: 1px solid black;
+    margin-top: 150px;
+    position: relative;
+}
+.practice-picture-frame img{
+    width: 250px;
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+}
+
+.flag-container-2{
+    width: 400px;
+    height: 300px;
+    background-image: linear-gradient(
+        to bottom,
+        yellow 33%,
+        green 33% 66%,
+        red 66%
+    );
+}
+.flag-container-3{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    border: 1px solid black;
+}
+.flag-practice-item{
+    height:5rem;
+    width: 100%;
+}
+#flag-practice-color1{
+    background-color: yellow;
+}
+#flag-practice-color2{
+    background-color: green;
+}
+#flag-practice-color3{
     background-color: red;
 }
