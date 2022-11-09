@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 paskaita - css įvadas</title>
+
+    <!-- Nesamoningas budas daryti CSS -->
+    <style>
+        p {
+            color: orange;
+            background-color: black;
+        }
+    </style>
+
+    <!-- Pagrindinis budas sujungti css su html per vanilla html implementacija (bet as esu #reactgang narys, tai sito niekad nedarysiu :P) -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div id="task-1">
+        <div class="flag-container">
+            <div class="lithuania-item lithuania-1"></div>
+            <div class="lithuania-item lithuania-2"></div>
+            <div class="lithuania-item lithuania-3"></div>
+        </div>
+
+        <div class="flag-container">
+            <div class="belgium-item belgium-1"></div>
+            <div class="belgium-item belgium-2"></div>
+            <div class="belgium-item belgium-3"></div>
+        </div>
+
+        <div class="flag-container japanese-flag-container">
+            <div class="japanese-flag-center-item"></div>
+        </div>
+
+        <div class="flag-container">
+            <div class="france-item france-1"></div>
+            <div class="france-item france-2"></div>
+            <div class="france-item france-3"></div>
+        </div>
+
+        <div class="flag-container">
+            <div class="poland-item poland-1"></div>
+            <div class="poland-item poland-2"></div>
+        </div>
+    </div>
+
+    <!-- CSS rašymo būdai -->
+    <div>
+        <h1>CSS rašymo būdai</h1>
+        <h2>Inline</h2>
+        <p style="color: darksalmon; background-color: beige;display: inline;">
+            Linijinis stilius yra, kai elementui kuri stilizuojame suteikiame style atributa ir jo viduje suteikiame stilius; nera teisingas budas naudoti CSS.
+        </p>
+        <h2>Internal</h2>
+        <p>
+            Vidinis stilius yra, kai HTML failo viduje, head tag'o dalyje susikuriame style tag'a ir style tag'e rasome CSS koda; velgi, nera teisingas budas rasyti CSS koda
+        </p>
+        <h2>External</h2>
+        <p>
+            Isorinis stilius yra rasomas CSS faile.
+        </p>
+    </div>
+
+    <!-- Basic selectors -->
+    <div>
+        <h1>Basic Selectors</h1>
+        <h2>Element / Tag (p,h,div...{})</h2>
+        <h2>Class (.main-container{})</h2>
+        <p>Testinis klases pavizdys: <span class="testinis-tekstas">*sitas tekstas bus keiciamas*</span></p>
+        <p>&ltp&gt;</p>
+        <h2>ID (#id-vardas{})</h2>
+        <p id="testinis-id">Pakeisime sita teksta!</p>
+    </div>
+
+    <div id="displays">
+        <h1>Displays</h1>
+        <h2>Inline</h2>
+        <p>
+            Inline privalumas yra tas, kad ju dydziu negalima keisti, konteineriai su display: inline, uzema tiek vietos kiek ju content'as. Negalima duoti kazkokio kito dydzio.
+        </p>
+
+        <div>
+            <div class="kvadratas linijinis">1</div>
+            <div class="kvadratas linijinis">2</div>
+            <div class="kvadratas linijinis">3</div>
+        </div>
+
+        <h2>Block</h2>
+        <p>
+            Block elementai uzima visa eilute arba nurodyta dydi. Bet jie uzima visa eilute, net jeigu ju dydzio nustatymai to nereikalauja.
+        </p>
+        <div>
+            <div class="kvadratas blokinis">1</div>
+            <div class="kvadratas blokinis">2</div>
+            <div class="kvadratas blokinis">3</div>
+        </div>
+
+        <h2>Inline-Block</h2>
+        <p>
+            Inline-Block elementai uzima tik tiek vietos kiek ju content'as
+        </p>
+        <div>
+            <div class="kvadratas linijinis-blokinis">1</div>
+            <div class="kvadratas linijinis-blokinis">2</div>
+            <div class="kvadratas linijinis-blokinis">3</div>
+        </div>
+    </div>
+</body>
+</html>

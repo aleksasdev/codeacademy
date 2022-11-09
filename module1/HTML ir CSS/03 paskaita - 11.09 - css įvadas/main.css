@@ -1,0 +1,117 @@
+h2 {
+    color: blueviolet;
+}
+.testinis-tekstas {
+    font-size: 2.2em;
+    font-style: italic;
+    font-weight: bold;
+}
+#testinis-id {
+    border: 3px dashed cyan;
+}
+.kvadratas {
+    width: 15rem;
+    height: 15rem;
+    background-color: beige;
+    border: 3px solid black;
+    font-size: 2em;
+}
+.linijinis {
+    display: inline;
+}
+.blokinis {
+    display: block;
+}
+.linijinis-blokinis {
+    display: inline-block;
+}
+
+/* Task 1, kad graziau butu*/
+#task-1{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: 2px solid red;
+    border-radius: 3rem;
+    padding: 2rem;
+    margin-left: 2rem;
+    font-size: 0;
+}
+
+/* Task 1 */
+.flag-container {
+    border: 2px dashed black;
+}
+.lithuania-item{
+    display:block;
+    width: 10rem;
+    height: 2rem;
+}
+.lithuania-1{
+    background-color: yellow;
+}
+.lithuania-2{
+    background-color: green;
+}
+.lithuania-3{
+    background-color: red;
+}
+
+.belgium-item{
+    display: inline-block;
+    height: 7rem;
+    width: 3.4rem;
+    font-size: 0;
+}
+.belgium-1{
+    background-color: black;
+}
+.belgium-2{
+    background-color: yellow;
+}
+.belgium-3{
+    background-color: red;
+}
+
+.japanese-flag-container{
+    width: 10rem;
+    height: 7rem;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.japanese-flag-center-item{
+    background-color: red;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.france-item{
+    display: inline-block;
+    height: 7rem;
+    width: 3.4rem;
+    font-size: 0;
+}
+.france-1{
+    background-color: blue;
+}
+.france-2{
+    background-color: white;
+}
+.france-3{
+    background-color: red;
+}
+
+.poland-item{
+    display: block;
+    width: 10.5rem;
+    height: 3.5rem;
+}
+.poland-1{
+    background-color: red;
+}
