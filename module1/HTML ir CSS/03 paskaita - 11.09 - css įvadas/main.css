@@ -61,6 +61,7 @@ h2 {
     align-items: center;
     border-radius: 5%;
     cursor: pointer;
+    z-index: 5;
 }
 .dropdown-container{
     position: absolute;
@@ -81,6 +82,9 @@ h2 {
     padding: 0.4rem;
     border-bottom: 1px dashed var(--secondary-color);
     text-decoration: none;
+}
+.navbar-button:hover .dropdown-container{
+    visibility:visible;
 }
 
 /* Task 1, kad graziau butu*/
