@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: primary-font;
+    src: url('../assets/Saiyan-Sans.ttf');
+}
+@font-face {
+    font-family: secondary-font;
+    src: url('../assets/Uni Sans Heavy.otf');
+}
+
+:root{
+    --primary-color: #14142b99;
+    --secondary-color: #e76a24;
+    --third-color: black;
+}
+
+/* Global styles */
+.button-style{
+    background-color: var(--secondary-color);
+    border-radius: 5%;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    color: var(--third-color);
+    -webkit-user-drag: none;
+    -webkit-text-stroke-width: 0.09px;
+    -webkit-text-stroke-color: white;
+    cursor: pointer;
+    font-family: primary-font;
+    font-size: 2.3em;
+}
+
+/* Navbar */
+.navbar-container{
+    height: 4.5rem;
+    width: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+.logo-container img{
+    height: 2.5rem;
+    width: auto;
+}
+.menu-container > ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.decorative-menu-icon{
+    width: 1.2rem;
+    margin-right: 0.5rem;
+    opacity: 0;
+}
+.menu-container ul > li:hover .decorative-menu-icon{
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Hero */
+.hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    text-align: center;
+}
+.hero-container img{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+.hero-content-background{
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.6);
+    color: antiquewhite;
+    font-size: 2em;
+    padding: 5rem;
+    box-shadow: 1px 1px 1px 1px;
+    max-width: 70rem;
+}
+.hero-content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.hero-content-wrapper h1{
+    font-family: secondary-font;
+    font-size: 1.5em;
+}
+.cta-button{
+    width: 25rem;
+    height: 6rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
