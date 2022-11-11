@@ -8,17 +8,24 @@ html{
     scroll-behavior: smooth;
 }
 
+h1, a{
+    color: black;
+}
+p {
+    font-family: secondary-font;
+}
+
 @font-face {
     font-family: primary-font;
     src: url('../assets/Saiyan-Sans.ttf');
 }
 @font-face {
     font-family: secondary-font;
-    src: url('../assets/Uni Sans Heavy.otf');
+    src: url('../assets/Bronova Regular.otf');
 }
 
 :root{
-    --primary-color: #14142bbb;
+    --primary-color: #14142bee;
     --secondary-color: #e76a24;
     --third-color: black;
 
@@ -27,21 +34,12 @@ html{
 }
 
 /* Global styles */
-.primary-font-style{
-    font-family: primary-font;
-}
-.secondary-font-style{
-    font-family: secondary-font;
-}
 .button-style{
     background-color: var(--secondary-color);
     border-radius: 5%;
     padding: 0.4rem 1rem;
     text-decoration: none;
-    color: var(--third-color);
     -webkit-user-drag: none;
-    -webkit-text-stroke-width: 0.09px;
-    -webkit-text-stroke-color: white;
     cursor: pointer;
     font-family: primary-font;
     font-size: 2.3em;
@@ -52,6 +50,13 @@ html{
 }
 .wrapper-style{
     box-shadow: 1px 1px 1px 1px white;
+}
+.text-background-style{
+    border: 5px solid white;
+    padding: 0.5rem;
+    background-color: var(--secondary-color);
+    clip-path: polygon(50% 0%, 100% 0, 97% 89%, 0 100%, 0 0);
+    cursor: auto;
 }
 
 /* Navbar */
@@ -101,7 +106,6 @@ html{
 .hero-content-background{
     flex-direction: column;
     background-color: var(--primary-color);
-    color: antiquewhite;
     font-size: 2em;
     padding: 3rem;
     max-width: 70rem;
@@ -116,9 +120,16 @@ html{
     flex-direction: column;
     gap: 1.5rem;
 }
+.hero-content-wrapper h1{
+    font-family: primary-font;
+    padding: 1rem 2rem;
+}
 .hero-content-wrapper p{
-    width: 40rem;
+    color: white;
+    width: 35rem;
     z-index: 5;
+    font-size: 0.8em;
+    margin-bottom: 1rem;
 }
 .cta-button{
     width: 25rem;
@@ -160,7 +171,7 @@ html{
 .results-card-wrapper{
     background-color: var(--primary-color);
     border-radius: 10%;
-    width: 20rem;
+    width: 23rem;
     height: 23rem;
     display: flex;
     align-items: center;
@@ -169,15 +180,15 @@ html{
     color: white;
 }
 .results-card-wrapper img{
-    width: 10rem;
+    width: 9.5rem;
 }
 .results-card-wrapper h1{
     font-family: primary-font;
     font-size: 2.1em;
-    padding-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
 }
 .results-card-wrapper p{
     font-family: secondary-font;
     color: var(--secondary-color);
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
