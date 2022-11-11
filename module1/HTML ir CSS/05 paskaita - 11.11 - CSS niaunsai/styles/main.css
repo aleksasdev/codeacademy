@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: primary-font;
     src: url('../assets/Saiyan-Sans.ttf');
@@ -14,12 +18,21 @@
 }
 
 :root{
-    --primary-color: #14142b99;
+    --primary-color: #14142bbb;
     --secondary-color: #e76a24;
     --third-color: black;
+
+    --section-background-primary-color: #FF6633;
+    --section-background-secondary-color: #FCBDA3;
 }
 
 /* Global styles */
+.primary-font-style{
+    font-family: primary-font;
+}
+.secondary-font-style{
+    font-family: secondary-font;
+}
 .button-style{
     background-color: var(--secondary-color);
     border-radius: 5%;
@@ -32,6 +45,13 @@
     cursor: pointer;
     font-family: primary-font;
     font-size: 2.3em;
+    user-select: none;
+}
+.button-style:hover{
+    outline: 2px solid white;
+}
+.wrapper-style{
+    box-shadow: 1px 1px 1px 1px white;
 }
 
 /* Navbar */
@@ -68,7 +88,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 7rem;
     text-align: center;
 }
 .hero-container img{
@@ -76,27 +96,29 @@
     top: 0;
     z-index: -1;
     width: 100%;
-    height: auto;
+    height: 100vh;
 }
 .hero-content-background{
     flex-direction: column;
-    background-color: rgba(0,0,0,0.6);
+    background-color: var(--primary-color);
     color: antiquewhite;
     font-size: 2em;
-    padding: 5rem;
-    box-shadow: 1px 1px 1px 1px;
+    padding: 3rem;
     max-width: 70rem;
+    border-radius: 5%;
+    position: relative;
+    overflow: hidden;
 }
 .hero-content-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
-.hero-content-wrapper h1{
-    font-family: secondary-font;
-    font-size: 1.5em;
+.hero-content-wrapper p{
+    width: 40rem;
+    z-index: 5;
 }
 .cta-button{
     width: 25rem;
@@ -106,4 +128,56 @@
     justify-content: center;
     align-items: center;
     padding: 3rem;
+}
+.hero-avatar-container{
+    position: absolute;
+    z-index: 0;
+    width: 16rem;
+    height: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+.hero-avatar-container img{
+    width: 95%;
+    height: auto;
+}
+
+/* Results section */
+.results-container{
+    background-color: var(--section-background-primary-color);
+    height: 25rem;
+    width: 100%;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px dashed black;
+    gap: 2rem;
+}
+.results-card-wrapper{
+    background-color: var(--primary-color);
+    border-radius: 10%;
+    width: 20rem;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    flex-direction: column;
+    color: white;
+}
+.results-card-wrapper img{
+    width: 10rem;
+}
+.results-card-wrapper h1{
+    font-family: primary-font;
+    font-size: 2.1em;
+    padding-bottom: 0.5rem;
+}
+.results-card-wrapper p{
+    font-family: secondary-font;
+    color: var(--secondary-color);
+    font-size: 1.4em;
 }
