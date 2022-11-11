@@ -9,7 +9,17 @@ html{
 }
 
 h1, a{
-    color: black;
+    color: white;
+    font-family: primary-font;
+    letter-spacing: 0.1rem;
+    -webkit-text-stroke-color: black;
+}
+a{
+    -webkit-text-stroke-width: 1px;
+}
+h1{
+    letter-spacing: 0.2rem;
+    -webkit-text-stroke-width: 0.5px;
 }
 p {
     font-family: secondary-font;
@@ -25,12 +35,14 @@ p {
 }
 
 :root{
-    --primary-color: #14142bee;
-    --secondary-color: #e76a24;
+    --primary-color: #23272aee;
+    --secondary-color: #d45929;
     --third-color: black;
 
-    --section-background-primary-color: #FF6633;
-    --section-background-secondary-color: #FCBDA3;
+    --section-background-primary-color: #23272a;
+    --section-background-secondary-color: #2c2f33;
+
+    --hero-margin: 13rem;
 }
 
 /* Global styles */
@@ -50,6 +62,7 @@ p {
 }
 .wrapper-style{
     box-shadow: 1px 1px 1px 1px white;
+    border-radius: 10%;
 }
 .text-background-style{
     border: 5px solid white;
@@ -93,7 +106,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 7rem;
+    margin-top: var(--hero-margin);
     text-align: center;
 }
 .hero-container img{
@@ -161,7 +174,7 @@ p {
     background-color: var(--section-background-primary-color);
     height: 25rem;
     width: 100%;
-    margin-top: 20vh;
+    margin-top: var(--hero-margin);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,14 +183,16 @@ p {
 }
 .results-card-wrapper{
     background-color: var(--primary-color);
-    border-radius: 10%;
-    width: 23rem;
+    width: 24rem;
     height: 23rem;
     display: flex;
     align-items: center;
     padding: 0.5rem 2rem;
     flex-direction: column;
     color: white;
+}
+#results-icon{
+    font-size: 0.6em;
 }
 .results-card-wrapper img{
     width: 9.5rem;
@@ -191,4 +206,31 @@ p {
     font-family: secondary-font;
     color: var(--secondary-color);
     font-size: 1.5em;
+}
+
+/* About us section */
+.about-us-container{
+    width: 100%;
+    height: 35rem;
+    background-color: var(--section-background-secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-us-container img{
+    max-width:50rem;
+    max-height:30rem;
+}
+.about-us-content-wrapper{
+    width: 45rem;
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.8em;
+}
+.about-us-content-wrapper p{
+    color: white;
 }
