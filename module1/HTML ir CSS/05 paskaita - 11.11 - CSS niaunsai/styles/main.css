@@ -12,14 +12,12 @@ h1, a{
     color: white;
     font-family: primary-font;
     letter-spacing: 0.1rem;
-    -webkit-text-stroke-color: black;
-}
-a{
-    -webkit-text-stroke-width: 1px;
+    text-shadow: 1px 1px 5px black;
 }
 h1{
     letter-spacing: 0.2rem;
-    -webkit-text-stroke-width: 0.5px;
+    text-shadow: -10px 5px 10px black;
+    font-family: secondary-font;
 }
 p {
     font-family: secondary-font;
@@ -27,7 +25,7 @@ p {
 
 @font-face {
     font-family: primary-font;
-    src: url('../assets/Saiyan-Sans.ttf');
+    src: url('../assets/Saiyan-Sans\ Right\ Oblique.ttf');
 }
 @font-face {
     font-family: secondary-font;
@@ -39,10 +37,10 @@ p {
     --secondary-color: #d45929;
     --third-color: black;
 
-    --section-background-primary-color: #23272a;
-    --section-background-secondary-color: #2c2f33;
+    --section-background-primary-color: #E6B666;
+    --section-background-secondary-color: grey;
 
-    --hero-margin: 13rem;
+    --hero-margin: 12.5rem;
 }
 
 /* Global styles */
@@ -66,10 +64,35 @@ p {
 }
 .text-background-style{
     border: 5px solid white;
-    padding: 0.5rem;
+    padding: 1.5rem 2rem;
     background-color: var(--secondary-color);
     clip-path: polygon(50% 0%, 100% 0, 97% 89%, 0 100%, 0 0);
     cursor: auto;
+}
+.seperator-wrapper-style{
+    clip-path: polygon(50% 68%, 95% 21%, 100% 0, 100% 100%, 68% 100%, 32% 100%, 0 100%, 0 0, 5% 22%);
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Header */
+header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
 
 /* Navbar */
@@ -81,6 +104,9 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 0 3rem;
+    position: absolute;
+    top: 0;
+    z-index: 50;
 }
 .logo-container img{
     height: 2.5rem;
@@ -106,22 +132,14 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: var(--hero-margin);
     text-align: center;
-}
-.hero-container img{
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
 }
 .hero-content-background{
     flex-direction: column;
     background-color: var(--primary-color);
     font-size: 2em;
     padding: 3rem;
-    max-width: 70rem;
+    width: 60rem;
     border-radius: 5%;
     position: relative;
     overflow: hidden;
@@ -132,10 +150,6 @@ p {
     align-items: center;
     flex-direction: column;
     gap: 1.5rem;
-}
-.hero-content-wrapper h1{
-    font-family: primary-font;
-    padding: 1rem 2rem;
 }
 .hero-content-wrapper p{
     color: white;
@@ -174,7 +188,6 @@ p {
     background-color: var(--section-background-primary-color);
     height: 25rem;
     width: 100%;
-    margin-top: var(--hero-margin);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +196,7 @@ p {
 }
 .results-card-wrapper{
     background-color: var(--primary-color);
-    width: 24rem;
+    width: 28rem;
     height: 23rem;
     display: flex;
     align-items: center;
@@ -198,8 +211,7 @@ p {
     width: 9.5rem;
 }
 .results-card-wrapper h1{
-    font-family: primary-font;
-    font-size: 2.1em;
+    font-size: 2.3em;
     margin-bottom: 0.7rem;
 }
 .results-card-wrapper p{
