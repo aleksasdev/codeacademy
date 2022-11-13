@@ -8,19 +8,28 @@ html{
     scroll-behavior: smooth;
 }
 
+h1, h2, a{
+    text-shadow: 1px 1px 5px black;
+}
 h1, a{
     color: white;
     font-family: primary-font;
     letter-spacing: 0.1rem;
-    text-shadow: 1px 1px 5px black;
 }
 h1{
-    letter-spacing: 0.2rem;
-    text-shadow: -10px 5px 10px black;
     font-family: secondary-font;
+    font-size: 1.7em;
+}
+h2{
+    font-family: secondary-font;
+    font-size: 1.2em;
 }
 p {
     font-family: secondary-font;
+    font-size: 1.3em;
+}
+a {
+    font-size: 2em;
 }
 
 @font-face {
@@ -29,16 +38,16 @@ p {
 }
 @font-face {
     font-family: secondary-font;
-    src: url('../assets/Bronova Regular.otf');
+    src: url('../assets/homeblock.ttf');
 }
 
 :root{
     --primary-color: #23272aee;
     --secondary-color: #d45929;
     --third-color: black;
-
-    --section-background-primary-color: #E6B666;
-    --section-background-secondary-color: grey;
+    
+    --section-background-primary-color: #666564;
+    --section-background-secondary-color: #252322;
 
     --hero-margin: 12.5rem;
 }
@@ -52,7 +61,6 @@ p {
     -webkit-user-drag: none;
     cursor: pointer;
     font-family: primary-font;
-    font-size: 2.3em;
     user-select: none;
 }
 .button-style:hover{
@@ -70,12 +78,14 @@ p {
     cursor: auto;
 }
 .seperator-wrapper-style{
-    clip-path: polygon(50% 68%, 95% 21%, 100% 0, 100% 100%, 68% 100%, 32% 100%, 0 100%, 0 0, 5% 22%);
-    background-color: var(--primary-color);
     width: 100%;
-    height: 2rem;
     position: absolute;
     bottom: 0;
+    height: 3rem;
+    background-color: var(--secondary-color);
+    margin-bottom: -2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 54%);
+    z-index: 20;
 }
 
 /* Header */
@@ -137,9 +147,8 @@ header{
 .hero-content-background{
     flex-direction: column;
     background-color: var(--primary-color);
-    font-size: 2em;
     padding: 3rem;
-    width: 60rem;
+    width: 42rem;
     border-radius: 5%;
     position: relative;
     overflow: hidden;
@@ -155,8 +164,7 @@ header{
     color: white;
     width: 35rem;
     z-index: 5;
-    font-size: 0.8em;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 .cta-button{
     width: 25rem;
@@ -166,6 +174,7 @@ header{
     justify-content: center;
     align-items: center;
     padding: 3rem;
+    font-size: 3.2em;
 }
 .hero-avatar-container{
     position: absolute;
@@ -186,12 +195,11 @@ header{
 /* Results section */
 .results-container{
     background-color: var(--section-background-primary-color);
-    height: 25rem;
+    height: 30rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 3px dashed black;
     gap: 2rem;
 }
 .results-card-wrapper{
@@ -210,14 +218,13 @@ header{
 .results-card-wrapper img{
     width: 9.5rem;
 }
-.results-card-wrapper h1{
-    font-size: 2.3em;
+.results-card-wrapper h2{
     margin-bottom: 0.7rem;
 }
 .results-card-wrapper p{
     font-family: secondary-font;
     color: var(--secondary-color);
-    font-size: 1.5em;
+    text-shadow: 1px 1px 3px black;
 }
 
 /* About us section */
@@ -228,6 +235,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .about-us-container img{
     max-width:50rem;
@@ -241,7 +249,6 @@ header{
     text-align: center;
     flex-direction: column;
     gap: 0.5rem;
-    font-size: 1.8em;
 }
 .about-us-content-wrapper p{
     color: white;
