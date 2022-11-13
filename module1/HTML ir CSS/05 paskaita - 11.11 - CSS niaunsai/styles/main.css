@@ -9,10 +9,10 @@ html{
 }
 
 h1, h2, a{
+    color: white;
     text-shadow: 1px 1px 5px black;
 }
 h1, a{
-    color: white;
     font-family: primary-font;
     letter-spacing: 0.1rem;
 }
@@ -42,19 +42,16 @@ a {
 }
 
 :root{
-    --primary-color: #23272aee;
-    --secondary-color: #d45929;
+    --primary-color: #d45929;
+    --secondary-color: #111111cc;
     --third-color: black;
-    
-    --section-background-primary-color: var(--primary-color);
-    --section-background-secondary-color: #5d5956;
 
     --hero-margin: 12.5rem;
 }
 
 /* Global styles */
 .button-style{
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     border-radius: 5%;
     padding: 0.4rem 1rem;
     text-decoration: none;
@@ -67,13 +64,14 @@ a {
     outline: 2px solid white;
 }
 .wrapper-style{
+    background-color: var(--secondary-color);
     box-shadow: 1px 1px 1px 1px white;
     border-radius: 10%;
 }
 .text-background-style{
     border: 5px solid white;
     padding: 1.5rem 2rem;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     clip-path: polygon(50% 0%, 100% 0, 97% 89%, 0 100%, 0 0);
     cursor: auto;
 }
@@ -82,22 +80,23 @@ a {
     position: absolute;
     bottom: 0;
     height: 3rem;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     margin-bottom: -2rem;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 54%);
     z-index: 20;
 }
 .side-wrapper-1-style{
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     width: 30rem;
-    height: 100%;
-    clip-path: polygon(0 0, 39% 0, 75% 100%, 0% 100%);
+    height: 40%;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    margin-right: 2rem;
 }
 .side-wrapper-2-style{
     width: 20rem;
     height: 30%;
     clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 .character-style{
     max-width:50rem;
@@ -125,7 +124,7 @@ header{
 .navbar-container{
     height: 4.5rem;
     width: 100%;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -162,7 +161,6 @@ header{
 }
 .hero-content-background{
     flex-direction: column;
-    background-color: var(--primary-color);
     padding: 3rem;
     width: 42rem;
     border-radius: 5%;
@@ -185,7 +183,6 @@ header{
 .cta-button{
     width: 25rem;
     height: 6rem;
-    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,7 +227,6 @@ header{
     align-items: center;
 }
 .results-card-wrapper{
-    background-color: var(--primary-color);
     width: 28rem;
     height: 27rem;
     display: flex;
@@ -238,7 +234,6 @@ header{
     justify-content: center;
     padding: 0.5rem 2rem;
     flex-direction: column;
-    color: white;
 }
 #results-icon{
     font-size: 0.6em;
@@ -251,7 +246,7 @@ header{
 }
 .results-card-wrapper p{
     font-family: secondary-font;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     text-shadow: 1px 1px 3px black;
 }
 
@@ -261,7 +256,7 @@ header{
     height: 35rem;
     background-color: var(--section-background-primary-color);
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     position: relative;
 }
