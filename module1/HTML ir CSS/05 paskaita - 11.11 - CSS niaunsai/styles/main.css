@@ -9,7 +9,7 @@ html{
 }
 
 h1, h2, a{
-    color: white;
+    color: var(--text-color);
     text-shadow: 1px 1px 5px black;
 }
 h1, a{
@@ -17,18 +17,21 @@ h1, a{
     letter-spacing: 0.1rem;
 }
 h1{
-    font-family: secondary-font;
-    font-size: 1.9em;
+    font-family: primary-font;
+    font-size: 2.4em;
+    letter-spacing: 0.2rem;
 }
 h2{
-    font-family: secondary-font;
-    font-size: 1.2em;
+    font-family: primary-font;
+    font-size: 1.7em;
+    letter-spacing: 0.2rem;
 }
 p {
     font-family: secondary-font;
-    font-size: 1.3em;
-    color: white;
-    width: 20rem;
+    font-size: 1.2em;
+    color: var(--text-color);
+    width: 80%;
+    z-index: 3;
 }
 a {
     font-size: 2em;
@@ -40,15 +43,14 @@ a {
 }
 @font-face {
     font-family: secondary-font;
-    src: url('../assets/Roboto-Medium.ttf');
+    src: url('../assets/homeblock.ttf');
 }
 
 :root{
-    --primary-color: #d45929;
+    --primary-color: #f85d1ae8;
     --secondary-color: #111111cc;
-    --third-color: black;
-
-    --hero-margin: 12.5rem;
+    --third-color: #8A9294;
+    --text-color: white;
 }
 
 /* Global styles */
@@ -68,11 +70,18 @@ a {
 .wrapper-style{
     background-color: var(--secondary-color);
     box-shadow: 1px 1px 1px 1px white;
-    border-radius: 10%;
+    border-radius: 5%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 1.6rem;
 }
 .text-background-style{
     border: 5px solid white;
-    padding: 1.5rem 2rem;
+    padding: .5rem 1rem;
     background-color: var(--primary-color);
     clip-path: polygon(50% 0%, 100% 0, 97% 89%, 0 100%, 0 0);
     cursor: auto;
@@ -163,18 +172,10 @@ header{
 }
 .hero-content-background{
     flex-direction: column;
-    padding: 3rem;
     width: 42rem;
     border-radius: 5%;
     position: relative;
     overflow: hidden;
-}
-.hero-content-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.5rem;
 }
 .cta-button{
     width: 25rem;
@@ -189,7 +190,6 @@ header{
     position: absolute;
     z-index: 0;
     width: 16rem;
-    height: 16rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,7 +203,7 @@ header{
 
 /* Results section */
 .results-container{
-    background-color: var(--section-background-primary-color);
+    background-color: var(--third-color);
     height: 45rem;
     width: 100%;
     display: flex;
@@ -223,13 +223,15 @@ header{
     align-items: center;
 }
 .results-card-wrapper{
-    width: 28rem;
+    width: 25rem;
     height: 27rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 2rem;
     flex-direction: column;
+    background-color: var(--secondary-color);
+    border-radius: 15%;
+    gap: 0.2rem;
 }
 #results-icon{
     font-size: 0.6em;
@@ -249,7 +251,7 @@ header{
 .about-us-container{
     width: 100%;
     height: 35rem;
-    background-color: var(--secondary-color);
+    background-color: var(--third-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,7 +264,6 @@ header{
     align-items: center;
     text-align: center;
     flex-direction: column;
-    gap: 0.5rem;
 }
 
 /* Merch section */
@@ -272,16 +273,14 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--section-background-secondary-color);
+    background-color: var(--third-color);
     gap: 2rem;
 }
 .merch-content-wrapper{
     width: 40rem;
     text-align: center;
-    color: white;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     justify-content: center;
     align-items: center;
 }
