@@ -18,7 +18,7 @@ h1, a{
 }
 h1{
     font-family: secondary-font;
-    font-size: 1.7em;
+    font-size: 1.9em;
 }
 h2{
     font-family: secondary-font;
@@ -27,6 +27,8 @@ h2{
 p {
     font-family: secondary-font;
     font-size: 1.3em;
+    color: white;
+    width: 20rem;
 }
 a {
     font-size: 2em;
@@ -38,7 +40,7 @@ a {
 }
 @font-face {
     font-family: secondary-font;
-    src: url('../assets/homeblock.ttf');
+    src: url('../assets/Roboto-Medium.ttf');
 }
 
 :root{
@@ -174,12 +176,6 @@ header{
     flex-direction: column;
     gap: 1.5rem;
 }
-.hero-content-wrapper p{
-    color: white;
-    width: 35rem;
-    z-index: 5;
-    margin: 1rem 0;
-}
 .cta-button{
     width: 25rem;
     height: 6rem;
@@ -241,20 +237,19 @@ header{
 .results-card-wrapper img{
     width: 9.5rem;
 }
+.results-card-wrapper p{
+    width: auto;
+    color: var(--primary-color);
+}
 .results-card-wrapper h2{
     margin-bottom: 0.7rem;
-}
-.results-card-wrapper p{
-    font-family: secondary-font;
-    color: var(--primary-color);
-    text-shadow: 1px 1px 3px black;
 }
 
 /* About us section */
 .about-us-container{
     width: 100%;
     height: 35rem;
-    background-color: var(--section-background-primary-color);
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,12 +259,10 @@ header{
     width: 35rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     flex-direction: column;
     gap: 0.5rem;
-}
-.about-us-content-wrapper p{
-    color: white;
 }
 
 /* Merch section */
