@@ -214,3 +214,61 @@ main{
 .task3-table tbody .two{
     color: orange;
 }
+
+/* Task 5 */
+:root{
+    --task5-primary-color: #202739;
+    --task5-secondary-color: #202739;
+    --task5-third-color: #202739;
+
+    --task5-primary-text-color: #a7a0ae;
+    --task5-secondary-text-color: #f86478;
+
+    --task5-primary-background-color: #323c50;
+    --task5-secondary-background-color: #2d3446;
+
+}
+#task5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20rem 0;
+    display: flex;
+    height: 40rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--task5-primary-color);
+    color: var(--task5-primary-text-color);
+}
+.table-container-task5 span{
+    padding: 0.4rem 0.8rem;
+    border-radius: 10%;
+    color: white;
+}
+.lost-span-style{
+    background-color: #dd0000;
+}
+.won-span-style{
+    background-color: #14dc4c;
+}
+.tie-span-style{
+    background-color: #ffcd00;
+}
+
+
+.table-container-task5 tbody th{
+    border: 1px solid black;
+    border-radius: 5%;
+    padding: 1rem;
+}
+.table-container-task5 tbody th:first-child{
+    padding: 0.7rem;
+}
+.table-container-task5 tbody tr:nth-child(2n+1){
+    background-color: var(--task5-primary-background-color);
+}
+.table-container-task5 tbody tr:nth-child(2n){
+    background-color: var(--task5-secondary-background-color);
+}
+.table-container-task5 tbody th:first-child{
+    color: var(--task5-secondary-text-color);
+}
