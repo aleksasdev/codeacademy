@@ -1,3 +1,5 @@
+@import url('animations.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -36,6 +38,7 @@ a{
 }
 main{
     position: relative;
+    overflow: hidden;
 }
 
 @font-face {
@@ -70,7 +73,6 @@ main{
 }
 .wrapper-style{
     background-color: var(--secondary-color);
-    box-shadow: 1px 1px 1px 1px white;
     border-radius: 5%;
     padding: 2.5rem;
     display: flex;
@@ -78,7 +80,8 @@ main{
     justify-content: center;
     text-align: center;
     align-items: center;
-    gap: 1.6rem;
+    border: 0.5rem solid var(--primary-color);
+    row-gap: 1.5rem;
 }
 .text-background-style{
     border: 5px solid white;
@@ -103,6 +106,7 @@ main{
     height: 10rem;
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
     margin-right: 2rem;
+    animation: back-and-forth 4s infinite linear;
 }
 .side-wrapper-2-style{
     width: 15rem;
@@ -111,19 +115,37 @@ main{
     background-color: var(--primary-color);
 }
 .character-style{
-    max-width:50rem;
-    max-height:30rem;
+    height:20rem;
+    width:auto;
 }
 .section-style{
-    background-color: #111111bb;
-    height: 55rem;
+    background-color: #11111199;
+    height: 50rem;
 }
 .section-background-style{
     position: absolute;
-    height: 100%;
+    height: auto;
     width: 100%;
     z-index: -50;
     top: 0;
+}
+.section-text-container-style{
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.cta-button-style{
+    width: 20rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.blending-shadow-style{
 }
 
 /* Header */
@@ -189,17 +211,8 @@ header{
     position: relative;
     overflow: hidden;
 }
-.cta-button{
-    width: 23rem;
-    height: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-}
 .hero-avatar-container{
     position: absolute;
-    z-index: 0;
     width: 16rem;
     display: flex;
     justify-content: center;
@@ -242,6 +255,7 @@ header{
     background-color: var(--secondary-color);
     border-radius: 15%;
     gap: 0.2rem;
+    border: 0.2rem solid var(--primary-color);
 }
 #results-icon{
     font-size: 0.6em;
@@ -266,12 +280,11 @@ header{
     position: relative;
 }
 .about-us-content-wrapper{
-    width: 35rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 /* Merch section */
@@ -283,12 +296,12 @@ header{
     gap: 2rem;
 }
 .merch-content-wrapper{
-    width: 40rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 .merch-second-side-wrapper{
     transform: rotate(180deg);
@@ -303,6 +316,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: 0.2rem solid var(--primary-color);
     bottom: 0;
 }
 .footer-container p{
