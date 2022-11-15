@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 paskaita</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/task1.css">
+    <link rel="stylesheet" href="./styles/task2.css">
+</head>
+<body>
+    <main>
+        <!-- Task 1 -->
+        <section id="task1">
+            <form class="form-container-task1" action="">
+                <h1>Get in touch</h1>
+                <!-- First row -->
+                <div class="double-input-row-task1">
+                    <div>
+                        <label for="">FULL NAME</label>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div>
+                        <label for="">EMAIL ADDRESS</label>
+                        <input type="text" placeholder="Email">
+                    </div>
+                </div>
+                <!-- Second row -->
+                <div class="singular-input-row-task1">
+                    <div>
+                        <label for="">SUBJECT</label>
+                        <input type="text" placeholder="Subject">
+                    </div>
+                </div>
+                <!-- Third row -->
+                <div class="singular-input-row-task1">
+                    <div>
+                        <label for="">MESSAGE</label>
+                        <textarea name="" id="" placeholder="Message"></textarea>
+                    </div>
+                </div>
+                <!-- Button -->
+                <button class="submit-button-task1" type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Task 2 -->
+        <section id="task2">
+            <form class="form-container-task2" action="">
+                <h1>Register to Fancy Form</h1>
+                <p>All fields are <span class="highlighted-word-task2">required</span> unless marked as "optional"</p>
+                <!-- First inputs -->
+                <div class="input-container-task2">
+                    <label for="">Your unique ID that you can't change</label>
+                    <input id="id-input-task2" readonly placeholder="XBX0123" type="text">
+                </div>
+                <div class="input-container-task2">
+                    <label for="">Email:</label>
+                    <input required type="email">
+                </div>
+                <div class="input-container-task2">
+                    <label for="">Password:</label>
+                    <input required type="password">
+                </div>
+                <!-- Second inputs -->
+                <div class="input-container-task2">
+                    <label for="">Age:</label>
+                    <input required id="age-container-task2" min="18" max="65" type="number">
+                </div>
+                <!-- Third inputs -->
+                <div class="input-container-task2">
+                    <label for="">Tell us a little about yourself <span style="font-size: smaller;">(optional):</span></label>
+                    <textarea name="" id="comment-container-task2"></textarea>
+                </div>
+                <!-- Accept terms -->
+                <div class="agree-terms-container-task2">
+                    <input type="checkbox" name="" id="">
+                    <label for="">I agree with the Terms & Conditions</label>
+                </div>
+                <!-- Submit button -->
+                <button type="submit" class="submit-button-task2">Register</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
