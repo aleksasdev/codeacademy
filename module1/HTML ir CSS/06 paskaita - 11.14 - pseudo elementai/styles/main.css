@@ -288,11 +288,12 @@ main{
     width: 100%;
     height: 100%;
 }
-
 /* Task 5 table */
+.table-container-task5 thead th{
+    padding: 0.5rem;
+}
 .table-container-task5 tbody th{
-    border: 1px solid black;
-    padding: 0.5rem 1.5rem;
+    padding: 0.4rem 1rem;
 }
 .table-container-task5 tbody th:first-child{
     padding: 0.7rem;
@@ -319,3 +320,42 @@ main{
     justify-content: center;
     align-items: center;
 }
+.lost-span-style{
+    background-color: #dd0000;
+}
+.won-span-style{
+    background-color: #14dc4c;
+}
+.tie-span-style{
+    background-color: #ffcd00;
+}
+
+/* Task 6 extra */
+#task6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50rem;
+    background-color: #202739;
+    margin: 20rem 0;
+}
+
+.table-container-task6{
+    color: var(--task5-primary-text-color);
+}
+.table-container-task6 tbody th{
+    border: 1px solid black;
+    padding: 0.5rem 1.5rem;
+}
+/* Make one element change color and background */
+.table-container-task6 tbody th:hover{
+    color: red;
+    background-color: var(--task5-primary-background-color);
+}
+/* Make the whole row of the element change color and background */
+.table-container-task6 tbody tr:hover{
+    color: white;
+    background-color: orange;
+}
+/* Make the whole column of the element change background */
