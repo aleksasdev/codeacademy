@@ -15,9 +15,11 @@
     height: 1.6rem;
     width: 13rem;
 }
+.form-container-task2 :required:invalid{
+    border: 2px solid red;
+}
 .form-container-task2 :required{
-    border: 3px solid red;
-    border-left: 5px solid rgb(241, 148, 237);
+    border: 2px solid green;
 }
 /* First input type */
 .highlighted-word-task2{
@@ -56,8 +58,8 @@
     display: flex;
     gap: 0.2rem;
 }
-.agree-terms-container-task2 input:checked + .agree-terms-container-task2 label{
-    color: blue;
+.agree-terms-container-task2 input:checked + label {
+    color: rgb(51, 141, 214);  
 }
 /* Submit button */
 .submit-button-task2{
