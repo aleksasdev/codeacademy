@@ -8,8 +8,6 @@
     flex-direction: row;
     padding: 0;
     gap: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    user-select: none;
 }
 :root{
     --task3-primary-color: #807182;
@@ -28,6 +26,7 @@
     justify-content: center;
     align-items: center;
     margin: 0.4rem 0;
+    font-family: 'Montserrat';
 }
 /* Radios */
 .form-container-task3 input[type="radio"]{
@@ -45,6 +44,7 @@
     align-items: center;
     margin: 0 0.5rem;
     cursor: pointer;
+    user-select: none;
 }
 .custom-radio-container-task3 label:hover{
     outline: 0.2px solid black;
@@ -82,12 +82,10 @@
 
 /* Form */
 .form-container-task3{
+    position: relative;
     height: 100%;
     width: 100%;
     background-color: var(--task3-secondary-color);
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
 }
 .form-grid-task3{
     display: grid;
@@ -105,4 +103,32 @@
     }
     .weight-selection-task3{
         grid-column-end: span 2;
+    }
+
+/* Next section */
+.next-container-task3{
+    position: absolute;
+    height: 13%;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+    .next-container-task3 button{
+        padding: 0.8rem 2.5rem;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+    }
+    .next-container-task3 .back-button-task3{
+        background-color: transparent;
+        border: 0.5px solid var(--task3-secondary-color);
+    }
+    .next-container-task3 .next-button-task3{
+        background-color: var(--task3-primary-color);
+        color: white;
     }
