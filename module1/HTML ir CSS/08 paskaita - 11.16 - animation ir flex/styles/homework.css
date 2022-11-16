@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+#homework{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+    color: white;
+    flex-direction: column;
+    padding: 4rem 0;
+    font-family: "Roboto";
+    font-weight: bolder;
+}
+
+/* Homework 1 */
+#homework .homework1-nav{
+    display: flex;
+    height: 6rem;
+    width: 70%;
+    background-color: #abcf00;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+    #homework .homework1-nav img{
+        height: 4rem;
+        width: auto;
+    }
+    #homework .homework1-nav div{
+        display: flex;
+        gap: 2rem;
+        color: black;
+        font-size: 1.1em;
+    }
+
+/* Homework 2 */
+.homework2-section{
+    display: flex;
+    width: 53rem;
+    height: 25rem;
+    background-color: #00253f;
+}
+    .homework2-section p{
+        color: #8da4b5;
+    }
+    .first-column-homework2{
+        width: 40%;
+        display: flex;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .first-column-homework2 h1{
+        font-size: 3em;
+        line-height: 5rem;
+        color: #83d4bb;
+    }
+    .second-column-homework2{
+        display: flex;
+        width: 70%;
+        gap: 0.9rem;
+        justify-content: flex-end;
+    }
+        .second-column-homework2 img{
+            height: 85%;
+            width: 11rem;
+            object-fit: cover;
+        }
+        .second-column-homework2 > div h1{
+            margin-top: 0.5rem;
+        }
