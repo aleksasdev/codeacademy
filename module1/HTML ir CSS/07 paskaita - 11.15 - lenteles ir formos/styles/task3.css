@@ -8,6 +8,7 @@
     flex-direction: row;
     padding: 0;
     gap: 0;
+    font-family: 'Montserrat';
 }
 :root{
     --task3-primary-color: #807182;
@@ -26,7 +27,6 @@
     justify-content: center;
     align-items: center;
     margin: 0.4rem 0;
-    font-family: 'Montserrat';
 }
 /* Radios */
 .form-container-task3 input[type="radio"]{
@@ -63,9 +63,18 @@
     background-color: var(--task3-primary-color);
     width: 70%;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
+    .aside-container-task3 img{
+        width: 15rem;
+        height: auto;
+        position: absolute;
+        bottom: -2.1rem;
+        right: 1.9rem;
+    }
 .logo-container-task3{
     display: flex;
     align-items: center;
