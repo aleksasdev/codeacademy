@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 
 #task3 main{
-    width: 50rem;
+    width: 55rem;
     height: 35rem;
-    display: flex;
+    display: grid;
     background-color: white;
-    flex-direction: row;
+    grid-template-columns: minmax(0, 0.5fr) minmax(0, 1fr);
     padding: 0;
     gap: 0;
     font-family: 'Montserrat';
@@ -19,7 +19,7 @@
 /* Global styling */
 .form-container-task3 input, .custom-radio-container-task3{
     width: 100%;
-    height: 2.5rem;
+    height: 2.7rem;
     border-radius: 5px;
     border: 1px solid var(--task3-third-color);
     background-color: white;
@@ -61,19 +61,20 @@
 .aside-container-task3{
     height: 100%;
     background-color: var(--task3-primary-color);
-    width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
+    grid-row-end: span 2;
 }
     .aside-container-task3 img{
         width: 15rem;
         height: auto;
         position: absolute;
-        bottom: -2.1rem;
-        right: 1.9rem;
+        bottom: -11.1rem;
+        right: 0.2rem;
     }
 .logo-container-task3{
     display: flex;
@@ -91,7 +92,6 @@
 
 /* Form */
 .form-container-task3{
-    position: relative;
     height: 100%;
     width: 100%;
     background-color: var(--task3-secondary-color);
@@ -99,8 +99,8 @@
 .form-grid-task3{
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    row-gap: 0.8rem;
-    column-gap: 2rem;
+    row-gap: 0.6rem;
+    column-gap: 5rem;
 }
     .upload-photo-span-task3{
         background-color: var(--task3-third-color);
@@ -109,6 +109,7 @@
     }
     .form-grid-task3 h1{
         grid-column: span 2;
+        font-size: 1.9em;
     }
     .weight-selection-task3{
         grid-column-end: span 2;
@@ -116,16 +117,11 @@
 
 /* Next section */
 .next-container-task3{
-    position: absolute;
-    height: 13%;
     background-color: white;
-    width: 100%;
-    left: 0;
-    bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem 3rem;
 }
     .next-container-task3 button{
         padding: 0.8rem 2.5rem;
