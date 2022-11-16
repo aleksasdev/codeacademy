@@ -16,10 +16,10 @@
     width: 13rem;
 }
 .form-container-task2 :required:invalid{
-    border: 2px solid red;
+    border: 3px solid #ee82ee;
 }
 .form-container-task2 :required, #comment-container-task2{
-    border: 2px solid green;
+    border: 3px solid green;
 }
 /* First input type */
 .highlighted-word-task2{
