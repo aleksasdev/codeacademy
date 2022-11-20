@@ -10,6 +10,7 @@ main {
 }
 :root{
    --color1: #a2cf8b;
+   --color2: #8d8e8f;
 
    --background-color1: #3f4249aa;
    --background-color2: #f4f4f4;
@@ -178,7 +179,7 @@ nav img{
 #call-to-action .images-container img{
    width: 100%;
    height: 100%;
-   object-fit: contain;
+   object-fit: cover;
 }
 #call-to-action .images-container img:nth-child(1){
    grid-column: 1 / span 3;
@@ -214,10 +215,81 @@ nav img{
    gap: var(--items-gap-size);
 }
 #results .images-container img{
-   width: 15rem;
-   height: 15rem;
+   width: 12rem;
+   height: 10rem;
    object-fit: cover;
    object-position: center;
+}
+
+/* Blog */
+#blog{
+   background-color: var(--color1);
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+#blog .headline{
+   color: var(--text-color1);
+}
+#blog .images-container{
+   display: grid;
+   grid-template: 13rem 13rem / 30rem 35rem;
+   gap: var(--items-gap-size);
+}
+#blog img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   object-position: right;
+}
+#blog .big-image{
+   grid-row: 1 / span 2;
+   position: relative;
+}
+#blog .small-image{
+   position: relative;
+}
+#blog .description-overlay{
+   width: 100%;
+   position: absolute;
+   z-index: 4;
+   color: var(--text-color1);
+   bottom: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 1rem;
+   gap: 0.4rem;
+   background-color: #111111aa;
+}
+#blog .grayed-out-text{
+   color: #a7a5a5;
+}
+
+/* Stats */
+#stats{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: var(--items-gap-size);
+}
+#stats .card{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 0.4rem;
+   background-color: var(--background-color2);
+   padding: 2rem;
+   width: 16rem;
+}
+#stats .card p:nth-child(1){
+   color: var(--color1);
+   font-weight: bold;
+   font-size: 1.2em;
+}
+#stats .card p:nth-child(2){
+   color: var(--color2);
 }
 
 /* Responsiveness */
