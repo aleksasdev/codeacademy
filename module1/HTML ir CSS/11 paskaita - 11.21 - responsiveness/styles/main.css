@@ -7,6 +7,9 @@
 body{
    background-color: white;
 }
+h1 {
+   text-align: center;
+}
 
 /* Task 1 */
 #task1{
