@@ -24,7 +24,7 @@ main {
 
 /* Global */
 section{
-   padding: 5rem;
+   padding: 8rem;
    gap: 3rem;
 }
 button{
@@ -125,8 +125,8 @@ nav img{
    background-color: var(--background-color2);
 }
 #about-us .cards-container{
-   display: flex;
-   justify-content: center;
+   display: grid;
+   grid-template: 1fr / repeat(4, 1fr);
    gap: var(--items-gap-size);
 }
 #about-us .cards-container .card{
@@ -135,7 +135,6 @@ nav img{
    justify-content: space-between;
    align-items: center;
    flex-direction: column;
-   width: 18rem;
    padding: 2rem;
    gap: 1.5rem;
    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -151,17 +150,15 @@ nav img{
 
 /* Call to action */
 #call-to-action{
-   display: flex;
-   justify-content: center;
-   align-items: center;
    color: var(--text-color1);
    position: relative;
+   display: grid;
+   grid-template: 1fr / 1fr 1fr;
 }
 #call-to-action .content-container{
    display: flex;
    flex-direction: column;
    gap: 2rem;
-   width: 40%;
 }
 #call-to-action .buttons-wrapper{
    display: flex;
@@ -173,6 +170,7 @@ nav img{
 }
 #call-to-action .images-container{
    display: grid;
+   justify-self: right;
    grid-template: repeat(4, 7rem) / 10rem repeat(4, 6rem) 5rem;
 }
 #call-to-action .images-container img{
@@ -214,8 +212,8 @@ nav img{
    gap: var(--items-gap-size);
 }
 #results .images-container img{
-   width: 12rem;
-   height: 10rem;
+   width: 100%;
+   height: 100%;
    object-fit: cover;
    object-position: center;
 }
@@ -233,7 +231,7 @@ nav img{
 }
 #blog .images-container{
    display: grid;
-   grid-template: 13rem 13rem / 30rem 35rem;
+   grid-template: 1fr 1fr / 1fr 1fr;
    gap: var(--items-gap-size);
 }
 #blog img{
@@ -268,9 +266,8 @@ nav img{
 
 /* Stats */
 #stats{
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   display: grid;
+   grid-template: 1fr / repeat(4, 1fr);
    gap: var(--items-gap-size);
 }
 #stats .card{
@@ -279,8 +276,7 @@ nav img{
    align-items: center;
    gap: 0.4rem;
    background-color: var(--background-color2);
-   padding: 2rem;
-   width: 16rem;
+   padding: 3rem;
 }
 #stats .card p:nth-child(1){
    color: var(--color1);
@@ -296,27 +292,24 @@ nav img{
    display: flex;
    flex-direction: column;
    align-items: center;
+   justify-content: center;
    position: relative;
    color: var(--text-color1);
 }
 #contact-us .main-container{
-   display: flex;
-   height: 20rem;
+   display: grid;
+   grid-template: 1fr / 1fr 1fr;
    gap: var(--items-gap-size);
 }
 #contact-us .map{
-   width: 30rem;
-   height: 100%;
-   grid-row: 1 / span 3;
+   grid-row: 1 / span 1;
 }
 #contact-us form{
    display: grid;
-   grid-template: 0.2fr 1fr 0.2fr / 1fr 1fr;
+   grid-template: 0.2fr 1fr 0.1fr / 1fr 1fr;
    gap: var(--items-gap-size);
 }
 #contact-us form input, #contact-us form textarea{
-   width: 15rem;
-   height: 3rem;
    background-color: #535353dd;
    border: none;
    color: var(--text-color1);
@@ -324,8 +317,6 @@ nav img{
 }
 #contact-us form textarea{
    grid-column: 1 / span 2;
-   height: 100%;
-   width: 100%;
 }
 #contact-us form button{
    width: 8rem;
