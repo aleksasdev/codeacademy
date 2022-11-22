@@ -24,7 +24,7 @@ main {
 
 /* Global */
 section{
-   padding: 8rem;
+   padding: 5rem 20rem;
    gap: 3rem;
 }
 button{
@@ -207,6 +207,7 @@ nav img{
    cursor: pointer;
 }
 #results .images-container{
+   width: 100%;
    display: grid;
    grid-template: 1fr 1fr / repeat(4, 1fr);
    gap: var(--items-gap-size);
@@ -231,14 +232,14 @@ nav img{
 }
 #blog .images-container{
    display: grid;
-   grid-template: 1fr 1fr / 1fr 1fr;
+   grid-template: 15rem 15rem / 1fr 1fr;
    gap: var(--items-gap-size);
+   width: 100%;
 }
 #blog img{
+   object-fit: cover;
    height: 100%;
    width: 100%;
-   object-fit: cover;
-   object-position: right;
 }
 #blog .big-image{
    grid-row: 1 / span 2;
@@ -300,9 +301,11 @@ nav img{
    display: grid;
    grid-template: 1fr / 1fr 1fr;
    gap: var(--items-gap-size);
+   width: 100%;
 }
 #contact-us .map{
    grid-row: 1 / span 1;
+   width: 100%;
 }
 #contact-us form{
    display: grid;
