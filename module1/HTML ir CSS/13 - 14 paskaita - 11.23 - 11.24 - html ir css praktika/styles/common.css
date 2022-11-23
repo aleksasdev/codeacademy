@@ -2,15 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
 
 :root{
+   /* Colors */
    --color-main: #645cff;
    --color-light: #807af8;
+   --color-bg-secondary: #f8fbfc;
 
-   --padding-main: 3rem 2rem;
+   --padding-section: 4rem 2rem;
    --padding1: 1rem;
    --padding2: 2rem;
 
    --gap1: 1rem;
    --gap2: 2rem;
+   --gap3: 3rem;
 
    --font-main: 'Poppins', sans-serif;
    --font-secondary: 'Lato', sans-serif;
@@ -22,4 +25,7 @@
 
 .span-highlight{
    color: var(--color-main);
+}
+.box-shadow1{
+   
 }

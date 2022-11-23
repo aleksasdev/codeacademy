@@ -1,6 +1,8 @@
 @import url("common.css");
 @import url("header/header.css");
 @import url("about/about.css");
+@import url("services/services.css");
+@import url("featured/featured.css");
 
 * {
   margin: 0;
@@ -10,8 +12,8 @@
 html{
   font-family: var(--font-main);
 }
-main{
-  padding: var(--padding-main);
+section{
+  padding: var(--padding-section);
 }
 h1{
   text-transform: uppercase;
@@ -22,4 +24,9 @@ h1{
 h2{
   text-transform: uppercase;
   font-size: 1.3em;
+}
+img{
+  width: 100%;
+  height: 13rem;
+  object-fit: cover;
 }

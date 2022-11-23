@@ -1,0 +1,41 @@
+#featured{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: var(--gap2);
+}
+#featured .card-container{
+   width: 100%;
+}
+#featured .card-container .image-container{
+   position: relative;
+   width: 100%;
+}
+#featured .card-container .image-container p{
+   position: absolute;
+   top: 1rem;
+   padding: 0.2rem;
+   background-color: var(--color-main);
+}
+
+#featured .card-container .description-container{
+   display: grid;
+   grid-template: 1fr 1fr / 1fr 0.5fr;
+   gap: var(--gap2);
+   padding: var(--padding1);
+}
+#featured .card-container .description-container h2{
+   text-transform: none;
+   grid-column: span 2;
+}
+#featured .card-container .country-container{
+   display: flex;
+   align-items: center;
+   fill: var(--color-main);
+   color: var(--color-main);
+   grid-row: 2;
+}
+#featured .card-container .country-container svg{
+   height: auto;
+   width: 1.5rem;
+}
