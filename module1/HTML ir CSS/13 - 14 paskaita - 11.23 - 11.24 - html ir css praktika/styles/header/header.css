@@ -39,10 +39,6 @@ header #hero{
    text-align: center;
    gap: var(--gap1);
 }
-header #hero h1{
-   font-weight: normal;
-   font-size: 2rem;
-}
 header #hero p{
    width: 80%;
    line-height: 2rem;

@@ -3,7 +3,8 @@
 @import url("about/about.css");
 @import url("services/services.css");
 @import url("featured/featured.css");
-
+@import url("gallery/gallery.css");
+@import url("subscribe/subscribe.css");
 * {
   margin: 0;
   padding: 0;
@@ -12,8 +13,9 @@
 html{
   font-family: var(--font-main);
 }
-section{
-  padding: var(--padding-section);
+section, footer{
+  padding: var(--padding-section-vertical) var(--padding-section-horizontal);
+  gap: var(--gap3);
 }
 h1{
   text-transform: uppercase;
@@ -25,8 +27,57 @@ h2{
   text-transform: uppercase;
   font-size: 1.3em;
 }
+h3{
+  font-weight: normal;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
 img{
   width: 100%;
-  height: 13rem;
+  height: 15rem;
   object-fit: cover;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/* Footer */
+footer{
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+footer > ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: var(--gap1);
+  color: white !important;
+}
+footer > ul a{
+  color: white;
+}
+footer .icons{
+  display: flex;
+  gap: var(--gap1);
+}
+footer .icons svg{
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--color-main);
+}
+
+@media (min-width: 600px){
+  section{
+    --padding-section-horizontal: 5rem;
+  }
+}
+@media (min-width: 1100px){
+  section{
+    --padding-section-horizontal: 10rem;
+  }
 }

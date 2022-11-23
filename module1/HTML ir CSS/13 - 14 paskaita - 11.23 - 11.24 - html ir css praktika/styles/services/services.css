@@ -1,10 +1,14 @@
 #services{
    display: flex;
-   gap: var(--gap2);
    background-color: var(--color-bg-secondary);
    flex-direction: column;
    align-items: center;
    text-align: center;
+}
+#services .cards-wrapper{
+   display: flex;
+   flex-direction: column;
+   gap: inherit;
 }
 #services .icon-wrapper{
    display: flex;
@@ -25,5 +29,28 @@
    align-items: center;
 }
 #services .card p{
-   width: 80%;
+   width: 70%;
+}
+
+@media (min-width: 600px){
+   #services .cards-wrapper{
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+   }
+}
+
+@media (min-width: 1100px){ 
+   #services .cards-wrapper{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   }
+   #services .card{
+      display: grid;
+      grid-template: 1fr / max-content 1fr;
+      text-align: left;
+   }
+   #services .card p{
+      grid-column: 2;
+   }
 }

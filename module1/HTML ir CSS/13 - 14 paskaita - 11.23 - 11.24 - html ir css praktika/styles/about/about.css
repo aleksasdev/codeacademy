@@ -2,10 +2,10 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: var(--gap2);
 }
 #about .content{
    display: flex;
    gap: var(--gap1);
    flex-direction: column;
+   align-self: flex-start;
 }

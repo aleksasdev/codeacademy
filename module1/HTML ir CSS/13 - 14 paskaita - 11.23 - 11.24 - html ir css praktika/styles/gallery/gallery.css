@@ -1,0 +1,20 @@
+#gallery{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--color-bg-secondary);
+   padding-bottom: 0;
+   padding-right: 0;
+   padding-left: 0;
+}
+#gallery .images-container{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+#gallery .images-container img{
+   border-bottom: 5px solid var(--color-main);
+}
+#gallery .images-container img:last-child{
+   border: none;
+}

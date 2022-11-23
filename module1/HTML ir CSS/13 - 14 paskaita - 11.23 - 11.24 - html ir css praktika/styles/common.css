@@ -6,8 +6,10 @@
    --color-main: #645cff;
    --color-light: #807af8;
    --color-bg-secondary: #f8fbfc;
+   --color-secondary: #222222;
 
-   --padding-section: 4rem 2rem;
+   --padding-section-vertical: 3rem;
+   --padding-section-horizontal: 1.5rem;
    --padding1: 1rem;
    --padding2: 2rem;
 
@@ -17,15 +19,11 @@
 
    --font-main: 'Poppins', sans-serif;
    --font-secondary: 'Lato', sans-serif;
-
-   /* Responsive */
-   --responsive-desktop-size: 1100px;
-   --responsive-tablet-size: 700px;
 }
 
 .span-highlight{
    color: var(--color-main);
 }
 .box-shadow1{
-   
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 1.20px 2.6px;
 }
