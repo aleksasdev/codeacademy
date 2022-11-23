@@ -1,0 +1,54 @@
+header{
+   font-family: var(--font-secondary);
+}
+
+/* Nav */
+nav{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: var(--padding1);
+   height: 10vh;
+}
+nav .icons svg{
+   fill: var(--color-main);
+   height: 1.4rem;
+   width: auto;
+}
+nav .icons{
+   display: flex;
+   gap: var(--gap1);
+}
+
+nav h1{
+   padding-left: var(--padding1);
+   font-size: 1.2rem;
+   line-height: normal;
+   word-spacing: 50rem;
+}
+
+/* Hero */
+header #hero{
+   background-color: var(--color-main);
+   height: 90vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   flex-direction: column;
+   text-align: center;
+   gap: var(--gap1);
+}
+header #hero h1{
+   font-weight: normal;
+}
+header #hero p{
+   width: 80%;
+   line-height: 2rem;
+}
+header #hero button{
+   padding: var(--padding1);
+   color: white;
+   background-color: var(--color-light);
+   border: 0;
+}

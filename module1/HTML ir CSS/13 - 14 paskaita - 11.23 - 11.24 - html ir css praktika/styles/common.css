@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
+
+:root{
+   --color-main: #645cff;
+   --color-light: #807af8;
+
+   --padding-main: 3rem 2rem;
+   --padding1: 1rem;
+   --padding2: 2rem;
+
+   --gap1: 1rem;
+   --gap2: 2rem;
+
+   --font-main: 'Poppins', sans-serif;
+   --font-secondary: 'Lato', sans-serif;
+
+   /* Responsive */
+   --responsive-desktop-size: 1100px;
+   --responsive-tablet-size: 700px;
+}
+
+.span-highlight{
+   color: var(--color-main);
+}
