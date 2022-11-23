@@ -10,6 +10,9 @@ nav{
    padding: var(--padding1);
    height: 10vh;
 }
+nav ul{
+   display: none;
+}
 nav .icons svg{
    fill: var(--color-main);
    height: 1.4rem;
@@ -25,6 +28,7 @@ nav h1{
    font-size: 1.2rem;
    line-height: normal;
    word-spacing: 50rem;
+   text-transform: none;
 }
 
 /* Hero */
@@ -38,6 +42,10 @@ header #hero{
    flex-direction: column;
    text-align: center;
    gap: var(--gap1);
+   position: relative;
+}
+header #hero img{
+   display: none;
 }
 header #hero p{
    width: 80%;
@@ -48,4 +56,46 @@ header #hero button{
    color: white;
    background-color: var(--color-light);
    border: 0;
+   cursor: pointer;
+}
+
+@media (min-width: 600px){
+   nav h1{
+      word-spacing: normal;
+      font-size: 1.5rem;
+   }
+   header #hero{
+      background: linear-gradient(var(--color-main), var(--color-secondary));
+   }
+   header #hero img{
+      display: unset;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+   }
+   header #hero h3{
+      font-size: 4.3rem;
+      letter-spacing: 0.3rem;
+   }
+   header #hero p{
+      width: 50vh;
+   }
+   header #hero button{
+      border-radius: 5px;
+   }
+}
+
+@media (min-width: 1100px){
+   nav ul{
+      display: flex;
+      gap: var(--gap1);
+      font-weight: bold;
+    }
+    nav{
+      justify-content: space-around;
+    }
+    nav h1{
+      padding-left: 0;
+    }
 }

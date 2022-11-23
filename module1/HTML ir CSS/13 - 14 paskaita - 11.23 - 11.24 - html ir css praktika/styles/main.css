@@ -76,6 +76,7 @@ footer .icons svg{
     --padding-section-horizontal: 5rem;
   }
 }
+
 @media (min-width: 1100px){
   section{
     --padding-section-horizontal: 10rem;
