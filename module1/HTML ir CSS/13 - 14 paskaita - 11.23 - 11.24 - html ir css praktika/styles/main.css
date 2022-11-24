@@ -50,6 +50,7 @@ footer{
   align-items: center;
   color: white;
   text-align: center;
+  gap: var(--gap2);
 }
 footer > ul{
   display: flex;
@@ -71,14 +72,27 @@ footer .icons svg{
   fill: var(--color-main);
 }
 
-@media (min-width: 600px){
+@media (min-width: 700px){
   section{
     --padding-section-horizontal: 5rem;
+  }
+  footer > ul{
+    display: none;
   }
 }
 
 @media (min-width: 1100px){
   section{
     --padding-section-horizontal: 10rem;
+  }
+  section h1{
+    margin-top: var(--padding-section-vertical);
+    margin-bottom: var(--padding-section-vertical);
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 1400px){
+  section{
+    --padding-section-horizontal: 15rem;
   }
 }

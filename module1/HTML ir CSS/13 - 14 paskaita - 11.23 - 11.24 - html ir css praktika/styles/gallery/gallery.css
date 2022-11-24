@@ -18,3 +18,22 @@
 #gallery .images-container img:last-child{
    border: none;
 }
+
+@media (min-width: 600px){
+   #gallery .images-container{
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+   }
+   #gallery .images-container img:nth-child(3){
+      border: none;
+   }
+ }
+ 
+ @media (min-width: 1100px){
+   #gallery .images-container{
+      grid-template: 1fr / repeat(4, 1fr);
+   }
+   #gallery .images-container img{
+      border: none;
+   }
+ }

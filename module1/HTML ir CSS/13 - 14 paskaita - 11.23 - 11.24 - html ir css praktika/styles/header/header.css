@@ -9,6 +9,9 @@ nav{
    justify-content: space-between;
    padding: var(--padding1);
    height: 10vh;
+   width: 100%;
+   z-index: 50;
+   background-color: white;
 }
 nav ul{
    display: none;
@@ -58,14 +61,26 @@ header #hero button{
    border: 0;
    cursor: pointer;
 }
+header #hero h3{
+   word-spacing: 50rem;
+}
 
-@media (min-width: 600px){
+@media (min-width: 700px){
+   nav{
+      position: fixed;
+      height: 7vh;
+   }
+   nav ul{
+      display: flex;
+      gap: var(--gap1);
+      font-weight: bold;
+    }
    nav h1{
       word-spacing: normal;
       font-size: 1.5rem;
    }
    header #hero{
-      background: linear-gradient(var(--color-main), var(--color-secondary));
+      background: linear-gradient(#645cffbb, #111111bb);
    }
    header #hero img{
       display: unset;
@@ -87,15 +102,16 @@ header #hero button{
 }
 
 @media (min-width: 1100px){
-   nav ul{
-      display: flex;
-      gap: var(--gap1);
-      font-weight: bold;
-    }
     nav{
       justify-content: space-around;
     }
     nav h1{
       padding-left: 0;
+    }
+    header #hero{
+      gap: var(--gap2);
+    }
+    header #hero h3{
+      word-spacing: normal;
     }
 }

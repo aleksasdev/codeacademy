@@ -8,8 +8,23 @@
    font-family: var(--font-secondary);
    gap: var(--gap1);
 }
-
 #subscribe input[type="email"]{
    padding: 0.5rem;
-   width: 15rem;
+   width: 20rem;
+   border: none;
+   height: 2.5rem;
+}
+#subscribe .subscribe-container{
+   position: relative;
+}
+#subscribe .subscribe-button{
+   position: absolute;
+   height: 100%;
+   right: 0;
+   font-family: var(--font-main);
+   cursor: pointer;
+   padding: 0 0.9rem;
+}
+#subscribe .subscribe-container, #subscribe .subscribe-button{
+   border: 2px solid white;
 }
