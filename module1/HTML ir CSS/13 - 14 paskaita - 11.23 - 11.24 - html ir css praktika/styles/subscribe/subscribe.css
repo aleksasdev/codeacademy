@@ -13,6 +13,7 @@
    width: 20rem;
    border: none;
    height: 2.5rem;
+   outline: none;
 }
 #subscribe .subscribe-container{
    position: relative;

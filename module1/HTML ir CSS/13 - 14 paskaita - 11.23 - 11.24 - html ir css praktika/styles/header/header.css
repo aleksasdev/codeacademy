@@ -56,10 +56,12 @@ header #hero p{
 }
 header #hero button{
    padding: var(--padding1);
-   color: white;
    background-color: var(--color-light);
    border: 0;
    cursor: pointer;
+}
+header #hero button a{
+   color: white;
 }
 header #hero h3{
    word-spacing: 50rem;
@@ -80,7 +82,7 @@ header #hero h3{
       font-size: 1.5rem;
    }
    header #hero{
-      background: linear-gradient(#645cffbb, #111111bb);
+      background: linear-gradient(#645cffbb, #000000aa);
    }
    header #hero img{
       display: unset;
@@ -100,7 +102,11 @@ header #hero h3{
       border-radius: 5px;
    }
 }
-
+@media (min-width: 700px){
+   header #hero{
+      height: 100vh;
+    }
+}
 @media (min-width: 1100px){
     nav{
       justify-content: space-around;

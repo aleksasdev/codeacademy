@@ -1,0 +1,21 @@
+button:hover{
+   background-color: var(--color-main) !important;
+   transition: all 0.2s ease-in-out;
+   color: white;
+}
+a[class="hoverable"]:hover{
+   color: var(--color-main);
+   transition: color 0.1s ease-out;
+}
+.icons svg:hover{
+   fill: var(--color-light) !important;
+   transition: color 0.1s ease-out;
+}
+
+#featured .card-container:hover{
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#gallery .images-container .image-wrapper:hover > svg, #gallery .images-container .image-wrapper:hover > .overlay {
+   display: unset;
+}
