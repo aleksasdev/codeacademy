@@ -71,3 +71,6 @@
 #featured .card-wrapper .bottom .timeline{
    justify-self: end;
 }
+
+@media (min-width: 700px){
+}
