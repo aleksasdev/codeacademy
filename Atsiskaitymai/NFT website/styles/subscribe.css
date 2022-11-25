@@ -1,8 +1,8 @@
 #subscribe{
    display: grid;
    grid-template: 1fr / 55% 12rem;
-   padding: var(--mobile-padding-vertical) var(--mobile-padding-horizontal);
-   gap: var(--mobile-gap);
+   padding: var(--padding-vertical) var(--padding-horizontal);
+   gap: var(--gap);
    border-top: 2px solid var(--color-gray);
    border-bottom: 2px solid var(--color-gray);
    overflow: hidden;
@@ -17,5 +17,5 @@
 #subscribe .content{
    display: flex;
    flex-direction: column;
-   gap: var(--mobile-gap);
+   gap: var(--gap);
 }

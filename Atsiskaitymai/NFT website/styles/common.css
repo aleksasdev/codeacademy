@@ -7,7 +7,7 @@
    --color-text-light: #a5a5a5;
    --color-text-highlight: #5a5a5a;
 
-   --mobile-padding-horizontal: 2rem;
-   --mobile-padding-vertical: 3rem;
-   --mobile-gap: 0.8rem;
+   --padding-horizontal: 2rem;
+   --padding-vertical: 3rem;
+   --gap: 0.8rem;
 }

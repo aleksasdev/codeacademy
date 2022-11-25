@@ -1,8 +1,8 @@
 #featured{
    display: grid;
    grid-template: max-content / minmax(0, 1fr);
-   padding: var(--mobile-padding-vertical) var(--mobile-padding-horizontal);
-   gap: var(--mobile-gap);
+   padding: var(--padding-vertical) var(--padding-horizontal);
+   gap: var(--gap);
    overflow: hidden;
 }
 
