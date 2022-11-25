@@ -52,13 +52,13 @@ header .featured-logos-container{
    display: grid;
    grid-template: 1fr 1fr / 1fr 1fr;
    padding: var(--padding-vertical) var(--padding-horizontal);
-   gap: var(--gap);
+   gap: 1.5rem;
    align-items: center;
    padding-bottom: 0;
 }
 header .featured-logos-container img{
-   max-width: 8rem;
-   height: auto;
+   width: 8rem;
+   height: 2.5rem;
 }
 header .featured-logos-container img:nth-child(3n){
    justify-self: end;
@@ -110,6 +110,7 @@ header .featured-logos-container img:nth-child(5){
       justify-content: space-between;
       padding-right: 0;
       padding-left: 0;
+      gap: 0;
    }
    header .featured-logos-container img:nth-child(1){
       display: none;
