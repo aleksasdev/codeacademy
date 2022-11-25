@@ -1,6 +1,6 @@
 #subscribe{
    display: grid;
-   grid-template: 1fr / 55% 13.5rem;
+   grid-template: 1fr / 55% 13rem;
    padding: var(--padding-vertical) var(--padding-horizontal);
    gap: var(--gap);
    border-top: 2px solid var(--color-gray);
