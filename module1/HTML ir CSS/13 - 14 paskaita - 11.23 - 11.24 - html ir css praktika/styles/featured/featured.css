@@ -17,8 +17,8 @@
 #featured .card-container .image-container p{
    position: absolute;
    top: 1rem;
-   padding: 0.2rem;
-   background-color: var(--color-main);
+   padding: 0.2rem 0.6rem;
+   background-color: var(--color-light);
 }
 
 #featured .card-container .description-container{

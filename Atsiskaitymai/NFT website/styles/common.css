@@ -1,0 +1,13 @@
+:root{
+   --color-pink: #ff3998;
+   --color-orange: #ff8039;
+   --color-orange-light: #c4ad63;
+   --color-gray: #eeeeee;
+   --color-text: #555555;
+   --color-text-light: #a5a5a5;
+   --color-text-highlight: #5a5a5a;
+
+   --mobile-padding-horizontal: 2rem;
+   --mobile-padding-vertical: 3rem;
+   --mobile-gap: 0.8rem;
+}
