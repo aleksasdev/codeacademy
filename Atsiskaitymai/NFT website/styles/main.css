@@ -67,8 +67,9 @@ a{
       font-size: 2.8rem;
    }
    body{
-      padding: 2rem;
+      padding: 2rem 4rem;
       --padding-vertical: 6rem;
+      --padding-horizontal: 0;
       background-color: white;
       border: 30px solid var(--color-gray);
       border-right-width: 100px;
@@ -80,16 +81,16 @@ a{
 }
 @media (min-width: 1200px){
    h1{
-      font-size: 3.8rem;
+      font-size: 3.5rem;
    }
    body{
       border-right-width: 150px;
       border-left-width: 150px;
    }
 }
-@media (min-width: 1500px){
+@media (min-width: 1700px){
    body{
-      border-right-width: 250px;
-      border-left-width: 250px;
+      border-right-width: 300px;
+      border-left-width: 300px;
    }
 }

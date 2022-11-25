@@ -19,3 +19,9 @@
    flex-direction: column;
    gap: var(--gap);
 }
+
+@media (min-width: 900px){
+   #subscribe{
+      grid-template: 30rem / 0.5fr 0.5fr;
+   }
+}

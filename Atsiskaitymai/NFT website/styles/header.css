@@ -92,21 +92,16 @@ header .featured-logos-container img:nth-child(5){
       top: 8rem;
    }
    header .below-copy{
+      padding: 3rem;
       padding-top: 7rem;
       border-radius: 15px;
    }
 }
-@media(min-width: 800px){
+@media(min-width: 900px){
    header nav ul{
       list-style: none;
       display: flex;
       gap: var(--gap);
-   }
-   header .hero img{
-      width: 30rem;
-      height: 30rem;
-      top: 7rem;
-      right: 0;
    }
 }
 @media (min-width: 1000px){
