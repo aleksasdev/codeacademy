@@ -146,7 +146,7 @@
 {
    console.group("Task 2");
    // 6) Parašyti ciklą, kuris sukurtų 50 random skaičių (nuo 0 iki 100) masyvą.
-   let arrayWithRandomNumbers = [];
+   var arrayWithRandomNumbers = [];
    for(let i = 0; i < 50; i++){
       arrayWithRandomNumbers.push(Math.floor(Math.random()*100))
    }
@@ -208,5 +208,36 @@
 
    
 
+   console.groupEnd();
+}
+
+// Task extra
+{
+   console.group("Task extra");
+   // extra 1) Parašyti ciklą, kuris atlieka Fizz Buzz testą nuo 0 iki 100.
+   {
+      console.group("Fizz Buzz");
+      for(let i = 0; i < arrayWithRandomNumbers.length; i++){
+         if(arrayWithRandomNumbers[i]/3 % 2 === 0 && arrayWithRandomNumbers[i]/5 % 2 === 0){
+            console.log(arrayWithRandomNumbers[i],"FizzBuzz");
+         }
+         else if(arrayWithRandomNumbers[i]/3 % 2 === 0){
+            console.log(arrayWithRandomNumbers[i],"Fizz");
+         }
+         else if(arrayWithRandomNumbers[i]/5 % 2 === 0){
+            console.log(arrayWithRandomNumbers[i],"Buzz");
+         }
+         else{
+            console.log(arrayWithRandomNumbers[i]);
+         }
+      }
+      console.groupEnd();
+   }
+
+   // EXTRA 2) Parašyti ciklą, kuris atrinktų ir į konsolę išspausdintų tik pirminius skaičius intervale nuo 0 iki 100.
+   {
+      console.group("EXTRA task");
+      console.groupEnd();
+   }
    console.groupEnd();
 }
