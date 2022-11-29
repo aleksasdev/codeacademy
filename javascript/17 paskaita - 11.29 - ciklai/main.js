@@ -56,6 +56,6 @@
    console.log("Task 3.2 outputs [2.3 array]:",array2[0], array2[1], "[array in array] "+array2[2][2]);
    console.log("Task 3.2 outputs [2.4 array]:",array3[0], array3[1], "[object in array] "+array3[3].name);
    console.log("Task 3.2 outputs [2.5 object]:",object2.countries, object2.continents, "[array in object] "+object2.anotherArrayHowCool[1]);
-   console.log("Task 3.2 outputs [2.6 object]:",object3.countries, object3.continents, "[object in object ] "+object3.anotherObjectHowCool.a);
+   console.log("Task 3.2 outputs [2.6 object]:",object3.countries, object3.continents, "[object in object] "+object3.anotherObjectHowCool.a);
 
 }
