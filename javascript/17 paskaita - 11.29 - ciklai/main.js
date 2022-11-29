@@ -1,3 +1,5 @@
+// LMAO. This is an easter egg :P
+
 // Objects | Objektai
 {
    let person = {
@@ -27,6 +29,7 @@
 
 // Task 1
 {
+   console.groupCollapsed("Task 1");
    // 2) Susikurti konteinerius ir juos užpildyti reikšmėmis (bent po 1 kiekvieno tipo).
    // 2.1) Masyvas bent 6 ilgio. []
    // 2.2) Objektas bent 6 ilgio. {}
@@ -75,6 +78,7 @@
    // 4.2) 2.2 konteinerio reikšmes.
    if(typeof(array1[0]) === "string"){console.log(true)}else{console.log(false)};
    if(typeof(object1.name[0]) === "string"){console.log(true)}else{console.log(false)};
+   // ----------------------------------------------------------------------------------------
    
    // 4.3) 2.3-2.6 konteinerių reikšmes su jų viduje esančių konteinerių reikšmėmis.
    console.log("-4.3-");
@@ -82,6 +86,7 @@
    typeof(array3[array3.length-1].name) === "string" ? console.log("Object in [array3] | name value is a string") : console.log(false);
    typeof(object2.anotherArrayHowCool[0]) === "string" ? console.log("Array in [object2] | first value is a string") : console.log(false);
    typeof(object3.anotherObjectHowCool.name) === "string" ? console.log("Object in [object3] | name value is a string") : console.log(false);
+   // ----------------------------------------------------------------------------------------
 
    // 4.4) 2.3-2.6 konteinerių reikšmes su kitų konteinerių reikšmėmis (3kartus skirtingas reikšmes).
    console.log("-4.4-");
@@ -104,11 +109,104 @@
    object3.anotherObjectHowCool.name==array1[2] ? console.log(objectNameInQuestion,"anotherObject.name == Array1 [2] value") : console.log(objectNameInQuestion,"anotherObject.name != Array1 [2] value");
    object3.anotherObjectHowCool.name===array1[2].length ? console.log(objectNameInQuestion,"anotherObject.name == Array1 [2] length") : console.log(objectNameInQuestion,"anotherObject.name != Array1 [2] length");
    object3.anotherObjectHowCool.name>array1[3].length ? console.log(objectNameInQuestion,"anotherObject.name > Array1 [3] length") : console.log(objectNameInQuestion,"anotherObject.name < Array1 [3] length");
+   // ----------------------------------------------------------------------------------------
 
+   // 5) Parašyti if'ą, kuris tikrintų kokia tavo lytis (tikrinimas turi vykti iš object kintamojo (object kintamasis turi turėti bent 4 kintamuosiuos savo viduje)).
+      //   Naudoti:
+      //   1) let/const - kurti kintamuosius (objektą/us)
+      //   optional) prompt - vartotojas priskirtų objektui reikšmes
+      //   2) alert/console.log - grąžintų atsakymus.
+      //   3) if/elseIf/else - kas be ko... (arrrrrrrrrba ternary)
+   
+   // ----------------------------------------------------------------------------------------
+   let lytis = {
+      normal: ["man","woman"],
+      sayianGenders: ["sayianMan", "sayianWoman"],
+      alienGenders: ["alienMan", "alienWoman"],
+   }
+   console.groupEnd();
 }
 
 // Ternary
 {
    let isValid = true;
    isValid ? console.log("isValid:",true) : console.log("isValid:",false);
+}
+
+// For loop
+{
+   console.groupCollapsed("For");
+   for(let i = 0; i < 10; i++){
+      console.log("Oba i europa",i+1)
+   }
+   console.groupEnd();
+}
+
+// Task 2
+{
+   console.group("Task 2");
+   // 6) Parašyti ciklą, kuris sukurtų 50 random skaičių (nuo 0 iki 100) masyvą.
+   let arrayWithRandomNumbers = [];
+   for(let i = 0; i < 50; i++){
+      arrayWithRandomNumbers.push(Math.floor(Math.random()*100))
+   }
+   console.log(arrayWithRandomNumbers);
+
+   // 7) Parašyti ciklą, kuris išspausdintų kas trečią masyvo elementą.
+   {
+      console.groupCollapsed("Every third number")
+      for(let i = 0; i < arrayWithRandomNumbers.length; i++){
+         if(i === 0){console.log(arrayWithRandomNumbers[0]);continue};
+         i % 3 === 0 ? console.log(arrayWithRandomNumbers[i-1]) : null;
+      }
+      console.groupEnd();
+   }
+
+   // 8) Parašyti ciklą, kuris išspausdintų kas antrą masyvo elementą nuo galo.
+   {
+      console.groupCollapsed("Every second number reversed")
+      arrayWithRandomNumbers = arrayWithRandomNumbers.reverse();
+      for(let i = 0; i < arrayWithRandomNumbers.length; i++){
+         if(i === 0){console.log(arrayWithRandomNumbers[0]);continue};
+         i % 2 === 0 ? console.log(arrayWithRandomNumbers[i]) : null;
+      }
+      console.groupEnd();
+   }
+
+   // 9) Parašyti ciklą, kuris iš masyvo išspausdintų tik elementus, kurių reikšmė didesnė negu 54.
+   {
+      console.groupCollapsed("Every number that's bigger than 54");
+      for(let i = 0; i < arrayWithRandomNumbers.length; i++){
+         arrayWithRandomNumbers[i] > 54 ? console.log(arrayWithRandomNumbers[i]) : null;
+      }
+      console.groupEnd();
+   }
+
+   // 10) Parašyti ciklą, kuris iš masyvo išspausdintų tik lyginius/nelyginius skaičius. (2ciklai)
+   {
+      let scannedNumbersCount = 0;
+      console.groupCollapsed("Even and uneven numbers");
+      {
+         console.group("Even");
+         for(let i = 0; i < arrayWithRandomNumbers.length; i++){
+            arrayWithRandomNumbers[i] % 2 === 0 ? console.log(arrayWithRandomNumbers[i]) : null;
+            scannedNumbersCount++;
+         }
+         console.groupEnd();
+      }
+      {
+         console.group("Uneven");
+         for(let i = 0; i < arrayWithRandomNumbers.length; i++){
+            arrayWithRandomNumbers[i] % 2 === 0 ? null : console.log(arrayWithRandomNumbers[i]);
+            scannedNumbersCount++;
+         }
+         console.groupEnd();
+      }
+      console.log(`Scanned numbers count: ${scannedNumbersCount}`)
+      console.groupEnd();
+   }
+
+   
+
+   console.groupEnd();
 }
