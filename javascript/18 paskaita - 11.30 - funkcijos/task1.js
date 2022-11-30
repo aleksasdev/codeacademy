@@ -83,16 +83,16 @@ function GetSquaredNumber(number){
 
 // EXTRA-0 Sukurti funkciją, kuri pirmojo parametro (masyvo) elementus sudėtų į kito parametro (masyvo irgi) vidų toje vietoje, kokio ilgio yra antrasis parametras (tuo momentu) tol kol antrasis parametras liks tuščias. (a=[1,2,3,4,5,6,7]b=[a,b,c]; a=[1,2,3,a,4,5,6,7]b=[b,c]; a=[1,2,b,3,a,4,5,6,7]b=[c]; a=[1,c,2,b,3,a,4,5,6,7]b=[])
 function YeahYouThoughtNamingThatOneWasHardTakeALookAtThis(array, secondArray){
-   let i = 0;
-   let cycleAmountLeft = secondArray.length;
-   for(let element of array){
-      if(i>=secondArray.length && cycleAmountLeft!=0){
-         secondArray.push(element);
-         cycleAmountLeft--;
+   let newArray = [];
+   for(let i = 0; i < array.length; i++){
+      if(i === secondArray.length){
+         for(let element of secondArray){newArray.push(element)}
+         newArray.push(array[i])
+      }else{
+         newArray.push(array[i])
       }
-      i++;
    }
-   console.log(secondArray);
+   console.log(newArray);
 }
 
 // EXTRA 1 Sukurti funkciją, kuri atlieka Fizz Buzz testą nuo-iki duotųjų parametrų.
