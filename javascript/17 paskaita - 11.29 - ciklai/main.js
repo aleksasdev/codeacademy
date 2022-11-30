@@ -157,7 +157,7 @@
       console.groupCollapsed("Every third number")
       for(let i = 0; i < arrayWithRandomNumbers.length; i++){
          if(i === 0){console.log(arrayWithRandomNumbers[0]);continue};
-         i % 3 === 0 ? console.log(arrayWithRandomNumbers[i-1]) : null;
+         i % 3 === 0 ? console.log(arrayWithRandomNumbers[i]) : null;
       }
       console.groupEnd();
    }
@@ -213,7 +213,7 @@
 
 // Task extra
 {
-   console.group("Task extra");
+   console.groupCollapsed("Task extra");
    // extra 1) Parašyti ciklą, kuris atlieka Fizz Buzz testą nuo 0 iki 100.
    {
       console.group("Fizz Buzz");
@@ -237,6 +237,8 @@
    // EXTRA 2) Parašyti ciklą, kuris atrinktų ir į konsolę išspausdintų tik pirminius skaičius intervale nuo 0 iki 100.
    {
       console.group("EXTRA task");
+      for(let i = 0; i < 101; i++){
+      }
       console.groupEnd();
    }
    console.groupEnd();
