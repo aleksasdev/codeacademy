@@ -1,27 +1,27 @@
 // Task 1
 // 1) Sukurti funkcijas, kurios atliktų paprastus matematinius veiksmus su duotaisiais parametrais (du parametrai). (4 funkcijos) (optional 7 funkcijos)
-function Add(props){
+function doAdd(props){
    return props.num1+props.num2;
 }
-function Subtract(props){
+function doSubtract(props){
    return props.num1-props.num2;
 }
-function Multiply(props){
+function doMultiply(props){
    return props.num1*props.num2;
 }
-function Divide(props){
+function doDivide(props){
    return props.num1/props.num2;
 }
 
 // 2) Sukurti funkciją, kuri į konsolę išvestų visus jai duotojo masyvo elementus nuo pirmo iki paskutinio.
-function printArrayElements(array){
+function getArrayElements(array){
    for(let arrayElement of array){
       console.log(arrayElement)
    }
 }
 
 // 3) Sukurti funkciją, kuri į konsolę išvestų visus jai duotojo masyvo elementus nuo paskutinio iki pirmojo.
-function printArrayElementsReversed(array){
+function getArrayElementsReversed(array){
    for(let arrayElement of array.reverse()){
       console.log(arrayElement)
    }
@@ -33,19 +33,19 @@ function sortStrings(array){
 }
 
 // 5) Sukurti funkciją, kuri surikiuotų gautąją informaciją (parametrą(masyvą(tik su number kintamaisiais))) nuo didžiausio iki mažiausio ir ją išvestų į konsolę.
-function SortIntegers(array){
+function sortIntegers(array){
    console.log(array.sort((b, a) => a - b));
 }
 
 // 6) Sukurti funkciją, kuri į konsolę išvestų visus skaičius nuo pirmo duotojo parametro (imtinai) iki antrojo (imtinai). (paduodu 5,9 => grąžina 5,6,7,8,9)
-function printNumbersFromTo(num1, num2){
+function getNumbersFromTo(num1, num2){
    for(let i = num1; i < num2+1; i++){
       console.log(i);
    }
 }
 
 // 7) Sukurti funkciją, kuri į konsolę išvestų skaičius kas pirmąjį duotajį parametrą nuo antrojo duotojo parametro (imtinai) iki trečiojo duotojo parametro (imtinai). (paduodu 2,5,9 => grąžina 5,7,9)
-function printEveryNth(num1, num2, num3){
+function getEveryNth(num1, num2, num3){
    for(let i = num2; i < num3+1; i+=num1){
       console.log(i);
    }
