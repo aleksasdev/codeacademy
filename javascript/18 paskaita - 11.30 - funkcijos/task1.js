@@ -94,10 +94,10 @@ function whatIsThis(array, secondArray){
    let newArray = [];
    for(let i = 0; i < array.length; i++){
       if(i === secondArray.length){
-         for(let element of secondArray){newArray.push(element)}
-         newArray.push(array[i])
+         for(let element of secondArray){newArray.push(element)};
+         newArray.push(array[i]);
       }else{
-         newArray.push(array[i])
+         newArray.push(array[i]);
       }
    }
    return newArray;
