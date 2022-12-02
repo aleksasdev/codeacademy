@@ -1,6 +1,6 @@
 // 5) Sukurti skaičiuotuvą.
 // Global variables
-const valueCalculatorWidth = "20rem";
+const valueCalculatorWidth = "25rem";
 const valueCalculatorBorderSize = "3px";
 // Body styling
 document.querySelector('body').style.margin=0;
@@ -34,6 +34,8 @@ containerScreen.style.borderBottom="none";
 containerScreen.style.display="flex";
 containerScreen.style.justifyContent="center";
 containerScreen.style.alignItems="center";
+containerScreen.style.borderTopLeftRadius="15px";
+containerScreen.style.borderTopRightRadius="15px";
 currentOperation.innerText="+";
 //       styling operations container
 containerOperations.style.width=valueCalculatorWidth;
@@ -60,24 +62,25 @@ containerOperations.append(buttonPlus,buttonMinus,buttonMultiply,buttonDivide)
 
 // Handle listeners
 //       Handle key strokes
-let allItemsOnScreen = [];
 document.querySelector('html').addEventListener('keydown', (e)=>{
    if(!isNaN(parseInt(e.key))){ // Handle numbers
+      if(containerScreen.children.length>=35){return}; // Limit how many numbers there can fit
       let newEntryToScreen = document.createElement('p');
       newEntryToScreen.innerText=e.key;
       containerScreen.appendChild(newEntryToScreen);
-      allItemsOnScreen.push(newEntryToScreen);
    }
    // Handle backspace
-   if(e.key==="Backspace"&&allItemsOnScreen.length!==0){
-      containerScreen.removeChild(allItemsOnScreen.pop());
-      allItemsOnScreen.length===0?containerScreen.removeChild(currentOperation):null;
+   if(e.key==="Backspace"&&containerScreen.children.length!==0){
+      containerScreen.removeChild(containerScreen.lastChild);
+      containerScreen.children.length===0?containerScreen.removeChild(currentOperation):null;
    }
 });
 //       Handle calculate buttons being clicked on
+let leftSideNumbers = []
 for(let button of buttonsArray){
    button.addEventListener('click',(e)=>{
       currentOperation.innerText=e.target.innerText;
       containerScreen.appendChild(currentOperation);
+      leftSideNumbers = containerScreen.children;
    });
 }
