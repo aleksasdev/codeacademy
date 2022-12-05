@@ -5,7 +5,7 @@
    flex-direction: column;
    padding: 2rem;
 }
-#task1 .hide-button{
+.hide-button{
    align-self: flex-end;
    padding: 0.5rem 1rem;
    cursor: pointer;

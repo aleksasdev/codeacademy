@@ -24,16 +24,17 @@ for(let dataObject of data){
    contentContainer.appendChild(headlineElement);
    contentContainer.appendChild(paragraphElement);
 }
-// Handle hide/show button being clicked on
-let hideButton = document.querySelector('#task1 .hide-button');
-hideButton.addEventListener('click', (e)=>{
-   if(hideButton.id==="state-hide"){
-      contentContainer.style.display="none";
-      hideButton.id="state-show";
-      hideButton.innerText="Rodyti";
-   }else{
-      contentContainer.style.display="unset";
-      hideButton.id="state-hide";
-      hideButton.innerText="Slėpti";
-   }
-});
+// Handle hide/show buttons being clicked on
+for(let hideButton of document.querySelectorAll('.hide-button')){
+   hideButton.addEventListener('click', (e)=>{
+      if(hideButton.id==="state-hide"){
+         document.querySelector(hideButton.getAttribute('containerToHide')).style.display="none";
+         hideButton.id="state-show";
+         hideButton.innerText="Rodyti";
+      }else{
+         document.querySelector(hideButton.getAttribute('containerToHide')).style.display="unset";
+         hideButton.id="state-hide";
+         hideButton.innerText="Slėpti";
+      }
+   });
+}
