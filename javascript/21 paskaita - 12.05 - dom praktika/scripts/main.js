@@ -30,8 +30,10 @@ hideButton.addEventListener('click', (e)=>{
    if(hideButton.id==="state-hide"){
       contentContainer.style.display="none";
       hideButton.id="state-show";
+      hideButton.innerText="Rodyti";
    }else{
       contentContainer.style.display="unset";
       hideButton.id="state-hide";
+      hideButton.innerText="Slėpti";
    }
 });
