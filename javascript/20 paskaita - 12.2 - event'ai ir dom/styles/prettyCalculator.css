@@ -1,0 +1,76 @@
+:root{
+   --border-radius: 5px;
+}
+#pretty-calculator{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#pretty-calculator .calculator-container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 20rem;
+   height: 22rem;
+   margin-top: 5rem;
+   border-radius: var(--border-radius);
+   background-color: hsl(0, 6%, 77%);
+   padding: 1rem;
+   gap: 1rem;
+}
+#pretty-calculator .calculator-container .screen-container{
+   width: 100%;
+   height: 5rem;
+   background-color: hsl(40, 12%, 90%);
+   border-radius: var(--border-radius);
+   padding: 0.5rem;
+   font-size: 1.2rem;
+}
+
+/* Buttons container */
+#pretty-calculator .buttons-container{
+   display: grid;
+   grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+   height: 100%;
+   width: 100%;
+}
+#pretty-calculator .buttons-container button{
+   border-radius: var(--border-radius);
+   border: 0;
+   cursor: pointer;
+   font-weight: bold;
+   font-size: 1.3rem;
+   margin: 0.6rem;
+}
+/* Add calculation options to the right grid areas */
+#pretty-calculator .buttons-container .sub-button{
+   grid-column: 1;
+   grid-row: 2;
+}
+#pretty-calculator .buttons-container .multi-button{
+   grid-column: 1;
+   grid-row: 3;
+}
+#pretty-calculator .buttons-container .div-button{
+   grid-column: 1;
+   grid-row: 4;
+}
+#pretty-calculator .buttons-container .root-button{
+   grid-column: 2;
+   grid-row: 4;
+}
+#pretty-calculator .buttons-container .pow-button{
+   grid-column: 3;
+   grid-row: 4;
+}
+#pretty-calculator .buttons-container .answer-button{
+   grid-column: 4;
+   grid-row: 4;
+}
+#pretty-calculator .buttons-container button:hover{
+   background-color: hsl(45, 11%, 86%);
+}
+#pretty-calculator .buttons-container .answer-button:hover{
+   background-color: hsl(221, 75%, 62%);
+}
+/* ------------------------------------------------------------------------------------- */

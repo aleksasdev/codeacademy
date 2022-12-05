@@ -82,7 +82,7 @@ containerOperations.append(buttonPlus,buttonMinus,buttonMultiply,buttonDivide)
 // Handle listeners
 //       Handle key strokes
 document.querySelector('html').addEventListener('keydown', (e)=>{
-   if(!isNaN(parseInt(e.key))){ // Handle numbers
+   if(!isNaN(parseInt(e.key))){ // Handle numbers only
       if(containerScreen.children.length>=30){return}; // Limit how many numbers there can fit
       // Clear the screen if there's an answer on the screen
       if(containerScreen.firstChild !== null&&containerScreen.firstChild.classList.contains("answer")){
