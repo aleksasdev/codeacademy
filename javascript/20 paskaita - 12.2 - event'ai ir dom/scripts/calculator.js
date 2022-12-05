@@ -14,7 +14,7 @@ sectionCalculator.style.alignItems="center";
 sectionCalculator.style.flexDirection="column";
 
 // Generate html objects that'll get pushed to the DOM
-// and style them
+// and style them later
 const paragraphDescription = document.createElement("p");
    paragraphDescription.innerText="Type in numbers to start calculating...";
    sectionCalculator.appendChild(paragraphDescription);
@@ -78,6 +78,7 @@ sectionCalculator.appendChild(containerOperations);
 sectionCalculator.appendChild(containerAnswer);
 containerOperations.append(buttonPlus,buttonMinus,buttonMultiply,buttonDivide)
 
+// -------------------------------------------------------------------------
 // Handle listeners
 //       Handle key strokes
 document.querySelector('html').addEventListener('keydown', (e)=>{
@@ -120,7 +121,7 @@ buttonAnswer.addEventListener('click', (e)=>{
    let arrayToString;
    for(let element of containerScreen.children){arrayToString+=element.innerText};
    arrayToString=arrayToString.replace('undefined','');
-   // Now loop through every value in the string array
+   // Now loop through every value in the string variable
    // and find where the calculation choice resides in,
    // then split that spot into left side numbers, right side numbers
    // and operation variables
@@ -130,7 +131,7 @@ buttonAnswer.addEventListener('click', (e)=>{
    let i=0;
    for(let numberValue of arrayToString){
       // Find the operation which is not a number
-      if(!parseInt(numberValue)){
+      if(!parseInt(numberValue) && numberValue!=="0"){
          operation = arrayToString[i]; // Assign operation to its variable first
          // Then simply split the string into two
          leftSideNumbers = arrayToString.split(operation)[0];
