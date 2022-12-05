@@ -15,7 +15,6 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: center;
    text-align: center;
 }
 section{
@@ -24,7 +23,9 @@ section{
    padding: 2rem;
 }
 img{
-   max-width: 20rem;
+   width: 100%;
+   height: 25rem;
+   object-fit: cover;
 }
 
 /* Task 1 */
@@ -35,7 +36,56 @@ img{
 #task2{
    background-color: hsl(0, 8%, 77%);
 }
+#task2 img{
+   width: 20rem;
+   height: 25rem;
+}
 /* Task 3 */
 #task3{
    background-color: hsl(0, 4%, 58%);
+}
+/* Task 4 */
+#task4{
+   background-color: hsl(0, 10%, 57%);
+}
+#task4 .stylize-grid{
+   margin-top: 4rem;
+   display: grid;
+   justify-content: center;
+   gap: 1rem;
+   grid-template: max-content repeat(2, max-content) / 1fr;
+}
+#task4 .stylize-grid h1{
+   justify-self: center;
+   text-align: center;
+}
+@media(min-width: 500px){
+   #task4 .stylize-grid{
+      grid-template: max-content repeat(2, max-content) / 1fr 1fr;
+   }
+   #task4 .stylize-grid h1{
+      grid-column: span 2;
+   }
+}
+@media(min-width: 800px){
+   #task4 .stylize-grid{
+      grid-template: max-content repeat(2, max-content) / repeat(3,15rem);
+   }
+   #task4 img{
+      height: 30rem;
+   }
+   #task4 .stylize-grid h1{
+      grid-column: span 3;
+   }
+}
+@media(min-width: 1300px){
+   #task4 .stylize-grid{
+      grid-template: max-content repeat(2, max-content) / repeat(3,25rem);
+   }
+   #task4 img{
+      height: 30rem;
+   }
+   #task4 .stylize-grid h1{
+      grid-column: span 3;
+   }
 }
