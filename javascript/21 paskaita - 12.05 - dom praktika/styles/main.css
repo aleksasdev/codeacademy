@@ -69,7 +69,7 @@ img{
 }
 @media(min-width: 800px){
    #task4 .stylize-grid{
-      grid-template: max-content repeat(2, max-content) / repeat(3,15rem);
+      grid-template: max-content repeat(2, max-content) / repeat(3,1fr);
    }
    #task4 img{
       height: 30rem;
@@ -80,10 +80,10 @@ img{
 }
 @media(min-width: 1300px){
    #task4 .stylize-grid{
-      grid-template: max-content repeat(2, max-content) / repeat(3,25rem);
+      grid-template: max-content repeat(2, max-content) / repeat(3,1fr);
    }
    #task4 img{
-      height: 30rem;
+      height: 40rem;
    }
    #task4 .stylize-grid h1{
       grid-column: span 3;

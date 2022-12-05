@@ -5,20 +5,19 @@ contentContainer.classList.add('stylize-grid');
 
 // Quickly add title to the content container
 let containertitle = document.createElement('h1');
-containertitle.innerText=data[2].title;
+containertitle.innerText=data[2].mainTitle;
 contentContainer.appendChild(containertitle);
 // Make all the necessary elements
 let index = 0;
-for(let image of data[2].images){
+for(let object of data[2].content){
    
    let cardContainer = document.createElement('div');
    let cardHeadline = document.createElement('h4');
-   console.log(data[2].imagesTitles);
-   cardHeadline.innerText=data[2].imagesTitles[index];
+   cardHeadline.innerText=data[2].content[index].title;
    let cardImage = document.createElement('img');
-   cardImage.src=image;
+   cardImage.src=object.image;
    let cardDescription = document.createElement('p');
-   cardDescription.innerText=data[2].paragraphs[index];
+   cardDescription.innerText=data[2].content[index].paragraph;
 
    cardContainer.appendChild(cardHeadline);
    cardContainer.appendChild(cardImage);
