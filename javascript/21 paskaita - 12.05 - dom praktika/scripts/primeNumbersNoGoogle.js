@@ -1,6 +1,7 @@
 function getPrimeNumbersWithoutGoogling(toNum){
    let primeNumbers = [2];
    let countOptimizationCycles=0;
+   let startTime = performance.now()
    for(let i = 2; i <= toNum; i++){
       let isPrime=true;
       for(let alreadyDefinedPrimeNumber of primeNumbers){
@@ -41,6 +42,7 @@ function getPrimeNumbersWithoutGoogling(toNum){
       }
       isPrime?primeNumbers.push(i):null;
    }
+   console.log("Function ran in:",((performance.now()-startTime)/1000).toFixed(2),"seconds");
    console.log("Optimization ran this many times:",countOptimizationCycles);
    console.log(primeNumbers);
 }
