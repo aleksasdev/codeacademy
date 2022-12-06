@@ -47,21 +47,6 @@ function getPrimeNumbersWithoutGoogling(toNum){
    console.log(primeNumbers);
 }
 
-function getPrimeNumbersSquareFormula(toNum){
+function getPrimeNumbersNewFormula(toNum){
    let primeNumbers=[];
-   for(let numberToCheck = 2; numberToCheck < toNum+1; numberToCheck++){
-      let isPrime = true;
-      // Get square root of a number in question
-      let numberRoot = Math.sqrt(numberToCheck);
-      for(let primeNumber of primeNumbers){
-         if(primeNumber < numberRoot){
-            if(numberToCheck%primeNumber){
-               isPrime=false;
-               break;
-            }
-         }
-      }
-      isPrime?primeNumbers.push(numberToCheck):null;
-   }
-   return primeNumbers;
 }
