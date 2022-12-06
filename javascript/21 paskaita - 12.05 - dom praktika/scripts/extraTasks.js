@@ -16,7 +16,7 @@ function doFizzBuzz(e){
       outputItem.classList.add('output-item-styling');
       // Then we calculate using the fizzbuzz instructions
       // and asign a specific text and color to the div
-      // container we just created
+      // we just created
       if(i % 3 === 0 && i % 5 === 0){
          outputItem.innerText="FizzBuzz\n ("+i+")";
          outputItem.style.color="lightgreen";
@@ -62,7 +62,7 @@ function doPrimeNumbers(e){
          const outputItem = document.createElement('div');
          outputItem.classList.add('output-item-styling');
          outputItem.innerText="("+i+")";
-         outputItem.style.color="purple";
+         outputItem.style.color="white";
          outputContainer.appendChild(outputItem);
       }
    };
