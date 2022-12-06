@@ -1,0 +1,15 @@
+/* Task 1 */
+#task1 form{
+   display: flex;
+   flex-direction: column;
+   width: 10rem;
+   gap: 0.5rem;
+}
+#task1 form input:not(#task1 form input[type="submit"]){
+   padding: 0.2rem;
+   border-radius: 5px;
+}
+#task1 form input[type="submit"]{
+   width: 40%;
+   align-self: center;
+}

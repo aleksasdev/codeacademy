@@ -4,10 +4,21 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="./scripts/main.js"></script>
+   <link rel="stylesheet" href="./styles/main.css">
+   <script src="./scripts/main.js" defer></script>
    <title>Document</title>
 </head>
 <body>
-   
+   <section id="task1">
+      <h1>Task 1</h1>
+      <form>
+         <label for="">Kaina</label>
+         <input class="price" type="text" type="number" step="0.001" required>
+         <label for="">Degalų kiekis</label>
+         <input type="text" type="number" step="0.1" required>
+         <input type="submit" value="Submit">
+         <h1 class="output"></h1>
+      </form>
+   </section>
 </body>
 </html>
