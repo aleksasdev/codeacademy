@@ -22,7 +22,7 @@ for(let object of data[2].content){
    cardContainer.appendChild(cardHeadline);
    cardContainer.appendChild(cardImage);
    cardContainer.appendChild(cardDescription);
-   cardContainer.classList.add('stylize-center-content')
+   cardContainer.classList.add('stylize-center-content');
    contentContainer.appendChild(cardContainer);
    index++;
 }

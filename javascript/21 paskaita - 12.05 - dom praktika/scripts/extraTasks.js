@@ -9,6 +9,7 @@ function doFizzBuzz(e){
    // Clear out everything from the output container
    while(outputContainer.firstChild){outputContainer.removeChild(outputContainer.firstChild)};
    console.log("Fizzbuzzing","from number:",fromNumber,"to number:",toNumber);
+   
    for(let i = fromNumber; i < toNumber; i++){
       if(i % 3 === 0 && i % 5 === 0){
          const outputItem = document.createElement('div');
