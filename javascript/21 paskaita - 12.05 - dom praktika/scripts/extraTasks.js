@@ -11,31 +11,28 @@ function doFizzBuzz(e){
    console.log("Fizzbuzzing","from number:",fromNumber,"to number:",toNumber);
    
    for(let i = fromNumber; i < toNumber; i++){
+      // We create a div and add a style from .css
+      const outputItem = document.createElement('div');
+      outputItem.classList.add('output-item-styling');
+      // Then we calculate using the fizzbuzz instructions
+      // and asign a specific text and color to the div
+      // container we just created
       if(i % 3 === 0 && i % 5 === 0){
-         const outputItem = document.createElement('div');
-         outputItem.classList.add('output-item-styling');
          outputItem.innerText="FizzBuzz\n ("+i+")";
          outputItem.style.color="lightgreen";
-         outputContainer.appendChild(outputItem);
       }else if(i % 3 === 0){
-         const outputItem = document.createElement('div');
-         outputItem.classList.add('output-item-styling');
          outputItem.innerText="Fizz\n ("+i+")";
-         outputItem.style.color="purple";
-         outputContainer.appendChild(outputItem);
+         outputItem.style.color="yellow";
       }else if(i % 5 === 0){
-         const outputItem = document.createElement('div');
-         outputItem.classList.add('output-item-styling');
          outputItem.innerText="Buzz\n ("+i+")";
          outputItem.style.color="black";
-         outputContainer.appendChild(outputItem);
       }else{
-         const outputItem = document.createElement('div');
-         outputItem.classList.add('output-item-styling');
          outputItem.innerText="("+i+")";
          outputItem.style.color="white";
-         outputContainer.appendChild(outputItem);
       }
+      // Finally append that div we've created to the main
+      // output container
+      outputContainer.appendChild(outputItem);
    }
 }
 document.querySelector('#extra-tasks .fizzbuzz-container').addEventListener('submit',(e)=>{
