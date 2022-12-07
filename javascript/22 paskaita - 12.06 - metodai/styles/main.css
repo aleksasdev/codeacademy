@@ -1,3 +1,8 @@
+body{
+   display: flex;
+   align-items: center;
+   gap: 5rem;
+}
 form{
    display: flex;
    flex-direction: column;
@@ -11,4 +16,13 @@ form input:not(form input[type="submit"]){
 input[type="submit"]{
    width: form 40%;
    align-self: center;
+}
+.output-aside .output-container{
+   width: 40rem;
+   height: 40rem;
+   display: flex;
+   flex-direction: column;
+   padding: 1rem;
+   overflow-x: hidden;
+   overflow-y: scroll;
 }

@@ -48,5 +48,16 @@ function getPrimeNumbersWithoutGoogling(toNum){
 }
 
 function getPrimeNumbersNewFormula(toNum){
-   let primeNumbers=[];
+   let startTime = performance.now()
+   let primeNumbers=[2];
+
+   for(let numberToTest = 2; numberToTest < toNum; numberToTest++){
+      for(let j = 2; j <= parseInt(Math.sqrt(numberToTest))+1; j++){
+         if(numberToTest%j===0){break};
+         console.log(numberToTest);
+         primeNumbers.push(numberToTest);
+      }
+   }
+   console.log("Function ran in:",((performance.now()-startTime)/1000).toFixed(2),"seconds");
+   return primeNumbers;
 }
