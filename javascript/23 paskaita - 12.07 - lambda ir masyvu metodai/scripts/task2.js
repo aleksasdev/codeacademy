@@ -46,10 +46,6 @@ let getBiggestAndSmallestNumber = array=>{
       }
       if(isSmallestNumber){console.log("Smallest number is:",number);break};
    };
-
-   // Using the min/max methods, YES, I knew they exist all along >:)
-   console.log("[min/max method] biggest number is:",array.max());
-   console.log("[min/max method] smallest number is:",array.min());
 }
 console.log(getTaskNumber());
 getBiggestAndSmallestNumber([4,5,11,44,667,743,222,1112,3,4342244,3242422,3,2.5]);
