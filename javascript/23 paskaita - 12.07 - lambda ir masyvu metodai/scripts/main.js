@@ -157,9 +157,9 @@ let getOnlyNumbersArrayWithConditionOddEven = (evenNumbers,minNumber,maxNumber,a
    for(let element of array){
       if(typeof(element)!=="number"){continue};
       if(element<=minNumber || element>=maxNumber){continue};
-      if(evenNumbers && element%2 === 0){newArrayOfNumbers.push(element)};
-      if(!evenNumbers && element%2 === 1){newArrayOfNumbers.push(element)};
+      if(evenNumbers && element%2 === 0){newArrayOfNumbers.push("[EVEN] "+element)};
+      if(!evenNumbers && element%2 === 1){newArrayOfNumbers.push("[ODD] "+element)};
    }
    return newArrayOfNumbers;
 };
-console.log("(22)",getOnlyNumbersArrayWithConditionOddEven(false,1,10,[2,3,7,4,5,11,12,"string44444","nopeString",true,5000,"StartsWithUppercase"]));
+console.log("(22)",getOnlyNumbersArrayWithConditionOddEven(true,1,10,[2,3,7,4,5,11,12,"string44444","nopeString",true,5000,"StartsWithUppercase"]));
