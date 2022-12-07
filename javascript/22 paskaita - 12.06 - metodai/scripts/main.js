@@ -88,8 +88,6 @@ document.querySelector("#task2 .name-surname-form").addEventListener('submit',(e
       surnameElement.innerText+=surname+" ";
    }
 
-   outputContainer.appendChild(nameElement);
-   outputContainer.appendChild(surnameElement);
-
+   outputContainer.append(nameElement, surnameElement);
 });
 
