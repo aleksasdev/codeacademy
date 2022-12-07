@@ -128,3 +128,38 @@ let getOnlyNumbersArrayMin = (minNumber,array)=>{
    return newArrayOfNumbers;
 };
 console.log("(19)",getOnlyNumbersArrayMin(4,[2,3,4,5,"string44444","nopeString",true,5000,"StartsWithUppercase"]));
+
+// 20
+let getOnlyNumbersArrayMax = (maxNumber,array)=>{
+   let newArrayOfNumbers=[];
+   for(let element of array){
+      if(typeof(element)!=="number"){continue};
+      element<maxNumber?newArrayOfNumbers.push(element):null;
+   }
+   return newArrayOfNumbers;
+};
+console.log("(20)",getOnlyNumbersArrayMax(4,[2,3,4,5,"string44444","nopeString",true,5000,"StartsWithUppercase"]));
+
+// 21
+let getOnlyNumbersArrayWithCondition = (minNumber,maxNumber,array)=>{
+   let newArrayOfNumbers=[];
+   for(let element of array){
+      if(typeof(element)!=="number"){continue};
+      if(element>minNumber && element<maxNumber){newArrayOfNumbers.push(element)};
+   }
+   return newArrayOfNumbers;
+};
+console.log("(21)",getOnlyNumbersArrayWithCondition(4, 10,[2,3,7,4,5,11,12,"string44444","nopeString",true,5000,"StartsWithUppercase"]));
+
+// 22
+let getOnlyNumbersArrayWithConditionOddEven = (evenNumbers,minNumber,maxNumber,array)=>{
+   let newArrayOfNumbers=[];
+   for(let element of array){
+      if(typeof(element)!=="number"){continue};
+      if(element<=minNumber || element>=maxNumber){continue};
+      if(evenNumbers && element%2 === 0){newArrayOfNumbers.push(element)};
+      if(!evenNumbers && element%2 === 1){newArrayOfNumbers.push(element)};
+   }
+   return newArrayOfNumbers;
+};
+console.log("(22)",getOnlyNumbersArrayWithConditionOddEven(false,1,10,[2,3,7,4,5,11,12,"string44444","nopeString",true,5000,"StartsWithUppercase"]));
