@@ -50,4 +50,27 @@ let getBiggestAndSmallestNumber = array=>{
 console.log(getTaskNumber());
 getBiggestAndSmallestNumber([4,5,11,44,667,743,222,1112,3,4342244,3242422,3,2.5]);
 
+// 4
+let getRepeatingElement = (array1,array2)=>{
+   array1.forEach(element=>{
+      for(let secondArrayElement of array2){
+         if(element===secondArrayElement){console.log("Element: ["+element+"] has been found in both arrays"); break};
+      }
+   });
+}
+console.log(getTaskNumber());
+getRepeatingElement(["lel","yes","dada", "eggo",3],["lel","no","ahaha","eggo",3]);
+
+// 5
+let createArrayFromIndexes = (array,indexArray)=>{
+   let newArray=[];
+   array.forEach(element=>{
+      for(let index of indexArray){
+         element===array[index]?newArray.push(element):null;
+      }
+   });
+   return newArray;
+}
+console.log(getTaskNumber(),createArrayFromIndexes(["One","Two","Three","Four","Five"], [0,1,2]));
+
 console.groupEnd();
