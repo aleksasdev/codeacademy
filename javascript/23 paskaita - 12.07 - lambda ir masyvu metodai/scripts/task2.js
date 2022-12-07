@@ -64,11 +64,7 @@ getRepeatingElement(["lel","yes","dada", "eggo",3],["lel","no","ahaha","eggo",3]
 // 5
 let createArrayFromIndexes = (array,indexArray)=>{
    let newArray=[];
-   array.forEach(element=>{
-      for(let index of indexArray){
-         element===array[index]?newArray.push(element):null;
-      }
-   });
+   for(let index of indexArray){newArray.push(array[index])};
    return newArray;
 }
 console.log(getTaskNumber(),createArrayFromIndexes(["One","Two","Three","Four","Five"], [0,1,2]));
