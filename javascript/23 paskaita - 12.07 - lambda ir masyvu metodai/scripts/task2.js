@@ -48,7 +48,28 @@ let getBiggestAndSmallestNumber = array=>{
    };
 }
 console.log(getTaskNumber());
-getBiggestAndSmallestNumber([4,5,11,44,667,743,222,1112,3,4342244,3242422,3,2.5]);
+getBiggestAndSmallestNumber([4,5,11,44,667,743,222,1112,3,4342244,3242422,3,2.5,-100000000,-1000000000000000]);
+
+// 3.5
+let getBiggetAndSmallestNumberFilter = (array)=>{
+   let biggestNumber = array.filter(number=>{
+      for(let anotherNumber of array){
+         if(number<anotherNumber){return false};
+      }
+      return true;
+   });
+   console.log("Biggest number is:",biggestNumber);
+
+   let smallestNumber = array.filter(number=>{
+      for(let anotherNumber of array){
+         if(number>anotherNumber){return false};
+      }
+      return true;
+   });
+   console.log("Smallest number is:",smallestNumber);
+}
+console.log("[3.5]");
+getBiggetAndSmallestNumberFilter([4,5,11,44,667,743,222,1112,3,4342244,3242422,3,2.5,-100000000,-1000000000000000]);
 
 // 4
 let getRepeatingElement = (array1,array2)=>{
