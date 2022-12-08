@@ -7,10 +7,10 @@ console.group("Task2");
 // 1
 let doArrayToString = array=>{
    let newString="";
-   array.forEach((element)=>newString+=element);
+   array.forEach((element)=>newString+=element.toString());
    return newString;
 }
-console.log(getTaskNumber(),doArrayToString(["lmao","yoyo","aha"]));
+console.log(getTaskNumber(),doArrayToString(["lmao","yoyo","aha", 5444, 6, true, "aa"]));
 
 // 2
 let getReversedArray = array=>{
