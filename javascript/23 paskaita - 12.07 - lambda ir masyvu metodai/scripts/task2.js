@@ -58,7 +58,7 @@ let getBiggetAndSmallestNumberFilter = (array)=>{
       }
       return true;
    });
-   console.log("Biggest number is:",biggestNumber);
+   console.log("Biggest number is:",biggestNumber[0]);
 
    let smallestNumber = array.filter(number=>{
       for(let anotherNumber of array){
@@ -66,7 +66,7 @@ let getBiggetAndSmallestNumberFilter = (array)=>{
       }
       return true;
    });
-   console.log("Smallest number is:",smallestNumber);
+   console.log("Smallest number is:",smallestNumber[0]);
 }
 console.log("[3.5]");
 getBiggetAndSmallestNumberFilter([4,5,11,44,667,743,222,1112,3,4342244,3242422,3,2.5,-100000000,-1000000000000000]);
