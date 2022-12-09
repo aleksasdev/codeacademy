@@ -1,0 +1,38 @@
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+   --primary-color: #36393f;
+   --primary-color-tint: #40444b;
+   --primary-color-shadow: #202225;
+   --secondary-color: #7289DA;
+
+   --border-radius: 5px;
+   --border: 1px solid lightcoral;
+}
+section{
+   padding: 2rem;
+   gap: 1rem;
+   display: flex;
+   flex-flow: wrap;
+   justify-content: center;
+   background-color: var(--primary-color-shadow);
+   color: white;
+}
+input, textarea{
+   border-radius: var(--border-radius);
+   border: none;
+   height: 2.3rem;
+   padding: 0.8rem;
+   background-color: var(--primary-color-tint);
+   width: 100%;
+   color: white;
+}
+input[type="submit"]{
+   cursor: pointer;
+   background-color: var(--secondary-color);
+   padding: 0;
+}
