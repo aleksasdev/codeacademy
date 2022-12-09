@@ -26,8 +26,8 @@ document.querySelector('#card > form').addEventListener('submit',e=>{
          <img src="${debuggingMode&&!photo.value?"./assets/card-default.jpg"
          :URL.createObjectURL(photo.files[0])}" alt="">
          <span>
-            <p class="date">${date?date.value:null}</p>
-            <p class="location">${location?location.value:null}</p>
+            ${date.value?"<p class='date'>"+date.value+"</p>":""}
+            ${location.value?"<p class='location'>"+location.value+"</p>":""}
          </span>
       </div>
       <div class="content-container">
@@ -35,13 +35,6 @@ document.querySelector('#card > form').addEventListener('submit',e=>{
          <p class="description">${description.value}</p>
    </div>
    `;
-
-   // Turn the choosen file into usable data
-   if(photo.value){
-      var fileReader = new fileReader();
-      fileReader.onload = function(event){
-         document.querySelector();
-      }
-   }
+   cardContainer.scrollTo(0,cardContainer.scrollHeight);
    
 });
