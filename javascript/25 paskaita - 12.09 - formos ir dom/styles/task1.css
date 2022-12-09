@@ -7,21 +7,34 @@
 :root{
    --primary-color: #36393f;
    --primary-color-tint: #40444b;
+   --primary-color-shadow: #202225;
    --secondary-color: #7289DA;
+
    --border-radius: 5px;
+   --border: 1px solid lightcoral;
+}
+
+section{
+   padding: 2rem;
+   gap: 1rem;
+   display: flex;
+   flex-flow: wrap;
+   justify-content: center;
+   background-color: var(--primary-color-shadow);
 }
 
 #card form{
+   min-width: 40rem;
    max-width: 50rem;
-   max-height: 50rem;
+   max-height: 100%;
    border-radius: var(--border-radius);
-   padding: 2rem;
    background-color: var(--primary-color);
-   border: 1px solid lightcoral;
+   border: var(--border);
    color: white;
    display: grid;
-   grid-template: 1fr 1fr / 1fr 1fr;
+   grid-template: 1fr / 1fr 1fr;
    row-gap: 1rem;
+   padding: 2rem;
 }
 
 #card .info-container{
@@ -87,10 +100,18 @@
 }
 
 /* Generated card */
-#card .generated-card-container{
+#generated-cards{
+   border: var(--border);
+   border-radius: var(--border-radius);
    grid-column: span 2;
-   width: 100%;
-   height: 100%;
+   color: white;
+   background-color: var(--primary-color);
+   overflow-y: scroll;
+   height: 30rem;
+}
+#generated-cards .generated-card-container{
+   width: 40rem;
+   height: fit-content;
    background-color: var(--primary-color-tint);
    border-radius: var(--border-radius);
    display: grid;
@@ -98,19 +119,20 @@
    padding: 1rem;
    gap: 1rem;
 }
-#card .generated-card-container .image-container{
+#generated-cards .generated-card-container .image-container{
    position: relative;
    width: 100%;
-   height: 100%;
+   height: 15rem;
 }
-#card .generated-card-container img{
+#generated-cards .generated-card-container img{
    object-fit: cover;
+   object-position: top;
    width: 100%;
    height: 100%;
    border-radius: var(--border-radius);
    border: 5px solid var(--primary-color);
 }
-#card .generated-card-container .image-container span{
+#generated-cards .generated-card-container .image-container span{
    position: absolute;
    bottom: 0;
    display: flex;
@@ -119,12 +141,12 @@
    width: 100%;
    border-radius: var(--border-radius);
 }
-#card .generated-card-container .image-container span p{
+#generated-cards .generated-card-container .image-container span p{
    background-color: var(--primary-color-tint);
    padding: 0.5rem;
    border-radius: var(--border-radius);
 }
-#card .generated-card-container .content-container{
+#generated-cards .generated-card-container .content-container{
    align-self: flex-start;
    display: flex;
    gap: inherit;
@@ -132,14 +154,14 @@
    align-items: center;
    text-align: center;
 }
-#card .generated-card-container .content-container .title{
+#generated-cards .generated-card-container .content-container .title{
    margin: 0;
    padding: 0.2rem;
    width: 100%;
    background-color: var(--primary-color);
    border-radius: var(--border-radius);
 }
-#card .generated-card-container .content-container .description{
+#generated-cards .generated-card-container .content-container .description{
    background-color: var(--primary-color);
    padding: 0.2rem;
    border-radius: var(--border-radius);
