@@ -48,7 +48,7 @@ const handleAddingOrder=(e)=>{
 
    // Edit an existing bill item if it's already in there
    for(let element of selectedItemsContainer.children){
-      if(element.innerText.includes(selectedFoodValue.pavadinimas)){
+      if(element.id === selectedFoodValue.id){
          selectedItemsContainer.removeChild(element);
          selectedFoodValue.orderedAmount+=1;
          selectedFoodValue.owedAmount+=selectedFoodValue.kaina;
@@ -58,6 +58,7 @@ const handleAddingOrder=(e)=>{
    // Create new bill item
    const selectedFoodElement = document.createElement('div');
    selectedFoodElement.classList.add('selected-item');
+   selectedFoodElement.id=e.target.id;
    selectedFoodElement.innerText=selectedFoodValue.pavadinimas
       +"\nKiekis:"+selectedFoodValue.orderedAmount
       +"\nKaina:"+selectedFoodValue.owedAmount.toFixed(2)+"€";
@@ -75,7 +76,7 @@ const handleAddingOrder=(e)=>{
       removeElement.addEventListener('click',e=>{
          const selectedElement = data.find(element=>element.id===e.target.id);
          for(let element of selectedItemsContainer.children){
-            if(element.innerText.includes(selectedElement.pavadinimas)){
+            if(element.id === selectedElement.id){
                selectedElement.orderedAmount=undefined;
                selectedElement.owedAmount=undefined;
                selectedItemsContainer.removeChild(element);
