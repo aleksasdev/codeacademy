@@ -52,6 +52,7 @@ body{
    display: flex;
    flex-direction: column;
    gap: 0.5rem;
+   width: 100%;
 }
 #menu .bill-container .selected-item{
    display: flex;
