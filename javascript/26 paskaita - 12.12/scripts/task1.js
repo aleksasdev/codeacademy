@@ -7,10 +7,12 @@ const createMenu=()=>{
    // Create elements
    data.forEach(element=>{
       const div = document.createElement('div');
+      const img = document.createElement('img');
+      img.src = element.paveiksliukas;
       div.addEventListener('click', e=>handleAddingOrder(e));
       div.classList.add('menu-item');
       div.id=element.id;
-      div.innerText=element.pavadinimas;
+      div.append(img);
       menuContainer.append(div);
    });
 
