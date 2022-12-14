@@ -1,11 +1,11 @@
-class CreateHeading{
+class CreateElement{
    constructor(props){
       this.props=props;
       return this.render();
    }
    render(){
-      this.element = document.createElement(`h${this.props.size}`);
-      this.element.innerText=this.props.text;
+      this.element = document.createElement(this.props.tag);
+      this.element.append(document.createTextNode(this.props.text));
       if(this.props.attributes){
          Object.keys(this.props.attributes).forEach(key=>{
             this.element.setAttribute(key, this.props.attributes[key]);
@@ -15,10 +15,10 @@ class CreateHeading{
    }
 }
 
-document.querySelector("#task3").append(new CreateHeading({
-   size: 1,
+document.querySelector("#task3").append(new CreateElement({
+   tag: "h1",
    text: "lelele",
    attributes: {
-      "style":"color: red; font-size: 5rem; margin-left: 4rem"
+      "style":"color: red; margin-left: 4rem"
    }
 }));
