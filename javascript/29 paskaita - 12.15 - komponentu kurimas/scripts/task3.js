@@ -6,7 +6,7 @@ new Element({outputContainer:document.querySelector("body"),type:"h1",text:"Task
 const table = new Table({
    outputContainer:document.querySelector("body"),
    columns: 2,
-   rows: 4,
+   rows: 3,
    attributes: {class: "task3-table"}
 });
 table.addEntryHead({text: 'Head'});
