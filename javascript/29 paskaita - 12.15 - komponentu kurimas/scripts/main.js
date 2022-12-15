@@ -53,3 +53,17 @@ for(let i = 0; i<5; i++){
 ul.render();
 
 // Task 2
+const select = new Element({
+   outputContainer: document.querySelector('body'),
+   type: "select",
+   attributes:{class:"task2-select"}
+});
+
+for(let i = 0; i<5; i++){
+   select.addChild({
+      type: "option",
+      text: "LOL"+i,
+      attributes: {style:"color: blue; font-size: 2rem"}
+   });
+}
+select.render();
