@@ -38,7 +38,7 @@ class Element{
 const ul = new Element({
    outputContainer: document.querySelector('body'),
    type: "ul",
-   attributes:{class:"lel"}
+   attributes:{class:"task1-ul"}
 });
 
 ul.addChild({type:"h1", text:"Task1"})
@@ -51,3 +51,5 @@ for(let i = 0; i<5; i++){
    });
 }
 ul.render();
+
+// Task 2
