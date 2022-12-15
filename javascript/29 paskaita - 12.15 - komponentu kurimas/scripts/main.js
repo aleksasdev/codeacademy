@@ -6,15 +6,10 @@ class Element{
       this.#props = props;
       this.#outputContainer = this.#props.outputContainer;
       this.#element = document.createElement(this.#props.type);
-
-      // Add attributes to the main element we're creating
-      if(this.#props.attributes){
-         this.addAttributes({
-            attributes: this.#props.attributes,
-            element: this.#element
-         });
-      }
+      this.#parse();
    }
+   // Adds attributes to an element, constructor itself
+   // calls this method, but it can be used independently
    addAttributes(props){
       Object.keys(props.attributes).forEach(key=>{
          props.element.setAttribute(key,props.attributes[key]);
@@ -29,6 +24,17 @@ class Element{
       })}
       this.#element.appendChild(this.child);
    }
+   #parse(){
+      // Add text if available
+      if(this.#props.text){this.#element.innerText=this.#props.text};
+      // Add attributes to the main element we're creating
+      if(this.#props.attributes){
+         this.addAttributes({
+            attributes: this.#props.attributes,
+            element: this.#element
+         });
+      }
+   }
    render(){
       this.#outputContainer.appendChild(this.#element);
    }
@@ -41,7 +47,7 @@ const ul = new Element({
    attributes:{class:"task1-ul"}
 });
 
-ul.addChild({type:"h1", text:"Task1"})
+new Element({outputContainer:document.querySelector("body"),type:"h1",text:"Task 1"}).render();
 
 for(let i = 0; i<5; i++){
    ul.addChild({
@@ -58,6 +64,8 @@ const select = new Element({
    type: "select",
    attributes:{class:"task2-select"}
 });
+
+new Element({outputContainer:document.querySelector("body"),type:"h1",text:"Task 2"}).render();
 
 for(let i = 0; i<5; i++){
    select.addChild({
