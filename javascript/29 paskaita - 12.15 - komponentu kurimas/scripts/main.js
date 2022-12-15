@@ -8,8 +8,6 @@ class Element{
       this.#element = document.createElement(this.#props.type);
       this.#parse();
    }
-   // Adds attributes to an element, constructor itself
-   // calls this method, but it can be used independently
    addAttributes(props){
       Object.keys(props.attributes).forEach(key=>{
          props.element.setAttribute(key,props.attributes[key]);
@@ -25,7 +23,7 @@ class Element{
       this.#element.appendChild(this.child);
    }
    #parse(){
-      // Add text if available
+      // Add text to the main element if available
       if(this.#props.text){this.#element.innerText=this.#props.text};
       // Add attributes to the main element we're creating
       if(this.#props.attributes){
