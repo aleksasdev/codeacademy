@@ -8,10 +8,14 @@ export default class Element{
       this.#element = document.createElement(this.#props.type);
       this.#parse();
    }
+   getElement(){return this.#element};
    addAttributes(props){
       Object.keys(props.attributes).forEach(key=>{
          props.element.setAttribute(key,props.attributes[key]);
       });
+   }
+   addChildNode(nodeElement){
+      this.#element.appencChild(nodeElement);
    }
    addChild(props){
       this.child = document.createElement(props.type);
