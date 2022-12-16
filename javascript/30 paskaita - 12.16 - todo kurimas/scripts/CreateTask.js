@@ -21,7 +21,10 @@ export default class CreateTask{
       this.props.outputContainer.append(this.div);
    }
    #createUtility(props){
-      // Generate elements
+      // Generate complete task button
+      this.completeButton
+
+      // Generate edit and delete buttons
       this.utilityContainer = document.createElement('div');
       this.utilityContainer.classList.add('utility-container');
 
@@ -36,7 +39,8 @@ export default class CreateTask{
 
       // Handle listeners
       this.handleEdit=(e)=>{
-         this.h1.innerText=prompt('New task...');
+         this.newText = prompt('New task...');
+         if(this.newText) this.h1.innerText=this.newText;
       }
       this.handleDelete=(e)=>{
          this.props.outputContainer.removeChild(props.elementIdentifier);
