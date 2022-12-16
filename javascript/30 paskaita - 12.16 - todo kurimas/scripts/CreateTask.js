@@ -1,4 +1,4 @@
-class CreateTask{
+export default class CreateTask{
    constructor(props){
       this.props = props;
       this.render();
@@ -45,17 +45,3 @@ class CreateTask{
       this.deleteButton.addEventListener('click',e=>this.handleDelete(e))
    }
 }
-
-document.querySelector("#todo .add-task-container form").addEventListener('submit',e=>{
-   e.preventDefault();
-   new CreateTask({
-      outputContainer: document.querySelector("#todo"),
-      taskText: document.querySelector("#todo .add-task-container form input[type='text']").value
-   });
-});
-
-// TESTING TODO: REMOVE
-// new CreateTask({
-//    outputContainer: document.querySelector("#todo"),
-//    taskText: "Take Out The Trash"
-// });

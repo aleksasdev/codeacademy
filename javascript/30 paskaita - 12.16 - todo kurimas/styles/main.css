@@ -38,6 +38,12 @@ main{
    cursor: pointer;
 }
 
+#todo .error-message{
+   color: lightcoral;
+   align-self: flex-start;
+   display: none;
+}
+
 #todo .task-container{
    height: 5rem;
    background-color: white;
