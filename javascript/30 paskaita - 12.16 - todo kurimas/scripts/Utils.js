@@ -6,7 +6,7 @@ export default class Utils{
    async doError({errorElement, errorMessage}){
       if(this.isErrorActive){return false};
 
-      this.isErrorActive = true;
+      this.isErrorActive = true; // Anti spam feature
       errorElement.style = "display: block;"
       errorElement.innerText = errorMessage;
       await setTimeout(() => {
