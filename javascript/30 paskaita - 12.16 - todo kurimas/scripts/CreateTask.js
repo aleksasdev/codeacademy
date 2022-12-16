@@ -10,9 +10,7 @@ export default class CreateTask{
       this.div.classList.add('shadow');
 
       // Add text
-      this.h1 = document.createElement('h1');
-      this.h1.innerText=this.props.taskText;
-      this.div.append(this.h1);
+      this.#createText({elementIdentifier: this.div});
 
       // Add utility buttons
       this.#createUtility({elementIdentifier: this.div});
@@ -20,10 +18,36 @@ export default class CreateTask{
       // Finally add task item to todo section
       this.props.outputContainer.append(this.div);
    }
-   #createUtility(props){
-      // Generate complete task button
-      this.completeButton
+   #createText(props){
+      // Create content container
+      this.contentContainer = document.createElement('div');
+      this.contentContainer.classList.add('content-container');
 
+      // Create text element
+      this.h1 = document.createElement('h1');
+      this.h1.innerText=this.props.taskText;
+
+      // Generate complete task button
+      this.completeButton = document.createElement('svg');
+      this.completeButton.innerHTML=`<?xml version="1.0" ?><svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><title/><g><path d="M58.3945,32.1563,42.9961,50.625l-5.3906-6.4629a5.995,5.995,0,1,0-9.211,7.6758l9.9961,12a5.9914,5.9914,0,0,0,9.211.0059l20.0039-24a5.9988,5.9988,0,1,0-9.211-7.6875Z"/><path d="M48,0A48,48,0,1,0,96,48,48.0512,48.0512,0,0,0,48,0Zm0,84A36,36,0,1,1,84,48,36.0393,36.0393,0,0,1,48,84Z"/></g></svg>`;
+      this.contentContainer.append(this.completeButton);
+
+      // Handle complete button listener
+      this.completeButton.addEventListener('click', e=>{
+         // Text
+         if(this.h1.style.textDecorationLine==="line-through"){this.h1.style.textDecorationLine="none"}
+         else if(!this.h1.style.textDecorationLine || this.h1.style.textDecorationLine==="none"){
+            this.h1.style.textDecorationLine="line-through"
+         };
+      });
+
+      // Append text element to content container
+      this.contentContainer.append(this.h1);
+
+      // Append content container to main div
+      this.div.append(this.contentContainer);
+   }
+   #createUtility(props){
       // Generate edit and delete buttons
       this.utilityContainer = document.createElement('div');
       this.utilityContainer.classList.add('utility-container');

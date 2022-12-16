@@ -52,6 +52,13 @@ main{
    align-items: center;
    padding: 0 2rem;
 }
+#todo .task-container .content-container{
+   display: flex;
+   align-items: center;
+   gap: 3rem;
+   user-select: none;
+}
+
 #todo .task-container .utility-container{
    display: flex;
    gap: 0.5rem;
@@ -62,6 +69,9 @@ main{
    fill: black;
    cursor: pointer;
 }
-#todo .task-container svg:hover{
+#todo .task-container .content-container svg:hover{
+   fill: lightgreen;
+}
+#todo .task-container .utility-container svg:hover{
    fill: var(--primary-color);
 }
