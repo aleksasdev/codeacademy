@@ -1,0 +1,33 @@
+@media (min-width: 1400px){
+   body{
+      padding: 0 20rem;
+   }
+   .hero{
+      height: 33rem;
+   }
+   .hero p{
+      font-size: 3.1em;
+   }
+
+   /* Content */
+   #content{
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      row-gap: 4rem;
+   }
+   #content .card{
+      grid-template: 0.2fr 1fr 0.2fr / 1fr 0.7fr;
+   }
+   #content .card h1{
+      grid-row: 1;
+   }
+   #content .card p{
+      grid-row: 2;
+   }
+   #content .card img{
+      padding: 1.3rem;
+      grid-row: 1 / span 3;
+      grid-column: 2;
+   }
+
+}

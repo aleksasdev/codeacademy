@@ -1,0 +1,19 @@
+nav{
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem 2rem;
+   background-color: white;
+   height: 6rem;
+}
+nav h1{
+   font-size: 2rem;
+}
+nav ul{
+   display: flex;
+   gap: 0.8rem;
+}
+nav ul svg{
+   fill: var(--primary-color);
+   width: 1.5rem;
+   height: 1.5rem;
+}

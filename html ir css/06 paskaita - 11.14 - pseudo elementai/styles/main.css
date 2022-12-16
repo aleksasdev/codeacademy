@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.selektoriu-pavyzdiai :not(p){
+    color:blue;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Task1 */
+:root{
+    --task1-section-height: 3rem;
+    --task1-primary-color: green;
+
+    --task1-background-color1: rgb(223, 222, 222);
+    --task1-background-color2: rgb(181, 238, 181);
+}
+#task1{
+    margin: 5rem 0;
+    width: 60%;
+}
+#task1 section{
+    font-size: 1.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 1.2rem 1.2rem;
+}
+#task1 section p{
+    font-size: 0.8em;
+}
+.task1-navbar-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task1-navbar-image img{
+    width: 19rem;
+    height: auto;
+}
+.navbar-task1-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--task1-section-height);
+    gap: 3rem;
+    background-color: var(--task1-primary-color);
+}
+.navbar-task1-container a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+}
+.task1-section-heading{
+    background-color: var(--task1-primary-color);
+    height: var(--task1-section-height);
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+#task1-hero{
+    background-color: var(--task1-background-color1);
+}
+#task1-hero img{
+    width: 100%;
+}
+
+#task1-about{
+    background-color: var(--task1-background-color1);
+}
+
+#task1-contact{
+    background-color: var(--task1-background-color2);
+}
+
+/* Task2 */
+:root{
+    --task2-primary-color: #24282c;
+    --task2-secondary-color: #121212;
+    --task2-text-color: #c9c8c8;
+    --task2-second-text-color: #
+}
+#task2{
+    display: flex;
+    height: 50rem;
+    width: 80%;
+    color: var(--task2-text-color);
+    margin: 10rem 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#task2 h1{
+    color: var(--task2-text-color);
+    font-size: 1.8em;
+    max-width: 2rem;
+}
+#task2 ol{
+    font-size: 1.1em;
+}
+
+/* Styles */
+.navbar-seperator-style{
+    height: 0.08rem;
+    background-color: var(--task2-secondary-color);
+}
+.text-highlight-style{
+    color: var(--task2-primary-color); 
+    font-weight: bold;
+}
+
+/* Header/Navbar */
+#header-task2{
+    width: 30%;
+    height: 100%;
+    background-color: var(--task2-primary-color);
+}
+.navbar-task2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0.5rem;
+
+}
+.movie-listings-task2{
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.movie-listings-task2 li{
+    margin-left: 3rem;
+}
+.unique-orderlist-task2 li{
+    color: rgb(94, 94, 94);
+}
+.unique-orderlist-task2 li::marker{
+    color: red;
+    font-size: 1.2em;
+}
+.unique-listitem-task2.unique-listitem-task2{
+    color: rgb(231, 230, 230);
+}
+
+
+/* Movies section */
+/* Movies header */
+#movies-container-task2{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.movies-aside-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--task2-text-color);
+    padding: 1rem 1rem;
+}
+.movies-aside-header > div{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.movies-aside-right-side{
+    margin-bottom: 3rem;
+}
+/* Movies main section */
+.movies-aside-main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.movies-aside-content-container{
+    width: 92%;
+}
+
+/* Task 3 */
+#task3{
+    margin: 20rem 0;
+}
+.task3-table th{
+    width: 5rem;
+    height: 2rem;
+}
+.task3-table th:first-child{
+    color: orange;
+}
+.task3-table th:last-child{
+    color: pink;
+}
+.task3-table thead tr:first-child{
+    background-color: cyan;
+}
+.task3-table tr:nth-child(2n){
+    background-color: red;
+}
+.task3-table tbody .one{
+    color: orange;
+}
+.task3-table tbody .two{
+    color: orange;
+}
+
+/* Task 5 */
+:root{
+    --task5-primary-color: #202739;
+    --task5-secondary-color: #202739;
+    --task5-third-color: #202739;
+
+    --task5-primary-text-color: #a7a0ae;
+    --task5-secondary-text-color: #f86478;
+
+    --task5-primary-background-color: #323c50;
+    --task5-secondary-background-color: #2d3446;
+
+}
+#task5{
+    font-family: monospace serif;
+    margin: 20rem 0;
+    display: flex;
+    height: 50rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--task5-primary-color);
+    color: var(--task5-primary-text-color);
+    flex-direction: column;
+}
+.content-container-task5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.9rem;
+}
+.content-container-task5 p{
+    color: var(--task5-secondary-text-color);
+    margin-top: 1rem;
+}
+.task5-content-headline{
+    font-size: 2.7em;
+    margin-bottom: 2rem;
+    color: #fff843;
+}
+.task5-content-headline-first-word{
+    color: #4ec2fa;
+}
+.content-image{
+    background-color: white;
+    border-radius: 5%;
+    height: 17rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-image img{
+    width: 35rem;
+    height: auto;
+}
+.lost-span-style{
+    background-color: #dd0000;
+}
+.won-span-style{
+    background-color: #14dc4c;
+}
+.tie-span-style{
+    background-color: #ffcd00;
+}
+.results-wrapper-task5{
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+/* Task 5 table */
+.table-container-task5{
+    font-size: 1.05em;
+}
+.table-container-task5 thead th{
+    padding: 0.5rem;
+}
+.table-container-task5 tbody th{
+    padding: 0.4rem 1rem;
+}
+.table-container-task5 tbody th:first-child{
+    padding: 0.7rem;
+}
+.table-container-task5 tbody tr:nth-child(2n+1){
+    background-color: var(--task5-primary-background-color);
+}
+.table-container-task5 tbody tr:nth-child(2n){
+    background-color: var(--task5-secondary-background-color);
+}
+.table-container-task5 tbody th:first-child{
+    color: var(--task5-secondary-text-color);
+}
+.task5-form-column{
+    display: flex;
+    gap: 0.3rem;
+}
+.task5-form-column span{
+    width: 30px;
+    height: 30px;
+    border-radius: 10%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lost-span-style{
+    background-color: #dd0000;
+}
+.won-span-style{
+    background-color: #14dc4c;
+}
+.tie-span-style{
+    background-color: #ffcd00;
+}
+
+/* Task 6 extra */
+#task6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50rem;
+    background-color: #202739;
+    margin: 20rem 0;
+}
+
+.table-container-task6{
+    overflow: hidden;
+    position: relative;
+    color: var(--task5-primary-text-color);
+}
+.table-container-task6 tbody th{
+    border: 1px solid black;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+}
+/* Make one element change color and background */
+.table-container-task6 tbody th:hover{
+    color: red;
+}
+/* Make the whole row of the element change color and background */
+.table-container-task6 tbody tr:hover{
+    color: white;
+    background-color: orange;
+}
+/* Make the whole column of the element change background */
+.table-container-task6 tbody th[class*='column-1']:hover{
+    background-color: white;
+}

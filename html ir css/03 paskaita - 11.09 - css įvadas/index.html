@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 paskaita - css įvadas</title>
+
+    <!-- Nesamoningas budas daryti CSS -->
+    <style>
+        p {
+            color: orange;
+            background-color: black;
+        }
+    </style>
+
+    <!-- Pagrindinis budas sujungti css su html per vanilla html implementacija (bet as esu #reactgang narys, tai sito niekad nedarysiu :P) -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- Homework -->
+    <div class="navbar-container">
+        <div class="navbar-button">Home
+            <div class="dropdown-container" id="off"></div>
+        </div>
+        <div class="navbar-button">Tables
+            <div class="dropdown-container" id="off">
+                <a href="#" class="dropdown-button">Oak Tables</a>
+                <a href="#" class="dropdown-button">Birch Tables</a>
+                <a href="#" class="dropdown-button">Spruce Tables</a>
+            </div>
+        </div>
+
+        <div class="navbar-button">Wardrobes
+            <div class="dropdown-container" id="off">
+                <a href="#" class="dropdown-button">Double Doors</a>
+                <a href="#" class="dropdown-button">Single Door</a>
+                <a href="#" class="dropdown-button">Complex</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="task-1">
+        <div class="flag-container">
+            <div class="lithuania-item lithuania-1"></div>
+            <div class="lithuania-item lithuania-2"></div>
+            <div class="lithuania-item lithuania-3"></div>
+        </div>
+
+        <div class="flag-container">
+            <div class="belgium-item belgium-1"></div>
+            <div class="belgium-item belgium-2"></div>
+            <div class="belgium-item belgium-3"></div>
+        </div>
+
+        <div class="flag-container japanese-flag-container">
+            <div class="japanese-flag-center-item"></div>
+        </div>
+
+        <div class="flag-container">
+            <div class="france-item france-1"></div>
+            <div class="france-item france-2"></div>
+            <div class="france-item france-3"></div>
+        </div>
+
+        <div class="flag-container">
+            <div class="poland-item poland-1"></div>
+            <div class="poland-item poland-2"></div>
+        </div>
+    </div>
+
+    <!-- CSS rašymo būdai -->
+    <div>
+        <h1>CSS rašymo būdai</h1>
+        <h2>Inline</h2>
+        <p style="color: darksalmon; background-color: beige;display: inline;">
+            Linijinis stilius yra, kai elementui kuri stilizuojame suteikiame style atributa ir jo viduje suteikiame stilius; nera teisingas budas naudoti CSS.
+        </p>
+        <h2>Internal</h2>
+        <p>
+            Vidinis stilius yra, kai HTML failo viduje, head tag'o dalyje susikuriame style tag'a ir style tag'e rasome CSS koda; velgi, nera teisingas budas rasyti CSS koda
+        </p>
+        <h2>External</h2>
+        <p>
+            Isorinis stilius yra rasomas CSS faile.
+        </p>
+    </div>
+
+    <!-- Basic selectors -->
+    <div>
+        <h1>Basic Selectors</h1>
+        <h2>Element / Tag (p,h,div...{})</h2>
+        <h2>Class (.main-container{})</h2>
+        <p>Testinis klases pavizdys: <span class="testinis-tekstas">*sitas tekstas bus keiciamas*</span></p>
+        <p>&ltp&gt;</p>
+        <h2>ID (#id-vardas{})</h2>
+        <p id="testinis-id">Pakeisime sita teksta!</p>
+    </div>
+
+    <div id="displays">
+        <h1>Displays</h1>
+        <h2>Inline</h2>
+        <p>
+            Inline privalumas yra tas, kad ju dydziu negalima keisti, konteineriai su display: inline, uzema tiek vietos kiek ju content'as. Negalima duoti kazkokio kito dydzio.
+        </p>
+
+        <div>
+            <div class="kvadratas linijinis">1</div>
+            <div class="kvadratas linijinis">2</div>
+            <div class="kvadratas linijinis">3</div>
+        </div>
+
+        <h2>Block</h2>
+        <p>
+            Block elementai uzima visa eilute arba nurodyta dydi. Bet jie uzima visa eilute, net jeigu ju dydzio nustatymai to nereikalauja.
+        </p>
+        <div>
+            <div class="kvadratas blokinis">1</div>
+            <div class="kvadratas blokinis">2</div>
+            <div class="kvadratas blokinis">3</div>
+        </div>
+
+        <h2>Inline-Block</h2>
+        <p>
+            Inline-Block elementai uzima tik tiek vietos kiek ju content'as
+        </p>
+        <div>
+            <div class="kvadratas linijinis-blokinis">1</div>
+            <div class="kvadratas linijinis-blokinis">2</div>
+            <div class="kvadratas linijinis-blokinis">3</div>
+        </div>
+    </div>
+
+    <div id="colors">
+        <h1>Colors</h1>
+        <h2>Names (red, white, black)</h2>
+        <h2>RGB (rgb(1,1,1))</h2>
+        <h2>Hex (#ffffff)</h2>
+        <p>
+            
+        </p>
+
+    </div>
+
+    <div id="positions">
+        <h1>Positions</h1>
+        <h2>Static</h2>
+        <p>Nieko nedaro, nei pakeicia elemento pozicija, nei suteikia jam galimybe naudotis top, left, right, bottom, z-index, stiliais. Sita pozicija naudojama kaip placeholder </p>
+        <div>
+            <div class="kvadratas display-ib static">static 1</div>
+            <div class="kvadratas display-ib static">static 2</div>
+            <div class="kvadratas display-ib static">static 3</div>
+            <div class="kvadratas display-ib static">static 4</div>
+        </div>
+
+        <h2>Relative</h2>
+        <p>Suteikia galimybe naudotis top, left, right, bottom, z-index styliais. </p>
+        <div>
+            <div class="kvadratas display-ib static">static 1</div>
+            <div class="kvadratas display-ib relative t10">relative 1</div>
+            <div class="kvadratas display-ib relative r30">relative 2</div>
+            <div class="kvadratas display-ib static">static 4</div>
+        </div>
+
+        <h2>Absolute</h2>
+        <p>Iseina is puslapio tekmes.</p>
+        <div style="position: relative">
+            <div class="kvadratas display-ib absolute t10">absolute 1</div>
+            <div class="kvadratas display-ib static">static 2</div>
+            <div class="kvadratas display-ib static">static 3</div>
+            <div class="kvadratas display-ib static">static 4</div>
+        </div>
+
+        <h2>Fixed</h2>
+        <p></p>
+        <div>
+            <div class="kvadratas display-ib fixed">fixed 1</div>
+            <div class="kvadratas display-ib static">static 2</div>
+            <div class="kvadratas display-ib static">static 3</div>
+            <div class="kvadratas display-ib static">static 4</div>
+        </div>
+
+        <h2>Sticky</h2>
+        <p></p>
+        <div style="height: 500px; background-color: black; display: inline-block;">
+            <div class="kvadratas display-ib static">static 1</div>
+            <div class="kvadratas display-ib static">static 2</div>
+            <div class="kvadratas display-ib static">static 3</div>
+            <div class="kvadratas display-ib sticky">sticky 4</div>
+        </div>
+    </div>
+
+    <div id="practice">
+        <h1>Practice</h1>
+        <div class="practice-rectangle">f</div>
+        <div class="practice-rectangle test-2">ffff</div>
+        <div class="practice-rectangle">f</div>
+        <div class="practice-picture-frame">
+            <img src="https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png" alt="">
+        </div>
+
+        <!-- Veliava practice -->
+        <div class="flag-container-2">
+        </div>
+        <div class="flag-container-3">
+            <div id="flag-practice-color1" class="flag-practice-item"></div>
+            <div id="flag-practice-color2"  class="flag-practice-item"></div>
+            <div id="flag-practice-color3"  class="flag-practice-item"></div>
+        </div>
+    </div>
+
+    <!-- <script>
+        // Handle dropdown click
+        const navbarButtons = document.getElementsByClassName('navbar-button');
+        for(const element of navbarButtons){
+            element.addEventListener('click', (event) => {
+                const dropdownDiv = element.getElementsByClassName('dropdown-container')[0]
+                if(dropdownDiv){
+                    if(dropdownDiv.id==="off"){
+                        dropdownDiv.id="on";
+                        dropdownDiv.style.visibility="visible";
+
+                        // Close all other dropdowns
+                        for(const element of document.getElementsByClassName('dropdown-container')){
+                            if(element.innerHTML !== dropdownDiv.innerHTML && element.id!=="off"){
+                                element.id="off";
+                                element.style.visibility="collapse";
+                            }
+                        }
+                        return true;
+                    }
+                    dropdownDiv.id="off";
+                    dropdownDiv.style.visibility="collapse";
+
+                }
+            });
+        }
+
+        // Close dropdown when clicked anywhere randomly TODO: Not perfectly implemented, needs fixing
+        document.getElementsByTagName('html')[0].addEventListener('click', (event)=>{
+            if(event.target.innerHTML.includes("navbar")){
+                const dropdownDivs = document.getElementsByClassName('dropdown-container');
+                for(const dropdownDivElement of dropdownDivs){
+                    dropdownDivElement.style.visibility="collapse";
+                    dropdownDivElement.id="off";
+                }
+            }
+        })
+        
+    </script> -->
+</body>
+</html>

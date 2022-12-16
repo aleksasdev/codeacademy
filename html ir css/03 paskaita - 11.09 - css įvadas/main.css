@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #404258;
+    --secondary-color: #D6E4E5;
+    --text-color: #fff;
+}
+
+h2 {
+    color: blueviolet;
+}
+.testinis-tekstas {
+    font-size: 2.2em;
+    font-style: italic;
+    font-weight: bold;
+}
+#testinis-id {
+    border: 3px dashed cyan;
+}
+.kvadratas {
+    width: 10rem;
+    height: 10rem;
+    background-color: beige;
+    border: 3px solid black;
+    font-size: 2em;
+    text-align: center;
+}
+.linijinis {
+    display: inline;
+}
+.blokinis {
+    display: block;
+}
+.linijinis-blokinis {
+    display: inline-block;
+}
+
+/* Homework */
+.navbar-container{
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
+    background-color: var(--primary-color);
+    gap: 2.5rem;
+    user-select: none;
+}
+.navbar-button{
+    position: relative;
+    color: var(--text-color);
+    height: 40%;
+    padding: 1rem;
+    border: 1px solid var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    cursor: pointer;
+    z-index: 5;
+}
+.dropdown-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    z-index: 2;
+    text-align: center;
+    top: calc(100% + 0.5rem);
+    border-top: none;
+    visibility: collapse;
+}
+.dropdown-button{
+    color: var(--text-color);
+    padding: 0.4rem;
+    border-bottom: 1px dashed var(--secondary-color);
+    text-decoration: none;
+}
+.navbar-button:hover .dropdown-container{
+    visibility:visible;
+}
+
+/* Task 1, kad graziau butu*/
+#task-1{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: 2px solid red;
+    border-radius: 3rem;
+    padding: 2rem;
+    margin-left: 2rem;
+    font-size: 0;
+}
+
+/* Task 1 */
+.flag-container {
+    border: 2px dashed black;
+}
+.lithuania-item{
+    display:block;
+    width: 10rem;
+    height: 2rem;
+}
+.lithuania-1{
+    background-color: yellow;
+}
+.lithuania-2{
+    background-color: green;
+}
+.lithuania-3{
+    background-color: red;
+}
+
+.belgium-item{
+    display: inline-block;
+    height: 7rem;
+    width: 3.4rem;
+}
+.belgium-1{
+    background-color: black;
+}
+.belgium-2{
+    background-color: yellow;
+}
+.belgium-3{
+    background-color: red;
+}
+
+.japanese-flag-container{
+    width: 10rem;
+    height: 7rem;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.japanese-flag-center-item{
+    background-color: red;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.france-item{
+    display: inline-block;
+    height: 7rem;
+    width: 3.4rem;
+}
+.france-1{
+    background-color: blue;
+}
+.france-2{
+    background-color: white;
+}
+.france-3{
+    background-color: red;
+}
+
+.poland-item{
+    display: block;
+    width: 10.5rem;
+    height: 3.5rem;
+}
+.poland-1{
+    background-color: red;
+}
+
+.display-ib{
+    display: inline-block;
+}
+.t10{
+    top: 10px;
+}
+.r30{
+    right: 30px;
+}
+.b50{
+    bottom: 50px;
+}
+.l80{
+    left: 80px;
+}
+.static{
+    position: static;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+}
+.sticky{
+    position: sticky;
+    top: -10px;
+}
+
+
+.practice-rectangle{
+    width: 150px;
+    height: 150px;
+    background-color: bisque;
+    border: 1px solid black;
+    display: inline-block;
+}
+.test-2{
+    position: relative;
+    top: 50px;
+    border: 5px solid black;
+}
+
+.practice-picture-frame {
+    width: 30rem;
+    height: 30rem;
+    border: 1px solid black;
+    margin-top: 150px;
+    position: relative;
+}
+.practice-picture-frame img{
+    width: 250px;
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+}
+
+.flag-container-2{
+    width: 400px;
+    height: 300px;
+    background-image: linear-gradient(
+        to bottom,
+        yellow 33%,
+        green 33% 66%,
+        red 66%
+    );
+}
+.flag-container-3{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    border: 1px solid black;
+}
+.flag-practice-item{
+    height:5rem;
+    width: 100%;
+}
+#flag-practice-color1{
+    background-color: yellow;
+}
+#flag-practice-color2{
+    background-color: green;
+}
+#flag-practice-color3{
+    background-color: red;
+}

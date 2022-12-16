@@ -1,0 +1,325 @@
+@import url('animations.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1, h2, a{
+    color: var(--text-color);
+    text-shadow: 1px 1px 5px black;
+    letter-spacing: 0.1em;
+}
+h1, a{
+    font-family: primary-font;
+}
+h1{
+    font-family: primary-font;
+    font-size: 1.9em;
+}
+h2{
+    font-family: primary-font;
+    font-size: 1.6em;
+}
+p{
+    font-family: secondary-font;
+    font-size: 1.4em;
+    color: var(--text-color);
+    width: 80%;
+    z-index: 3;
+}
+a{
+    font-size: 1.5em;
+}
+main{
+    position: relative;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: primary-font;
+    src: url('../assets/CCClobberinTimeSmooth.ttf');
+}
+@font-face {
+    font-family: secondary-font;
+    src: url('../assets/CCClobberinTimeSmooth.ttf');
+}
+
+:root{
+    --primary-color: #f85d1ae8;
+    --secondary-color: #111111cd;
+    --third-color: #4d8fad;
+    --text-color: white;
+}
+
+/* Global styles */
+.button-style{
+    background-color: var(--primary-color);
+    border-radius: 5%;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
+    font-family: primary-font;
+    user-select: none;
+}
+.button-style:hover{
+    outline: 2px solid white;
+}
+.wrapper-style{
+    background-color: var(--secondary-color);
+    border-radius: 5%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 0.5rem solid var(--primary-color);
+    row-gap: 1.5rem;
+}
+.text-background-style{
+    border: 5px solid white;
+    padding: .5rem 1rem;
+    background-color: var(--primary-color);
+    clip-path: polygon(50% 0%, 100% 0, 97% 89%, 0 100%, 0 0);
+    cursor: auto;
+}
+.seperator-wrapper-style{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 3rem;
+    background-color: var(--primary-color);
+    margin-bottom: -2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 54%);
+    z-index: 20;
+}
+.side-wrapper-1-style{
+    background-color: var(--primary-color);
+    width: 20rem;
+    height: 10rem;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    margin-right: 2rem;
+    animation: back-and-forth 4s infinite linear;
+}
+.side-wrapper-2-style{
+    width: 15rem;
+    height: 10rem;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    background-color: var(--primary-color);
+}
+.character-style{
+    height:20rem;
+    width:auto;
+}
+.section-style{
+    background-color: #11111199;
+    height: 50rem;
+}
+.section-background-style{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    z-index: -50;
+    top: 0;
+}
+.section-text-container-style{
+    display: flex;
+    flex-direction: column;
+    max-width: 35rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.cta-button-style{
+    width: 20rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.blending-shadow-style{
+}
+
+/* Header */
+header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+/* Navbar */
+.navbar-container{
+    height: 4.5rem;
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+    position: absolute;
+    top: 0;
+    z-index: 50;
+}
+.logo-container img{
+    height: 2.5rem;
+    width: auto;
+}
+.menu-container > ul{
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+}
+.decorative-menu-icon{
+    width: 1.2rem;
+    margin-right: 0.5rem;
+    opacity: 0;
+}
+.menu-container ul > li:hover .decorative-menu-icon{
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Hero */
+.hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-content-background{
+    flex-direction: column;
+    width: 42rem;
+    border-radius: 5%;
+    position: relative;
+    overflow: hidden;
+}
+.hero-avatar-container{
+    position: absolute;
+    width: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+.hero-avatar-container img{
+    width: 95%;
+    height: auto;
+}
+
+/* Results section */
+.results-container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.results-headline{
+    width: 40rem;
+    text-align: center;
+}
+.results-cards-container{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.results-card-wrapper{
+    width: 25rem;
+    height: 27rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    border-radius: 15%;
+    gap: 0.2rem;
+    border: 0.2rem solid var(--primary-color);
+}
+#results-icon{
+    font-size: 0.6em;
+}
+.results-card-wrapper img{
+    width: 9.5rem;
+}
+.results-card-wrapper p{
+    width: auto;
+    color: var(--primary-color);
+}
+.results-card-wrapper h2{
+    margin-bottom: 0.7rem;
+}
+
+/* About us section */
+.about-us-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.about-us-content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+/* Merch section */
+.merch-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.merch-content-wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.merch-second-side-wrapper{
+    transform: rotate(180deg);
+}
+
+/* Footer */
+.footer-container{
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.2rem solid var(--primary-color);
+    bottom: 0;
+}
+.footer-container p{
+    width: auto;
+    font-size: 1em;
+}
