@@ -3,7 +3,7 @@ main{
    justify-content: center;
 }
 #todo{
-   margin-top: 10rem;
+   margin: 10rem 0;
    width: 40rem;
    display: flex;
    flex-direction: column;

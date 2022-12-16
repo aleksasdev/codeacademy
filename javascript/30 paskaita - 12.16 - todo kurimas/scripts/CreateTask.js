@@ -9,8 +9,8 @@ export default class CreateTask{
       this.div.classList.add('task-container');
       this.div.classList.add('shadow');
 
-      // Add text
-      this.#createText();
+      // Add complete button and text container (content)
+      this.#createContent();
 
       // Add utility buttons
       this.#createUtility();
@@ -18,7 +18,7 @@ export default class CreateTask{
       // Finally add task item to todo section
       this.props.outputContainer.append(this.div);
    }
-   #createText(){
+   #createContent(){
       // Create content container
       this.contentContainer = document.createElement('div');
       this.contentContainer.classList.add('content-container');
