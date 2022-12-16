@@ -1,18 +1,21 @@
-#todo{
+main{
    display: flex;
    justify-content: center;
-   align-items: center;
-   flex-direction: column;
+}
+#todo{
    margin-top: 10rem;
+   width: 35rem;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
 }
 #todo .add-task-container{
    display: flex;
    flex-direction: column;
    align-items: center;
    gap: 1.2rem;
-   width: 35rem;
    background-color: white;
-   padding: 3rem;
+   padding: 2rem;
 }
 #todo .add-task-container form{
    display: flex;
@@ -24,7 +27,6 @@
    flex: 3;
    border: 1px solid lightgray;
    padding: 1rem;
-   background-color: var(--background-color);
 }
 #todo .add-task-container input[type="submit"]{
    flex: 1;
@@ -34,4 +36,9 @@
    color: white;
    border: none;
    cursor: pointer;
+}
+
+#todo .task-container{
+   height: 5rem;
+   background-color: white;
 }
