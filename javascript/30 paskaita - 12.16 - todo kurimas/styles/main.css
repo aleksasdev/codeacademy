@@ -41,4 +41,18 @@ main{
 #todo .task-container{
    height: 5rem;
    background-color: white;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 2rem;
+}
+#todo .task-container .utility-container{
+   display: flex;
+   gap: 0.5rem;
+}
+#todo .task-container svg{
+   width: 1.5rem;
+   height: 1.5rem;
+   fill: black;
+   cursor: pointer;
 }
