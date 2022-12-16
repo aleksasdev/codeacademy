@@ -10,15 +10,15 @@ export default class CreateTask{
       this.div.classList.add('shadow');
 
       // Add text
-      this.#createText({elementIdentifier: this.div});
+      this.#createText();
 
       // Add utility buttons
-      this.#createUtility({elementIdentifier: this.div});
+      this.#createUtility();
 
       // Finally add task item to todo section
       this.props.outputContainer.append(this.div);
    }
-   #createText(props){
+   #createText(){
       // Create content container
       this.contentContainer = document.createElement('div');
       this.contentContainer.classList.add('content-container');
@@ -34,7 +34,6 @@ export default class CreateTask{
 
       // Handle complete button listener
       this.completeButton.addEventListener('click', e=>{
-         // Text
          if(this.h1.style.textDecorationLine==="line-through"){this.h1.style.textDecorationLine="none"}
          else if(!this.h1.style.textDecorationLine || this.h1.style.textDecorationLine==="none"){
             this.h1.style.textDecorationLine="line-through"
@@ -47,7 +46,7 @@ export default class CreateTask{
       // Append content container to main div
       this.div.append(this.contentContainer);
    }
-   #createUtility(props){
+   #createUtility(){
       // Generate edit and delete buttons
       this.utilityContainer = document.createElement('div');
       this.utilityContainer.classList.add('utility-container');
@@ -67,7 +66,7 @@ export default class CreateTask{
          if(this.newText) this.h1.innerText=this.newText;
       }
       this.handleDelete=(e)=>{
-         this.props.outputContainer.removeChild(props.elementIdentifier);
+         this.props.outputContainer.removeChild(this.div);
       }
       this.editButton.addEventListener('click',e=>this.handleEdit(e))
       this.deleteButton.addEventListener('click',e=>this.handleDelete(e))
