@@ -1,0 +1,23 @@
+#task2{
+   margin: 3rem 0;
+   display: flex;
+   justify-content: center;
+}
+#task2 .person-container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--primary-color);
+   border-radius: 5px;
+   padding: 2rem;
+   gap: 1rem;
+}
+#task2 .person-container img{
+   border-radius: 50%;
+   object-fit: cover;
+   border: 3px solid var(--secondary-color);
+}
+#task2 .highlight{
+   color: var(--secondary-color);
+   font-weight: bold;
+}
