@@ -3,8 +3,6 @@
    grid-template: auto / repeat(2,20rem);
    gap: 1.5rem;
    justify-content: center;
-   color: white;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #task1 .movies-container{
    border: 1px solid black;
