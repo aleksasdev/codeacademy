@@ -1,0 +1,20 @@
+{
+   "movies":[
+      {
+         "name":"John Wick: Chapter 4",
+         "poster":"https://cdn.vox-cdn.com/thumbor/Dc8bBshDmxtKUCeTFovjt_pz_bM=/0x0:1777x999/1200x800/filters:focal(708x235:992x519)/cdn.vox-cdn.com/uploads/chorus_image/image/63756879/parabellumcover.0.jpg",
+         "length":"150",
+         "actors":["Keanu Reeves","Ian McShane"]
+      },{
+         "name":"The Amazing World of Gumball: The Movie",
+         "poster":"https://pbs.twimg.com/media/EvGcAlnXUAIXCd1.jpg:large",
+         "length":"120",
+         "actors":["Mic Graves","Logan Grove"]
+      },{
+         "name":"The Hateful Eight",
+         "poster":"https://m.media-amazon.com/images/M/MV5BMjA1MTc1NTg5NV5BMl5BanBnXkFtZTgwOTM2MDEzNzE@._V1_FMjpg_UX1000_.jpg",
+         "length":"187",
+         "actors":["Samuel L. Jackson","Tim Roth"]
+      }
+   ]
+}
