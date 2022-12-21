@@ -30,10 +30,3 @@ function render({apiData}){
       }).render()
    })
 }
-
-
-// Fetch this when the page loads
-// new MealFetcher({
-//    url: "pork", 
-//    outputElement: document.querySelector("#task3 .output-container")
-// }).fetch();
