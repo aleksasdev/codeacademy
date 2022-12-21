@@ -1,4 +1,3 @@
-
 import MealElement from "./MealElement.js";
 
 const OUTPUT_CONTAINER = document.querySelector('#task3 .output-container');
