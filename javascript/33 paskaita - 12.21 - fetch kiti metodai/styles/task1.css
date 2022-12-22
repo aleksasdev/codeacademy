@@ -6,8 +6,8 @@
    background-color: var(--third-color);
 }
 #task1 .output-container .listing-container{
-   width: 24rem;
-   height: 20rem;
+   width: 7rem;
+   height: 7rem;
    background-color: var(--first-color);
    display: flex;
    flex-direction: column;
