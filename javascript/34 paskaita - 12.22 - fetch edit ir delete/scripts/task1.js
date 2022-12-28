@@ -7,7 +7,6 @@ export const LISTINGS_CONTAINER = document.querySelector("#task1 .output-contain
 // Get and display all the book listings
 document.querySelector('#task1 .add-book-container').addEventListener('submit', e=>{
    e.preventDefault()
-   console.log(e.target.elements)
    new Fetch(null, 
       {
          title: e.target.elements.title.value,

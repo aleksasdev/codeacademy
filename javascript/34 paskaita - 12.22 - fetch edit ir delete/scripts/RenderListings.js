@@ -31,7 +31,8 @@ export default class RenderListings{
          this.author.addEventListener('input', e=>this.handleUpdate(e, listing));
 
          // Delete button
-         this.deleteButton = document.createElement('button');
+         this.deleteButton = document.createElement('div');
+         this.deleteButton.classList.add('delete');
          this.deleteButton.textContent = "Delete";
          this.deleteButton.addEventListener('click', e=>{new Fetch(listing.id, null).delete()});
          
@@ -47,7 +48,6 @@ export default class RenderListings{
       else if(e.target.classList[0] === "author"){
          data.author = e.target.textContent;
       }
-
 
       new Fetch(data.id, data).edit();
    }
