@@ -1,5 +1,7 @@
+import RenderListings from "./RenderListings.js";
+
 export default class Fetch{
-   constrcutor(id, data){
+   constructor(id, data){
       this.id = id;
       this.data = data;
    }
@@ -13,22 +15,29 @@ export default class Fetch{
    }
 
    async post(){
+      console.log(this.data)
       fetch("http://localhost:3000/posts", {
          method: "POST",
          headers: {"Content-type":"application/json"},
-         body: JSON.stringify(data)
+         body: JSON.stringify(this.data)
       })
+      new RenderListings().refresh();
    }
 
-   async update(){
+   async edit(){
       if(!this.id){console.log("No id provided."); return false};
       fetch(`http://localhost:3000/posts/${this.id}`, {
          method: "PUT",
          headers: {"Content-type":"application/json"},
-         body: JSON.stringify({
-            title: "lmao",
-            author: "lol"
-         })
+         body: JSON.stringify(this.data)
       })
+   }
+
+   async delete(){
+      if(!this.id){console.log("No id provided."); return false};
+      fetch(`http://localhost:3000/posts/${this.id}`, {
+         method: "DELETE"
+      })
+      new RenderListings().refresh();
    }
 }
