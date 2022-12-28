@@ -1,4 +1,4 @@
-import RenderListings from "./RenderListings.js";
+import { RenderListings } from "./main.js";
 
 export default class Fetch{
    constructor(id, data){
@@ -21,7 +21,7 @@ export default class Fetch{
          headers: {"Content-type":"application/json"},
          body: JSON.stringify(this.data)
       })
-      new RenderListings().refresh();
+      RenderListings();
    }
 
    async edit(){
@@ -38,6 +38,6 @@ export default class Fetch{
       fetch(`http://localhost:3000/posts/${this.id}`, {
          method: "DELETE"
       })
-      new RenderListings().refresh();
+      RenderListings();
    }
 }
