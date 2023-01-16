@@ -1,0 +1,37 @@
+#food-cards{
+   display: flex;
+   gap: 1rem;
+   padding: 1rem;
+   flex-flow: wrap;
+   width: 30rem;
+   justify-content: center;
+}
+.food-card{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 15rem;
+   background-color: gray;
+   padding: 1rem;
+   border-radius: 5px;
+   color: white;
+   gap: 1rem;
+}
+.food-card img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.food-card .description{
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   justify-content: center;
+}
+.food-card .description span{
+   display: flex;
+   gap: 0.5rem;
+}
+.food-card .description p{
+   margin: 0;
+}
