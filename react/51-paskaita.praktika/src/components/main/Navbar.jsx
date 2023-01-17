@@ -20,7 +20,11 @@ export const Navbar = (props) => {
                Sign in
             </div>
          :
-            <div className="nav-button" onClick={e=> props.setUser(null)}>
+            // Handle logging out here, no need for extra abstraction 
+            <div className="nav-button" onClick={e=> {
+               props.setUser(null);
+               props.setCurrentTab(null)
+            }}>
                Sign out
             </div>
          }
