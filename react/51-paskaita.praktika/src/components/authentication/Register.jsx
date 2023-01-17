@@ -2,7 +2,7 @@ import React from 'react'
 import "./authentication.css"
 import { nanoid } from "nanoid";
 import Fetch from '../../helper/Fetch';
-import { DATABASE_PATH } from '../../App';
+import { USERS_PATH } from '../../App';
 
 export const Register = () => {
 
@@ -16,7 +16,7 @@ export const Register = () => {
          avatarUrl: avatar.value
       }
 
-      new Fetch(DATABASE_PATH, null).post(data);
+      new Fetch(USERS_PATH, null).post(data);
    }
 
    return (

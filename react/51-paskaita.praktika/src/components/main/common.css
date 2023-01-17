@@ -14,6 +14,7 @@
    --color-primary-shade: #99aab5;
 
    --color-secondary: #2c2f33;
+   --color-secondary-tint: #36393f;
    --color-secondary-shade: #23272a;
    
 }
@@ -30,6 +31,6 @@
    padding: 0.4rem;
    border: none;
    background-color: var(--color-primary-shade);
-   color: var(--color-primary-tint);
+   color: var(--color-secondary);
    border-radius: 5px;
 }

@@ -18,13 +18,13 @@ export default class Fetch{
 			body: JSON.stringify(data)
 		})
 			.then(res => res.json())
-			.then((data) => this.log(`Success!`)
-			.catch((error) => this.log(`Error! ${error}`)));
+			.then((data) => this.log(`Success!`))
+			.catch((error) => this.log(`Error! ${error}`));
    }
 
    async get(){
       let response = null;
-      
+
       await fetch(`${this.url}/${this.id? this.id : ""}`)
          .then(res => res.json())
          .then((data) => response = data)
