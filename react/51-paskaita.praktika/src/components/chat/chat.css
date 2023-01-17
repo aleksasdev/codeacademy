@@ -22,7 +22,7 @@
    height: 100%;
    background-color: var(--color-secondary-tint);
    overflow: auto;
-   gap: 0.5rem;
+   gap: 0.8rem;
 }
 
 #chat .chat-container .input-container{
@@ -47,6 +47,7 @@
 /* Edit */
 #chat .chat-container .edit-container{
    display: flex;
+   margin-left: 0.8rem;
 }
 #chat .chat-container .edit-container svg{
    fill: var(--color-primary-tint);
@@ -65,11 +66,20 @@
    align-items: center;
    font-size: 1.2rem;
 }
+.message-row .edit-wrapper{
+   display: flex;
+}
 .message-row img{
    width: 3rem;
    height: 3rem;
    border-radius: 50%;
+   object-fit: cover;
 }
 .message-row .message{
    color: var(--color-primary-shade)
+}
+.message-row .message:focus{
+   padding: 0.5rem;
+   background: var(--color-secondary);
+   margin-top: 0.5rem;
 }

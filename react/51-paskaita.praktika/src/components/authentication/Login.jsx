@@ -14,7 +14,6 @@ export const Login = ({setUser}) => {
       const [username, password] = e.target.elements;
 
       const allUsers = await new Fetch(USERS_PATH, null).get();
-      console.log(allUsers);
 
       const matchingUser = allUsers.filter(entry => entry.username === username.value)[0];
       if(!matchingUser){ console.log("Username is invalid"); return; }
