@@ -44,6 +44,20 @@
    font-size: 1.1rem;
 }
 
+/* Edit */
+#chat .chat-container .edit-container{
+   display: flex;
+}
+#chat .chat-container .edit-container svg{
+   fill: var(--color-primary-tint);
+   width: 1.5rem;
+   height: 1.5rem;
+   cursor: pointer;
+}
+#chat .chat-container .edit-container .delete-button{
+   fill: salmon;
+}
+
 /* Message component */
 .message-row{
    display: flex;

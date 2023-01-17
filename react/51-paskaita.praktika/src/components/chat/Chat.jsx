@@ -18,7 +18,13 @@ export const Chat = (props) => {
 
    function renderMessages(){
       return (
-         messages.map(entry => <Message data={entry} />)
+         messages.map(entry => 
+         <Message 
+            data={entry} 
+            user={props.user}
+            messages={messages}
+            setMessages={setMessages}
+         />)
       )
    }
 

@@ -22,6 +22,33 @@ export default class Fetch{
 			.catch((error) => this.log(`Error! ${error}`));
    }
 
+   put(data){
+      if(!this.id) return;
+
+      fetch(`${this.url}/${this.id}`, {
+			method: "PUT",
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(data)
+		})
+			.then(res => res.json())
+			.then((data) => this.log(`Success!`))
+			.catch((error) => this.log(`Error! ${error}`));
+   }
+
+   delete(){
+      if(!this.id) return;
+
+      fetch(`${this.url}/${this.id}`, {
+         method: "DELETE"
+      })
+         .then(res => res.json())
+			.then((data) => this.log(`Success!`))
+			.catch((error) => this.log(`Error! ${error}`));
+   }
+
    async get(){
       let response = null;
 
