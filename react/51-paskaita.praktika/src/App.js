@@ -3,6 +3,8 @@ import "./components/main/common.css";
 import { Navbar } from "./components/main/Navbar";
 import { Footer } from "./components/main/Footer";
 
+export const DATABASE_PATH = "http://localhost:5000/users"
+
 function App() {
 
    const [currentTab, setCurrentTab] = useState();
@@ -10,7 +12,7 @@ function App() {
 
    return (
       <div className="App">
-         <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} isLoggedIn={isLoggedIn} />
+         <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
          {currentTab}
          <Footer />
       </div>
