@@ -25,17 +25,14 @@ export const FoodCard = (props) => {
 
    function editTile(e){
       props.data.name = e.target.innerText;
-      editDone();
    }
 
    function editQuantity(e){
       props.data.quantity = e.target.innerText;
-      editDone();
    }
 
    function editType(e){
       props.data.type = e.target.innerText;
-      editDone();
    }
 
    function editDone(){
@@ -53,7 +50,7 @@ export const FoodCard = (props) => {
    }
 
    return (
-      <div className="food-card" spellCheck="false">
+      <div className="food-card" spellCheck="false" onMouseLeave={editDone}>
          <h1 className='title' onInput={editTile} contentEditable>{props.data.name}</h1>
          <img src={props.data.image} alt="food" />
          <div className="description">
