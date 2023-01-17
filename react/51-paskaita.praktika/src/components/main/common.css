@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 *{
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   color: var(--color-primary-tint);
+   font-family: 'Source Sans Pro', sans-serif;
 }
 
 :root{
@@ -16,4 +20,16 @@
 
 .button-style{
    cursor: pointer;
+   border: none;
+   outline: none;
+   background-color: var(--color-primary);
+   padding: 0.4rem 1rem;
+   border-radius: 5px;
+}
+.input-style{
+   padding: 0.4rem;
+   border: none;
+   background-color: var(--color-primary-shade);
+   color: var(--color-primary-tint);
+   border-radius: 5px;
 }

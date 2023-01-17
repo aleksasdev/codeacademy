@@ -1,8 +1,13 @@
+body{
+   background-color: var(--color-secondary);
+}
+
 nav{
    display: flex;
    gap: 0.5rem;
    justify-content: center;
    padding: 1.2rem;
+   background-color: var(--color-secondary-shade);
 }
 nav .nav-button{
    cursor: pointer;
@@ -11,5 +16,5 @@ nav .nav-button{
 footer{
    display: flex;
    height: 2rem;
-   background-color: var(--color-secondary);
+   background-color: var(--color-secondary-shade);
 }

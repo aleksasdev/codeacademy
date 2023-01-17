@@ -1,4 +1,6 @@
 import React from 'react'
+import { Login } from '../authentication/Login';
+import { Register } from '../authentication/Register';
 import "./main.css";
 
 export const Navbar = (props) => {
@@ -6,8 +8,12 @@ export const Navbar = (props) => {
       <nav>
          <div className="nav-button">Home</div>
          <div className="nav-button">Chat</div>
-         <div className="nav-button">Register</div>
-         <div className="nav-button">Login</div>
+         <div className="nav-button" onClick={e=> props.setCurrentTab(<Register />)}>Register</div>
+         {!props.isLoggedIn?
+            <div className="nav-button" onClick={e=> props.setCurrentTab(<Login />)}>Sign in</div>
+         :
+            <div className="nav-button">Sign out</div>
+         }
       </nav>
    )
 }
