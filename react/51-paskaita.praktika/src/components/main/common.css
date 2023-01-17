@@ -1,0 +1,19 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+:root{
+   --color-primary: #7289da;
+   --color-primary-tint: #ffffff;
+   --color-primary-shade: #99aab5;
+
+   --color-secondary: #2c2f33;
+   --color-secondary-shade: #23272a;
+   
+}
+
+.button-style{
+   cursor: pointer;
+}
