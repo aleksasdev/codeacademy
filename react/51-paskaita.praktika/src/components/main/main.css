@@ -1,5 +1,8 @@
-body{
+.App{
    background-color: var(--color-secondary);
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
 }
 
 nav{
@@ -10,15 +13,24 @@ nav{
    padding: 1.2rem;
    background-color: var(--color-secondary-shade);
 }
-nav .nav-button{
+.nav-button{
    cursor: pointer;
 }
-nav .nav-button:hover{
+.nav-button:hover{
    color: var(--color-primary-shade);
 }
 
 footer{
    display: flex;
-   height: 2rem;
+   height: 5rem;
    background-color: var(--color-secondary-shade);
+   margin-top: auto;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 0.2rem;
+}
+footer .footer-buttons{
+   display: flex;
+   gap: 1rem;
 }
