@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "nanoid": "^4.0.0"
+    "nanoid": "^4.0.0",
+    "react-router-dom": "^6.7.0"
   }
 }

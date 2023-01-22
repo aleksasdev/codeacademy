@@ -1,0 +1,35 @@
+@import url(./main.css);
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   color: snow;
+   font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root{
+   --color-primary: #7B8FA1;
+   --color-primary-shade: #567189;
+   --color-primary-tint: #CFB997;
+}
+
+.input-style{
+   background-color: var(--color-primary-shade);
+   border: none;
+   padding: 0.5rem;
+   border-radius: 5px;
+}
+.button-style{
+   display: flex;
+   outline: none;
+   border: none;
+   justify-content: center;
+   align-items: center;
+   padding: 0.5rem;
+   width: max-content;
+   background-color: var(--color-primary-tint);
+   border-radius: 5px;
+   cursor: pointer;
+}
