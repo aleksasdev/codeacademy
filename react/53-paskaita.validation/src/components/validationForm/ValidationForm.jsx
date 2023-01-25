@@ -35,9 +35,12 @@ export const ValidationForm = (props) => {
    return (
       <form className="validation-form">
          {inputs}
-         <div className="error-widget">
-            <p>{error}</p>
-         </div>
+         
+         {error &&
+            <div className="error-widget">
+               <p>{error}</p>
+            </div>
+         }
       </form>
    )
 }

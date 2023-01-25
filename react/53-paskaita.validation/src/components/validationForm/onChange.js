@@ -26,7 +26,6 @@ export const onChange = (e, formObject)=>{
 
 function isError(setError, currentValue, requirements){
 
-   
    for(const requirement of requirements.split(",")){
 
       const output = doesMeetRequirement(requirement, currentValue);
