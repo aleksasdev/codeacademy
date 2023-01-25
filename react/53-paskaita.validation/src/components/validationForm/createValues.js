@@ -14,3 +14,14 @@ export const createValues = (formObject) =>{
 
    formObject.setValues(valuesArray);
 }
+
+export const resetValues = (formObject)=>{
+   const valuesArray = [];
+
+   for(const object of formObject.values){
+      object.value = "";
+      valuesArray.push(object);
+   }
+
+   formObject.setValues(valuesArray);
+}

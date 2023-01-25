@@ -1,4 +1,5 @@
 
+import { resetValues } from './createValues';
 import { isInputValid } from './helper';
 import { isError } from './requirements';
 
@@ -25,5 +26,7 @@ export function onSubmit(e, formObject){
       inputValues.push(currentValue);
    }
 
-   formObject.submitState(inputValues)
+
+   resetValues(formObject);
+   formObject.submitState(inputValues);
 }
