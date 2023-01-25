@@ -1,17 +1,18 @@
-import { handleOnChange } from './handle';
+import { onChange } from './onChange';
 
-export const createInputs = (children, values, setInputs) =>{
-   if(!values) return;
+export const createInputs = (formObject) =>{
+   if(!formObject.values) return;
 
    const parsedInputsArray = [];
    let index = 0;
-   for(const child of children){
+   for(const child of formObject.children){
 
       const parsedInput = (
          <input 
+         requirements={child.props.requirements}
          name={child.props.name}
-         value={values[index].value}
-         onChange={handleOnChange}
+         value={formObject.values[index].value}
+         onChange={e=> onChange(e, formObject)}
          />
       )
       
@@ -19,5 +20,5 @@ export const createInputs = (children, values, setInputs) =>{
       parsedInputsArray.push(parsedInput);
    }
 
-   setInputs(parsedInputsArray);
+   formObject.setInputs(parsedInputsArray);
 }

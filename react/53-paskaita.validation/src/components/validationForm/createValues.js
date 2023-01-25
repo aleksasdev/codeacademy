@@ -1,7 +1,7 @@
-export const createValues = (children, setValues) =>{
+export const createValues = (formObject) =>{
    const valuesArray = [];
    
-   for(const child of children){
+   for(const child of formObject.children){
       const name = child.props.name;
       const requirements = child.props.requirements;
 
@@ -12,5 +12,5 @@ export const createValues = (children, setValues) =>{
       })
    }
 
-   setValues(valuesArray);
+   formObject.setValues(valuesArray);
 }
