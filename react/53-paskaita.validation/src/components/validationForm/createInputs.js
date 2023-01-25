@@ -6,8 +6,10 @@ export const createInputs = (formObject) =>{
    const parsedInputsArray = [];
    let index = 0;
    for(const child of formObject.children){
+      
+      const isValidComponent = child.type.name === "ValidInput";
 
-      const parsedInput = (
+      let parsedInput = (
          <input 
          requirements={child.props.requirements}
          name={child.props.name}
@@ -15,7 +17,9 @@ export const createInputs = (formObject) =>{
          onChange={e=> onChange(e, formObject)}
          />
       )
-      
+
+      if(!isValidComponent) parsedInput = child;
+
       index++;
       parsedInputsArray.push(parsedInput);
    }
