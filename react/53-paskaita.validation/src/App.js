@@ -1,13 +1,12 @@
 
 import { ValidInput } from './components/validationForm/ValidInput';
-import './index.css';
 import { HAVE_EMAIL_SIGN, MINIMUM_LENGTH_8, HAVE_GMAIL_PREFIX, MINIMUM_AGE_13 } from './components/validationForm/requirements';
 import { ValidationForm } from './components/validationForm/ValidationForm';
 
 function App() {
    return (
       <>
-         <ValidationForm className="register-form">
+         <ValidationForm>
             <p>Username</p>
             <ValidInput name="username" requirements={[MINIMUM_LENGTH_8]} />
             <p>Email</p>

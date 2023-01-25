@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { createValues } from './createValues';
 import { createInputs } from './createInputs';
+import './index.css';
 
 export const ValidationForm = (props) => {
 
@@ -29,7 +30,7 @@ export const ValidationForm = (props) => {
    }, [])
 
    return (
-      <form className={props.className}>
+      <form className="validation-form">
          {inputs}
 
          {error &&
