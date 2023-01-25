@@ -30,7 +30,7 @@ export const ValidationForm = (props) => {
    }, [])
 
    return (
-      <form className="validation-form">
+      <form className={props.className}>
          {inputs}
 
          {error &&

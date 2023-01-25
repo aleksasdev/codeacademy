@@ -7,7 +7,7 @@ import { ValidationForm } from './components/validationForm/ValidationForm';
 function App() {
    return (
       <>
-         <ValidationForm>
+         <ValidationForm className="register-form">
             <p>Username</p>
             <ValidInput name="username" requirements={[MINIMUM_LENGTH_8]} />
             <p>Email</p>

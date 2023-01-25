@@ -1,4 +1,37 @@
 *{
    margin: 0;
+   padding: 0;
    box-sizing: border-box;
+}
+
+:root{
+   --color-primary: #282b30;
+   --color-primary-tint: #424549;
+}
+
+.register-form{
+   color: white;
+   background-color: var(--color-primary);
+   display: flex;
+   height: 30rem;
+   flex-direction: column;
+   align-items: center;
+   gap: 0.2rem;
+   padding: 3rem;
+}
+.register-form input{
+   color: white;
+   padding: 0.7rem;
+   border-radius: 5px;
+   border: none;
+   background-color: var(--color-primary-tint);
+}
+.register-form input:focus{
+   outline: none;
+}
+.register-form .error-widget{
+   margin-top: 2rem;
+   background-color: var(--color-primary-tint);
+   padding: 1rem;
+   border-radius: 5px;
 }
