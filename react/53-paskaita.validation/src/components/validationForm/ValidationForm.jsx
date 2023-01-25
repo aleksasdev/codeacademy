@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { createValues } from './createValues';
 import { createInputs } from './createInputs';
-import './index.css';
 
 export const ValidationForm = (props) => {
 
