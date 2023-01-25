@@ -1,3 +1,4 @@
+import { isInputValid } from './helper';
 import { onChange } from './onChange';
 
 export const createInputs = (formObject) =>{
@@ -6,8 +7,6 @@ export const createInputs = (formObject) =>{
    const parsedInputsArray = [];
    let index = 0;
    for(const child of formObject.children){
-      
-      const isValidComponent = child.type.name === "ValidInput";
 
       let parsedInput = (
          <input 
@@ -18,7 +17,7 @@ export const createInputs = (formObject) =>{
          />
       )
 
-      if(!isValidComponent) parsedInput = child;
+      if(!isInputValid(child)) parsedInput = child;
 
       index++;
       parsedInputsArray.push(parsedInput);

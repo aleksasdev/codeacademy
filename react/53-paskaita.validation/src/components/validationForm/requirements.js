@@ -4,9 +4,14 @@ export const HAVE_EMAIL_SIGN = "@";
 export const HAVE_GMAIL_PREFIX = ".gmail";
 
 export function isError(setError, currentValue, requirements){
+   
+   if(!requirements) return false;
+
+   const isRequirementsTypeofString = typeof(requirements) === "string";
+   if(!isRequirementsTypeofString) requirements = requirements.toString()
 
    for(const requirement of requirements.split(",")){
-
+      
       const output = doesMeetRequirement(requirement, currentValue);
       if(output !== true){
          setError(output)
@@ -19,14 +24,13 @@ export function isError(setError, currentValue, requirements){
 }
 
 export function doesMeetRequirement(requirement, currentValue){
-   if(!currentValue) return true;
 
    if(requirement === MINIMUM_LENGTH_8){
       if(currentValue.length < 8) return "Your input has to be 8 characters long";
    }
 
    else if(requirement === MINIMUM_AGE_13){
-      if(parseInt(currentValue) < 13) return "You can't use this site if you aren't at least 13 years old";
+      if(!currentValue || parseInt(currentValue) < 13) return "You can't use this site if you aren't at least 13 years old";
    }
 
    else if(requirement === HAVE_EMAIL_SIGN){

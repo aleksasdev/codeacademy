@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { createValues } from './createValues';
 import { createInputs } from './createInputs';
 import './index.css';
+import { onSubmit } from './onSubmit';
 
 export const ValidationForm = (props) => {
 
@@ -18,7 +19,8 @@ export const ValidationForm = (props) => {
       inputs: inputs,
       setInputs: setInputs,
       error: error,
-      setError: setError
+      setError: setError,
+      submitState: props.submitState
    }
 
    useEffect(()=>{
@@ -30,8 +32,9 @@ export const ValidationForm = (props) => {
    }, [])
 
    return (
-      <form className="validation-form">
+      <form className="validation-form" onSubmit={e=> onSubmit(e, formObject)}>
          {inputs}
+         <input type="submit" value={props.label} />
 
          {error &&
             <div className="error-widget">

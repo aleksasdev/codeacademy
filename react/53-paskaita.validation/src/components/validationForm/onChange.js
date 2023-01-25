@@ -1,6 +1,7 @@
 import { isError } from "./requirements";
 
 export const onChange = (e, formObject)=>{
+
    const allValues = formObject.values;
 
    const currentValue = e.target.value;
@@ -16,6 +17,11 @@ export const onChange = (e, formObject)=>{
    })
 
    formObject.setValues(modifiedValues);
+
+   if(!currentValue) {
+      formObject.setError(null); 
+      return;
+   }
    
    if(!isError(formObject.setError, currentValue, requirements)){
       formObject.setError(null);
