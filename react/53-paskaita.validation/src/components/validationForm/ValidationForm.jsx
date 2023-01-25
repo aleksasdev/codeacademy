@@ -5,9 +5,6 @@ import { createValues } from './createValues';
 import { createInputs } from './createInputs';
 import './index.css';
 
-export const MINIMUM_LENGTH_8 = "min8";
-export const HAVE_EMAIL_SIGN = "@";
-
 export const ValidationForm = (props) => {
 
    const [values, setValues] = useState(null);
