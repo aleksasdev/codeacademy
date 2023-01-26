@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { HAVE_EMAIL_SIGN, MINIMUM_LENGTH_8, HAVE_GMAIL_PREFIX, MINIMUM_AGE_13 } from './components/validationForm/requirements';
+import { HAVE_EMAIL_SIGN, MINIMUM_LENGTH_8, HAVE_GMAIL_PREFIX, MINIMUM_AGE_13, HAVE_VALID_EMAIL } from './components/validationForm/requirements';
 import { ValidationForm } from './components/validationForm/ValidationForm';
 import { useEffect } from 'react';
 
@@ -19,7 +19,7 @@ function App() {
             <p>Username</p>
             <input name="username" requirements={[MINIMUM_LENGTH_8]} />
             <p>Email</p>
-            <input name="email" requirements={[HAVE_EMAIL_SIGN, HAVE_GMAIL_PREFIX]} />
+            <input name="email" requirements={[HAVE_VALID_EMAIL, HAVE_GMAIL_PREFIX]} />
             <p>Password</p>
             <input name="password" requirements={[MINIMUM_LENGTH_8]} />
             <p>Repeat Password</p>
